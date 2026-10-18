@@ -1,0 +1,25 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "koreanocean",
+  "model_version": "koreanocean-stella-seven-families-v1",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "3b616fd5b319f97dc105205931c2b660af61e0e3ebc6e0fa7ff7ced229b41b8b",
+    "accuracy.json": "5414d05a1ce320d0525d04ce07677b05cc53201ae5a31b770dd0d8ba2f894b4e",
+    "fluency.npz": "e700aa9c0d1d091ee0f2aef2787490aeafc5729b5e5be316917cb9268882b8c3",
+    "fluency.json": "df12f5ad2876fa3fc8967fbbeb6302c19506c72cbc976a392e6e277a1833dfd9",
+    "prosody.npz": "e700aa9c0d1d091ee0f2aef2787490aeafc5729b5e5be316917cb9268882b8c3",
+    "prosody.json": "9cae20f7e64e5afa1384a92ecc65c54215f189b5531b8c0d13f175b776da3c33"
+  },
+  "training_corpora": [
+    "speechocean",
+    "korean"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "permission_status": "Included at author direction; derived-weight release permissions under review. See docs/RIGHTS.md."
+}

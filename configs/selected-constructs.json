@@ -1,0 +1,40 @@
+{
+  "selection_basis": "public development; original 0.01 promotion rule",
+  "automatic_deployment": false,
+  "constructs": {
+    "accuracy": {
+      "family": "koreanocean",
+      "blocks": [
+        "xeus",
+        "phoneticxeus",
+        "ipa"
+      ],
+      "checkpoint": "models/koreanocean/accuracy.npz",
+      "checkpoint_sha256": "3b616fd5b319f97dc105205931c2b660af61e0e3ebc6e0fa7ff7ced229b41b8b",
+      "metadata_sha256": "5414d05a1ce320d0525d04ce07677b05cc53201ae5a31b770dd0d8ba2f894b4e",
+      "unchanged_existing_head": true
+    },
+    "fluency": {
+      "family": "aesopkoreanocean",
+      "blocks": [
+        "xeus",
+        "xlsr"
+      ],
+      "checkpoint": "models/aesopkoreanocean/fluency.npz",
+      "checkpoint_sha256": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+      "metadata_sha256": "f7b4a6e1e3391cbc6a0b530f29ca199c959e2b7e1e4dc133d6032c5283996f43",
+      "unchanged_existing_head": true
+    },
+    "prosody": {
+      "family": "aesopkoreanocean",
+      "blocks": [
+        "xeus",
+        "xlsr"
+      ],
+      "checkpoint": "models/aesopkoreanocean/prosody.npz",
+      "checkpoint_sha256": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+      "metadata_sha256": "b5001cd5f7aedd3493253b789c248f412bb6801188bf8b418f4c035372677e54",
+      "unchanged_existing_head": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source": "user-supplied independent aggregate results in research conversation",
+  "n": 305,
+  "human_reference": "arithmetic mean of all three raters",
+  "model_version": "speechocean-stella-v2",
+  "private_rows_included": false,
+  "results": {
+    "accuracy": {
+      "azure_rho": 0.77586,
+      "speechocean_rho": 0.86197,
+      "azure_qwk": 0.15762,
+      "speechocean_qwk": 0.55492,
+      "delta_rho_ci95": [
+        0.04169,
+        0.13279
+      ]
+    },
+    "fluency": {
+      "azure_rho": 0.6485,
+      "speechocean_rho": 0.85909,
+      "azure_qwk": 0.07715,
+      "speechocean_qwk": 0.70437,
+      "delta_rho_ci95": [
+        0.14494,
+        0.28342
+      ]
+    },
+    "prosody": {
+      "azure_rho": 0.75025,
+      "speechocean_rho": 0.86539,
+      "azure_qwk": 0.36937,
+      "speechocean_qwk": 0.59286,
+      "delta_rho_ci95": [
+        0.06608,
+        0.16931
+      ]
+    }
+  }
+}

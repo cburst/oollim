@@ -1,0 +1,610 @@
+{
+  "schema_version": "1.0",
+  "resources": [
+    {
+      "id": "xlsr-README.md",
+      "path": "xlsr-300m/README.md",
+      "url": "https://huggingface.co/facebook/wav2vec2-xls-r-300m/resolve/1a640f32ac3e39899438a2931f9924c02f080a54/README.md",
+      "license": "Apache-2.0",
+      "format": null,
+      "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+      "sha256": "eefcc8bd0709b1acc42f4b16000148fe445531db0eece77212cc09c20f54a320",
+      "bytes": 3735
+    },
+    {
+      "id": "xlsr-config.json",
+      "path": "xlsr-300m/config.json",
+      "url": "https://huggingface.co/facebook/wav2vec2-xls-r-300m/resolve/1a640f32ac3e39899438a2931f9924c02f080a54/config.json",
+      "license": "Apache-2.0",
+      "format": "json",
+      "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+      "sha256": "0bffa0d0e98153e883b828d86491f3c6062cb563dc9d7a9cfd1790da30c286ac",
+      "bytes": 1568
+    },
+    {
+      "id": "xlsr-preprocessor_config.json",
+      "path": "xlsr-300m/preprocessor_config.json",
+      "url": "https://huggingface.co/facebook/wav2vec2-xls-r-300m/resolve/1a640f32ac3e39899438a2931f9924c02f080a54/preprocessor_config.json",
+      "license": "Apache-2.0",
+      "format": "json",
+      "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+      "sha256": "a2254a5b58f72cd4de3632f8eee64f3f098b7c1402128d2f419e7d00ae13e335",
+      "bytes": 212
+    },
+    {
+      "id": "speechocean-README.md",
+      "path": "canonical-metadata/README.md",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/README.md",
+      "license": "CC-BY-4.0",
+      "format": null,
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "4f29e91dda24a591bbb7c99b52a9b874779fda6ad4c3346a7430f51e957da3c2",
+      "bytes": 12951
+    },
+    {
+      "id": "speechocean-resource-scores.json",
+      "path": "canonical-metadata/resource/scores.json",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/resource/scores.json",
+      "license": "CC-BY-4.0",
+      "format": "json",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "31c847b8ee29d61d8fe338bcbb1d4c4721425f05481d2144ad57cd19ea1159f8",
+      "bytes": 9755534
+    },
+    {
+      "id": "speechocean-resource-scores-detail.json",
+      "path": "canonical-metadata/resource/scores-detail.json",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/resource/scores-detail.json",
+      "license": "CC-BY-4.0",
+      "format": "json",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "8a90ff40558fe8032d9bfa919429dcae267c0ec3fbdedf1dca30c0515ea989e1",
+      "bytes": 19692352
+    },
+    {
+      "id": "speechocean-train-utt2spk",
+      "path": "canonical-metadata/train/utt2spk",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/train/utt2spk",
+      "license": "CC-BY-4.0",
+      "format": null,
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "e83546f91fa7444547b8c690ef004ad514eee1f7066d38ec87f7a6c847c84737",
+      "bytes": 37500
+    },
+    {
+      "id": "speechocean-test-utt2spk",
+      "path": "canonical-metadata/test/utt2spk",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/test/utt2spk",
+      "license": "CC-BY-4.0",
+      "format": null,
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "061291f397f8c281ff1bf6bf388e875ab9c4cc0de66f37d8559e690af08964be",
+      "bytes": 37500
+    },
+    {
+      "id": "speechocean-train-text",
+      "path": "canonical-metadata/train/text",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/train/text",
+      "license": "CC-BY-4.0",
+      "format": null,
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "32073dd72e20edb4ad051b7b49979d5cab4c2158c2d6396a08e3dfad6ad9ffe1",
+      "bytes": 99228
+    },
+    {
+      "id": "speechocean-test-text",
+      "path": "canonical-metadata/test/text",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/test/text",
+      "license": "CC-BY-4.0",
+      "format": null,
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "a0cf51d5f21b9e404b405672e85363e341dc2b8d510de41132d326f5f543382c",
+      "bytes": 99796
+    },
+    {
+      "id": "speechocean-train-spk2age",
+      "path": "canonical-metadata/train/spk2age",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/train/spk2age",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "783be59032da6a140c143fde9c850da1148d48a3aadd27745f2e1b412f981a02",
+      "bytes": 964
+    },
+    {
+      "id": "speechocean-train-spk2gender",
+      "path": "canonical-metadata/train/spk2gender",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/train/spk2gender",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "a49aa195c66b0bf5082c0621907c2597abb66231f77a187df2930196cf292232",
+      "bytes": 875
+    },
+    {
+      "id": "speechocean-test-spk2age",
+      "path": "canonical-metadata/test/spk2age",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/test/spk2age",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "bcc719f23f2352b76f3cec80f12a02f97d775ecfa7b77646be136159caf036d3",
+      "bytes": 962
+    },
+    {
+      "id": "speechocean-test-spk2gender",
+      "path": "canonical-metadata/test/spk2gender",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/test/spk2gender",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "4c59b3694169b84a2e69b44632c03d2cfb3ef309f29633a40a729b54d5b77485",
+      "bytes": 875
+    },
+    {
+      "id": "speechocean-train-wav.scp",
+      "path": "canonical-metadata/train/wav.scp",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/train/wav.scp",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "44b89d090fcb0be781c1bb275f4cf48aeb3694cdf9f02be52dd06b417ea67b8c",
+      "bytes": 102500
+    },
+    {
+      "id": "speechocean-test-wav.scp",
+      "path": "canonical-metadata/test/wav.scp",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/test/wav.scp",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "ec911e9319759c73e71ab62dc9cf6a2a00a1d02b7b91a288b39e6d56451e66f3",
+      "bytes": 102500
+    },
+    {
+      "id": "speechocean-resource-lexicon.txt",
+      "path": "canonical-metadata/resource/lexicon.txt",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/resource/lexicon.txt",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "049425b86748f312c2a61e73abeff554a0fe047967ac4630fef9689434410a81",
+      "bytes": 56421
+    },
+    {
+      "id": "speechocean-resource-text-phone",
+      "path": "canonical-metadata/resource/text-phone",
+      "url": "https://raw.githubusercontent.com/jimbozhang/speechocean762/613968e3b0b789fc33936fb5eba1973176ba7d11/resource/text-phone",
+      "license": "CC-BY-4.0",
+      "revision": "613968e3b0b789fc33936fb5eba1973176ba7d11",
+      "sha256": "39ee4fc8719775c082e2ce563d3818306eb1c1a98f97077241cdc110a57c319d",
+      "bytes": 843190
+    },
+    {
+      "id": "xlsr-weights",
+      "path": "xlsr-300m/pytorch_model.bin",
+      "url": "https://huggingface.co/facebook/wav2vec2-xls-r-300m/resolve/1a640f32ac3e39899438a2931f9924c02f080a54/pytorch_model.bin",
+      "license": "Apache-2.0",
+      "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+      "bytes": 1269737156,
+      "sha256": "d5e490574712ad0a6736923b9ed11d4cd51c78609c36205f704fc4e87b11d2e0"
+    },
+    {
+      "id": "speechocean-audio",
+      "path": "speechocean762.tar.gz",
+      "url": "https://openslr.elda.org/resources/101/speechocean762.tar.gz",
+      "license": "CC-BY-4.0",
+      "bytes": 520810923,
+      "format": "gzip",
+      "sha256": "876c34b828c2ebcc35ba2ff1ba5947d50e6b0162fc4a4af91db0942422b3bdd5"
+    },
+    {
+      "id": "xeus-README.md",
+      "path": "xeus/README.md",
+      "url": "https://huggingface.co/espnet/xeus/resolve/b651261280bf792df4632ccb2d1ba4eeaabeaee2/README.md",
+      "revision": "b651261280bf792df4632ccb2d1ba4eeaabeaee2",
+      "license": "CC-BY-NC-SA-4.0",
+      "sha256": "9e433b45a63f3ca93d2b8212a7888dda5ec2397c1804fd476273e15bbe9cb664",
+      "bytes": 28698
+    },
+    {
+      "id": "xeus-config.yaml",
+      "path": "xeus/model/config.yaml",
+      "url": "https://huggingface.co/espnet/xeus/resolve/b651261280bf792df4632ccb2d1ba4eeaabeaee2/model/config.yaml",
+      "revision": "b651261280bf792df4632ccb2d1ba4eeaabeaee2",
+      "license": "CC-BY-NC-SA-4.0",
+      "sha256": "382ab33c232e14ccf3eabdd0129db239ae0420fc2d8546098a4260820255062e",
+      "bytes": 8056
+    },
+    {
+      "id": "xeus-xeus_checkpoint_new.pth",
+      "path": "xeus/model/xeus_checkpoint_new.pth",
+      "url": "https://huggingface.co/espnet/xeus/resolve/b651261280bf792df4632ccb2d1ba4eeaabeaee2/model/xeus_checkpoint_new.pth",
+      "revision": "b651261280bf792df4632ccb2d1ba4eeaabeaee2",
+      "license": "CC-BY-NC-SA-4.0",
+      "bytes": 2306233340,
+      "sha256": "4fd02581b4dd06736d1a6aa29e20c442afe3d9b299c88359f63320292a5c5cff"
+    },
+    {
+      "id": "espnet-xeus-source",
+      "path": "espnet-xeus-source.tar.gz",
+      "url": "https://api.github.com/repos/wanchichen/espnet/tarball/5b52d57b4f872ff7babded35316a79642e9e6c12",
+      "revision": "5b52d57b4f872ff7babded35316a79642e9e6c12",
+      "license": "Inspect included license",
+      "format": "gzip",
+      "sha256": "3f0f9e5b60385fcf4d3e112c64669d649f4aacfeb99ac4672527ffdcf1f472fc",
+      "bytes": 18870459
+    },
+    {
+      "id": "phoneticxeus-source",
+      "path": "phoneticxeus-source.tar.gz",
+      "url": "https://api.github.com/repos/changelinglab/PhoneticXeus/tarball/1be0aecbc3e62290c579977abaa590c2a5a3721e",
+      "revision": "1be0aecbc3e62290c579977abaa590c2a5a3721e",
+      "license": "Inspect included license",
+      "format": "gzip",
+      "sha256": "11754a8bc8d86db50a534f347d80359247d097d566c37e5314eff8869031022d",
+      "bytes": 385925
+    },
+    {
+      "id": "px-README.md",
+      "path": "phoneticxeus/README.md",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/README.md",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "776ab41615020b3ae621d231353b70f40b2533849542d735109386ad2c97c284",
+      "bytes": 2070
+    },
+    {
+      "id": "px-config.json",
+      "path": "phoneticxeus/config.json",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/config.json",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3a1159d19f0908ecf21053c854e5f1994e90e6339a01025ea081d965d7d5a1b",
+      "bytes": 490
+    },
+    {
+      "id": "px-configuration_phoneticxeus.py",
+      "path": "phoneticxeus/configuration_phoneticxeus.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/configuration_phoneticxeus.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "be6167a7f8572cfe37407ac3b92379c46664dcf24f7e7d74ee6013d3c2c3dd51",
+      "bytes": 1075
+    },
+    {
+      "id": "px-ipa_vocab.json",
+      "path": "phoneticxeus/ipa_vocab.json",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/ipa_vocab.json",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "96c70e0f72c02aa882a6cf9083b2e1a007c37ff5890a94afc3bf0039748654c3",
+      "bytes": 5977
+    },
+    {
+      "id": "px-modeling_phoneticxeus.py",
+      "path": "phoneticxeus/modeling_phoneticxeus.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/modeling_phoneticxeus.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "7583603ff37667ce3d0d84760280e8d9d5cbeb20de749f41db2c9fd3feea256a",
+      "bytes": 4568
+    },
+    {
+      "id": "px-pxeus-__init__.py",
+      "path": "phoneticxeus/pxeus/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-core-__init__.py",
+      "path": "phoneticxeus/pxeus/core/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/core/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-core-utils.py",
+      "path": "phoneticxeus/pxeus/core/utils.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/core/utils.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e837c100eaa0b3b6df572b0e0743550767a32139010e74de1a1d288a274cc665",
+      "bytes": 3668
+    },
+    {
+      "id": "px-pxeus-espnet_import-__init__.py",
+      "path": "phoneticxeus/pxeus/espnet_import/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-espnet_import-attention.py",
+      "path": "phoneticxeus/pxeus/espnet_import/attention.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/attention.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "281729d0e2e7450e1b3c702d09afde9b5d948837ce8eed867f583c804d689c23",
+      "bytes": 17811
+    },
+    {
+      "id": "px-pxeus-espnet_import-cgmlp.py",
+      "path": "phoneticxeus/pxeus/espnet_import/cgmlp.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/cgmlp.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "027fd6754daab5a2b4080a3affc1edeb8b63a0997720bd6e98efc37bb3358ef3",
+      "bytes": 3489
+    },
+    {
+      "id": "px-pxeus-espnet_import-embedding.py",
+      "path": "phoneticxeus/pxeus/espnet_import/embedding.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/embedding.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "2ec7912011a0fb75250ca2cf3d5d4e9708542cdaa559cff50fc063dc6410d1eb",
+      "bytes": 17812
+    },
+    {
+      "id": "px-pxeus-espnet_import-fastformer.py",
+      "path": "phoneticxeus/pxeus/espnet_import/fastformer.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/fastformer.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e1a3a07a4b35dd187e2054a60936bbc9f6e88b8ac01bcf19a096ab962a65528f",
+      "bytes": 5282
+    },
+    {
+      "id": "px-pxeus-espnet_import-label_smoothing_loss.py",
+      "path": "phoneticxeus/pxeus/espnet_import/label_smoothing_loss.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/label_smoothing_loss.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "b1ae7794efe3f2650dc5c50cffa5f568a65398b162988fa59c39d6b7aa390977",
+      "bytes": 2235
+    },
+    {
+      "id": "px-pxeus-espnet_import-layer_norm.py",
+      "path": "phoneticxeus/pxeus/espnet_import/layer_norm.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/layer_norm.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "09ae1baa48bd76813f53b0deeadbc8ede816258acdc64ec7e4edbf81cff39ab2",
+      "bytes": 1072
+    },
+    {
+      "id": "px-pxeus-espnet_import-nets_utils.py",
+      "path": "phoneticxeus/pxeus/espnet_import/nets_utils.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/nets_utils.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "a36c74c940d910d75f633e0c163dc258c05b4329b6a2c732c3d791026366e502",
+      "bytes": 22863
+    },
+    {
+      "id": "px-pxeus-espnet_import-positionwise_feed_forward.py",
+      "path": "phoneticxeus/pxeus/espnet_import/positionwise_feed_forward.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/positionwise_feed_forward.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "b9980b46e2c2bec968c20bfa99a494996e156d53db95dbbb7005c0a2fc76eef0",
+      "bytes": 983
+    },
+    {
+      "id": "px-pxeus-espnet_import-repeat.py",
+      "path": "phoneticxeus/pxeus/espnet_import/repeat.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/repeat.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "9fefa31e135c0f8c4da1ac9437be162075210bf5f23fcd1b702d256e584783ad",
+      "bytes": 1299
+    },
+    {
+      "id": "px-pxeus-espnet_import-subsampling.py",
+      "path": "phoneticxeus/pxeus/espnet_import/subsampling.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/espnet_import/subsampling.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "f0b25ecf19b516b4d0626273a7b78042676176b3d37df75ba54ed909d03cd5d7",
+      "bytes": 27063
+    },
+    {
+      "id": "px-pxeus-model-__init__.py",
+      "path": "phoneticxeus/pxeus/model/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-model-powsm-__init__.py",
+      "path": "phoneticxeus/pxeus/model/powsm/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/powsm/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-model-powsm-ctc.py",
+      "path": "phoneticxeus/pxeus/model/powsm/ctc.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/powsm/ctc.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "88d945d8f71db7cc5da335707747fe707d79f9e2d65b74f6ffd219938de621aa",
+      "bytes": 8024
+    },
+    {
+      "id": "px-pxeus-model-powsm-e_branchformer.py",
+      "path": "phoneticxeus/pxeus/model/powsm/e_branchformer.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/powsm/e_branchformer.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "5870009388038a29368358095350da6f4ca7e8a8a8a7f78e38de1294dbc6aa93",
+      "bytes": 20348
+    },
+    {
+      "id": "px-pxeus-model-powsm-specaug.py",
+      "path": "phoneticxeus/pxeus/model/powsm/specaug.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/powsm/specaug.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "c3266cfdc40c25c908c6e3d0357506a097f668a15266fde7103b19fe37b29e25",
+      "bytes": 12093
+    },
+    {
+      "id": "px-pxeus-model-powsm-utils.py",
+      "path": "phoneticxeus/pxeus/model/powsm/utils.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/powsm/utils.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "d075f02ad6bd492d494f2afbbac0d06807d6d0c1a351a4c696a200d9abb8a631",
+      "bytes": 3020
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-__init__.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-builders.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/builders.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/builders.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "2287ea7e83d944358a136b83c558017a663d610a4904017345fa47873743241c",
+      "bytes": 10817
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-cnn_frontend.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/cnn_frontend.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/cnn_frontend.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "c8a303f39b471e1ec33fa9e549c073220a014da5f3a373a47ec2e57a9ff50683",
+      "bytes": 8063
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-linear_layer.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/linear_layer.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/linear_layer.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "4d4e40cda034d1674fbb395e2703c4b3ddd5aac93e2b32f4956c6e580168253b",
+      "bytes": 677
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-resources-__init__.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/resources/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/resources/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-resources-ipa_vocab.json",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/resources/ipa_vocab.json",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/resources/ipa_vocab.json",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "96c70e0f72c02aa882a6cf9083b2e1a007c37ff5890a94afc3bf0039748654c3",
+      "bytes": 5977
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-resources-xeus_config.yaml",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/resources/xeus_config.yaml",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/resources/xeus_config.yaml",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "382ab33c232e14ccf3eabdd0129db239ae0420fc2d8546098a4260820255062e",
+      "bytes": 8056
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-xeuspr_inference.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/xeuspr_inference.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/xeuspr_inference.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "742d51fcf39ea12d39817aab01f0bd30026b77f57eb88d21f43510226bfb91d9",
+      "bytes": 2824
+    },
+    {
+      "id": "px-pxeus-model-xeusphoneme-xeuspr_model.py",
+      "path": "phoneticxeus/pxeus/model/xeusphoneme/xeuspr_model.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/model/xeusphoneme/xeuspr_model.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "f9aa59fa7c9ae0761a49253b972f5140abdb9b5033c62d751a2b2f9240e0e011",
+      "bytes": 15999
+    },
+    {
+      "id": "px-pxeus-recipe-__init__.py",
+      "path": "phoneticxeus/pxeus/recipe/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/recipe/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-recipe-phone_recognition-__init__.py",
+      "path": "phoneticxeus/pxeus/recipe/phone_recognition/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/recipe/phone_recognition/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "id": "px-pxeus-recipe-phone_recognition-greedy_ctc_strategy.py",
+      "path": "phoneticxeus/pxeus/recipe/phone_recognition/greedy_ctc_strategy.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/recipe/phone_recognition/greedy_ctc_strategy.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "e7aa4c2849b9c02e6f3fda399970a37a6ff0a2e4906171b6a0d52015d9f67c6c",
+      "bytes": 1988
+    },
+    {
+      "id": "px-pxeus-utils-__init__.py",
+      "path": "phoneticxeus/pxeus/utils/__init__.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/utils/__init__.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "4698425f6b0c88a00e4058e055b0fba2d393021d55f38a98a2c0827d12253cc9",
+      "bytes": 46
+    },
+    {
+      "id": "px-pxeus-utils-pylogger.py",
+      "path": "phoneticxeus/pxeus/utils/pylogger.py",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/pxeus/utils/pylogger.py",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "license": "Inspect model card and code license",
+      "sha256": "680eaba59200727b1489bf53a52e61fa1ff18d812a3e6ea960ad93cbf6a57158",
+      "bytes": 734
+    },
+    {
+      "id": "phoneticxeus-weights",
+      "path": "phoneticxeus/model.safetensors",
+      "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/model.safetensors",
+      "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+      "bytes": 2300089432,
+      "sha256": "ad58bf20a60e9d0380327bd8b2d0e8e90a9b8de2adccbfb479f9b21ea85eda18",
+      "license": "See pinned model card; inherited XEUS non-commercial lineage"
+    },
+    {
+      "id": "cmudict",
+      "path": "text-reference-v1/cmudict.dict",
+      "license": "BSD-style CMUdict license",
+      "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+      "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+      "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22"
+    }
+  ]
+}

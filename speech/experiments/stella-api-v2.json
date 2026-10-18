@@ -1,0 +1,32 @@
+{
+  "schema_version": "stella-assessment-v1",
+  "model_version": "speechocean-stella-v2",
+  "reference_id": "please-call-stella-v1",
+  "reference_text": "Please call Stella. Ask her to bring these things with her from the store: Six spoons of fresh snow peas, five thick slabs of blue cheese, and maybe a snack for her brother Bob. We also need a small plastic snake and a big toy frog for the kids. She can scoop these things into three red bags, and we will go meet her Wednesday at the train station.",
+  "reference_sha256": "9d19a22107a5b208faf8725199505356447083b92c94e6acdef43243fe1197e2",
+  "max_duration_seconds": 120,
+  "ridge": "speechocean",
+  "extractor": {
+    "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+xlsr+phoneticxeus+ipa.npz",
+    "sha256": "180c5a5ccd57df631cf328f15230e327644840c5c0d461564567ce99eb4b9c49",
+    "metadata_sha256": "10a4f4e150c7dad27dccf880dbf3cc8dd4b6af48f0d6929bcbce8db759d347bb"
+  },
+  "heads": {
+    "accuracy": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+phoneticxeus+ipa.npz",
+      "sha256": "dc2baf759c0eae83ac7d4cbdd885f2aa0d1e6f6d849e620d74350f4d1a36966a",
+      "metadata_sha256": "4266449814e7480b97ade6c2228e92eb26b21ea99607d0b34ff85c061025faed"
+    },
+    "fluency": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+xlsr.npz",
+      "sha256": "2238f2ef93483a25d08cecf476f26f74729c8d9d2e96e4f48c51e13aa7667ef9",
+      "metadata_sha256": "aee150a4a634d945b6bb7aabfd08fb0491c6d85fc600c3265bc191379b9768e8"
+    },
+    "prosody": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+xlsr.npz",
+      "sha256": "2238f2ef93483a25d08cecf476f26f74729c8d9d2e96e4f48c51e13aa7667ef9",
+      "metadata_sha256": "aee150a4a634d945b6bb7aabfd08fb0491c6d85fc600c3265bc191379b9768e8"
+    }
+  },
+  "selection_note": "User-selected revision: XEUS+PhoneticXeus+IPA accuracy; XEUS+XLS-R fluency and prosody unchanged. No private scores used for selection. Historical text-reference ridge transforms unchanged; passage length unvalidated."
+}

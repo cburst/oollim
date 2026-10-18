@@ -1,0 +1,632 @@
+[
+  {
+    "family": "speechocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.8001106880597697,
+    "rmse": 1.0972033007037305,
+    "pearson": 0.848199218943484,
+    "spearman": 0.8163457095653589
+  },
+  {
+    "family": "speechocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.6827760879202345,
+    "rmse": 2.1417786963891317,
+    "pearson": 0.7114840332800778,
+    "spearman": 0.6992986997509917
+  },
+  {
+    "family": "speechocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 2.7522471718823467,
+    "rmse": 3.0546356259725793,
+    "pearson": 0.9440726302325019,
+    "spearman": 0.9670527670527671
+  },
+  {
+    "family": "speechocean",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6280158933825785,
+    "rmse": 0.8862148995970607,
+    "pearson": 0.8987986682561253,
+    "spearman": 0.8864773468432806
+  },
+  {
+    "family": "speechocean",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.5312006724743663,
+    "rmse": 1.948145794776864,
+    "pearson": 0.6920317748528527,
+    "spearman": 0.6682509982716885
+  },
+  {
+    "family": "speechocean",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 1.3819454688676305,
+    "rmse": 1.6345135544184926,
+    "pearson": 0.8854094965441799,
+    "spearman": 0.8563888438416604
+  },
+  {
+    "family": "speechocean",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6320276835645678,
+    "rmse": 0.8747511175272901,
+    "pearson": 0.8982657060696014,
+    "spearman": 0.8901339443641064
+  },
+  {
+    "family": "speechocean",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.546922958987138,
+    "rmse": 1.93785563266396,
+    "pearson": 0.6720165756949654,
+    "spearman": 0.6529347228329773
+  },
+  {
+    "family": "speechocean",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 1.4299077926373598,
+    "rmse": 1.6351328726540009,
+    "pearson": 0.92709753431211,
+    "spearman": 0.9286909589096428
+  },
+  {
+    "family": "korean",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.286899869004466,
+    "rmse": 2.5316453290572367,
+    "pearson": 0.7261205638722062,
+    "spearman": 0.7351941076857056
+  },
+  {
+    "family": "korean",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2278711482700888,
+    "rmse": 1.5370687189312662,
+    "pearson": 0.7629455501428849,
+    "spearman": 0.7591127061738085
+  },
+  {
+    "family": "korean",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 1.6375323687053966,
+    "rmse": 1.7556556863076416,
+    "pearson": 0.9654347922769556,
+    "spearman": 0.9693693693693693
+  },
+  {
+    "family": "korean",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.3313850659406254,
+    "rmse": 2.485674443769592,
+    "pearson": 0.8642053319874656,
+    "spearman": 0.8370145429877212
+  },
+  {
+    "family": "korean",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2244947026249857,
+    "rmse": 1.5234440618444076,
+    "pearson": 0.7780669804288499,
+    "spearman": 0.7775737454401881
+  },
+  {
+    "family": "korean",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.7201849762513375,
+    "rmse": 0.823660510350504,
+    "pearson": 0.9464757074923904,
+    "spearman": 0.9185710163575236
+  },
+  {
+    "family": "korean",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.0567312121389354,
+    "rmse": 2.233353033833081,
+    "pearson": 0.8584157420654229,
+    "spearman": 0.829176371081853
+  },
+  {
+    "family": "korean",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2244947026249857,
+    "rmse": 1.5234440618444076,
+    "pearson": 0.7780669804288499,
+    "spearman": 0.7775737454401881
+  },
+  {
+    "family": "korean",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.8459958420705017,
+    "rmse": 1.0017660929237144,
+    "pearson": 0.9658797236002817,
+    "spearman": 0.9380872776900175
+  },
+  {
+    "family": "aesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 4.671206086087301,
+    "rmse": 4.923050567976176,
+    "pearson": 0.6268552497085212,
+    "spearman": 0.6591732171792625
+  },
+  {
+    "family": "aesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 2.2215610968677795,
+    "rmse": 2.6232969060234996,
+    "pearson": 0.6726566844485151,
+    "spearman": 0.6733183140960644
+  },
+  {
+    "family": "aesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.31954424651462165,
+    "rmse": 0.3828071817452102,
+    "pearson": 0.9862157235319831,
+    "spearman": 0.9871299871299871
+  },
+  {
+    "family": "aesop",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 5.5261392636380355,
+    "rmse": 5.690466421021407,
+    "pearson": 0.7110970733668022,
+    "spearman": 0.6820210527086422
+  },
+  {
+    "family": "aesop",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 2.6768840811362833,
+    "rmse": 3.0961354119294726,
+    "pearson": 0.6009135596926614,
+    "spearman": 0.5864289118590658
+  },
+  {
+    "family": "aesop",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.4969171048473875,
+    "rmse": 0.5761350988873829,
+    "pearson": 0.9661698203563656,
+    "spearman": 0.9664628759349586
+  },
+  {
+    "family": "aesop",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 5.3594511064917825,
+    "rmse": 5.534488733497968,
+    "pearson": 0.6834354531143865,
+    "spearman": 0.6851157809910561
+  },
+  {
+    "family": "aesop",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 2.881323472882108,
+    "rmse": 3.3144989949361894,
+    "pearson": 0.5587677290112221,
+    "spearman": 0.543668978443155
+  },
+  {
+    "family": "aesop",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.4451211615818078,
+    "rmse": 0.5631818134573174,
+    "pearson": 0.9799900579002618,
+    "spearman": 0.9746428192465441
+  },
+  {
+    "family": "koreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.8479614674676925,
+    "rmse": 1.1220802335993145,
+    "pearson": 0.8250001524648466,
+    "spearman": 0.8079390547415018
+  },
+  {
+    "family": "koreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.3031815887587357,
+    "rmse": 1.6199950422459564,
+    "pearson": 0.7583068907423649,
+    "spearman": 0.7554079429641062
+  },
+  {
+    "family": "koreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 2.1618190534689194,
+    "rmse": 2.3429072139275555,
+    "pearson": 0.9625614224348022,
+    "spearman": 0.963963963963964
+  },
+  {
+    "family": "koreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6352507568823751,
+    "rmse": 0.8908579327572301,
+    "pearson": 0.8969585974132611,
+    "spearman": 0.8761274852660572
+  },
+  {
+    "family": "koreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.294039136568466,
+    "rmse": 1.6191074302552309,
+    "pearson": 0.767685881780722,
+    "spearman": 0.7696037356123578
+  },
+  {
+    "family": "koreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 1.0502075899188235,
+    "rmse": 1.2405721451162834,
+    "pearson": 0.9404424638636041,
+    "spearman": 0.9243643864676971
+  },
+  {
+    "family": "koreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6619076044179455,
+    "rmse": 0.8903637037358267,
+    "pearson": 0.8949841265879925,
+    "spearman": 0.8760990953960338
+  },
+  {
+    "family": "koreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.295117370390488,
+    "rmse": 1.6199043866218752,
+    "pearson": 0.7697302519679643,
+    "spearman": 0.7714453674839008
+  },
+  {
+    "family": "koreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 1.197463745490957,
+    "rmse": 1.400449090588509,
+    "pearson": 0.9629588708831327,
+    "spearman": 0.9494143469047159
+  },
+  {
+    "family": "aesopocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.8578767349643233,
+    "rmse": 1.1334187965980782,
+    "pearson": 0.8171615628274307,
+    "spearman": 0.8068224132918969
+  },
+  {
+    "family": "aesopocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.4017440237542946,
+    "rmse": 1.7638949569496962,
+    "pearson": 0.7249242304704909,
+    "spearman": 0.7154098217201322
+  },
+  {
+    "family": "aesopocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.39932052420851133,
+    "rmse": 0.5140211591369659,
+    "pearson": 0.9753339577614698,
+    "spearman": 0.9703989703989704
+  },
+  {
+    "family": "aesopocean",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6258555376143249,
+    "rmse": 0.8749751906534543,
+    "pearson": 0.8944045410250921,
+    "spearman": 0.8811175593017464
+  },
+  {
+    "family": "aesopocean",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.3558231592775238,
+    "rmse": 1.7487093493014627,
+    "pearson": 0.7364901443962165,
+    "spearman": 0.7279301886254069
+  },
+  {
+    "family": "aesopocean",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.44318527739395863,
+    "rmse": 0.5269830921129837,
+    "pearson": 0.9668899112996387,
+    "spearman": 0.9517863383225188
+  },
+  {
+    "family": "aesopocean",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6456411731939291,
+    "rmse": 0.8947985940871133,
+    "pearson": 0.8877113883055041,
+    "spearman": 0.8781128697027324
+  },
+  {
+    "family": "aesopocean",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.3428514451848845,
+    "rmse": 1.7268391442566509,
+    "pearson": 0.7502232476821654,
+    "spearman": 0.7465574483575763
+  },
+  {
+    "family": "aesopocean",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.489435291376479,
+    "rmse": 0.6209552191539582,
+    "pearson": 0.9767122443052888,
+    "spearman": 0.9711674684647617
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.395271847030487,
+    "rmse": 2.642968519218861,
+    "pearson": 0.6594699184941123,
+    "spearman": 0.682851409835904
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2261893405717197,
+    "rmse": 1.5316802797798876,
+    "pearson": 0.7605445780958316,
+    "spearman": 0.7552198174719019
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.28960426604327544,
+    "rmse": 0.38811410054282336,
+    "pearson": 0.9807516485876138,
+    "spearman": 0.9763191763191763
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.583774986523081,
+    "rmse": 2.7317275609872627,
+    "pearson": 0.8670632561236322,
+    "spearman": 0.8340245939149544
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2136982185173015,
+    "rmse": 1.5054136717568742,
+    "pearson": 0.7817973061013442,
+    "spearman": 0.7789206754697385
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.42366261884418066,
+    "rmse": 0.47018542515284534,
+    "pearson": 0.9721884099368537,
+    "spearman": 0.9591246071287387
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 2.3603374225223046,
+    "rmse": 2.528557721881448,
+    "pearson": 0.8548344334079624,
+    "spearman": 0.829836510124745
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2193613375940688,
+    "rmse": 1.5115350371007954,
+    "pearson": 0.779624483255506,
+    "spearman": 0.7771815823999888
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.3443608123416913,
+    "rmse": 0.46070354909203437,
+    "pearson": 0.9822155284845213,
+    "spearman": 0.9727120688122205
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.8950932622653026,
+    "rmse": 1.1608811950767872,
+    "pearson": 0.8065851633177967,
+    "spearman": 0.8035522101651212
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2736213116701798,
+    "rmse": 1.583848683426736,
+    "pearson": 0.7531892259220392,
+    "spearman": 0.7483212448039309
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "accuracy",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.40193312174331414,
+    "rmse": 0.5135627137586761,
+    "pearson": 0.9761509705247358,
+    "spearman": 0.970913770913771
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6376444760096122,
+    "rmse": 0.8786339593190922,
+    "pearson": 0.891869666116772,
+    "spearman": 0.8749071501260076
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2602106905894255,
+    "rmse": 1.578908009120615,
+    "pearson": 0.7694437813554857,
+    "spearman": 0.7694993763153517
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "fluency",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.5401419202942761,
+    "rmse": 0.6201864259687951,
+    "pearson": 0.9641763306103855,
+    "spearman": 0.953459978576569
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "speechocean",
+    "n": 500,
+    "mae": 0.6610060914354797,
+    "rmse": 0.8891351575621839,
+    "pearson": 0.8853104164717241,
+    "spearman": 0.8722914788374402
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "korean",
+    "n": 636,
+    "mae": 1.2633623167627601,
+    "rmse": 1.5808443509241392,
+    "pearson": 0.7698962616890974,
+    "spearman": 0.7698769753938484
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "prosody",
+    "evaluation_corpus": "aesop",
+    "n": 36,
+    "mae": 0.48414719580899657,
+    "rmse": 0.6165358691988594,
+    "pearson": 0.9785055660620798,
+    "spearman": 0.9739992357684362
+  }
+]

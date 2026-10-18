@@ -1,0 +1,39 @@
+{
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "machine": "arm64",
+  "python": "3.11.10",
+  "checks": [
+    {
+      "name": "doctor",
+      "exit_code": 0,
+      "seconds": 8.1
+    },
+    {
+      "name": "inference",
+      "exit_code": 0,
+      "seconds": 42.13
+    },
+    {
+      "name": "resume",
+      "exit_code": 0,
+      "seconds": 8.3
+    }
+  ],
+  "completed_rows": 1,
+  "passed": true,
+  "input": {
+    "corpus": "SpeechOcean762",
+    "partition": "train",
+    "id": "011970107",
+    "duration_seconds": 8.21
+  },
+  "family": "speechocean",
+  "model_version": "speechocean-stella-v2",
+  "scores": {
+    "accuracy": 7.083749944874618,
+    "fluency": 6.380180289804415,
+    "prosody": 6.306598094205062
+  },
+  "native_windows": "pending owner test",
+  "test_suite_passed": 22
+}

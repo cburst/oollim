@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "korean",
+  "model_version": "korean-stella-seven-families-v1",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "0969149a5ddfecea757c80c312a5434305b59d46383f9708c14de22dfee77374",
+    "accuracy.json": "6a8817ec85771fd28c5f76060d15a9ff023aa02e626815aed255bf21776e688b",
+    "fluency.npz": "7279b37ad49d928518c9ab5410471a9544afff5c92251c55d2115c01c855cba5",
+    "fluency.json": "b834dcd67e867fd056e3e9a13a5312bb976f3dffd07cb19005ddea12c525c365",
+    "prosody.npz": "7279b37ad49d928518c9ab5410471a9544afff5c92251c55d2115c01c855cba5",
+    "prosody.json": "2b127c07f2fcb435a62e031209ab068aa5290fd81bd7f4d05da41309e4c3886f"
+  },
+  "training_corpora": [
+    "korean"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "permission_status": "Included at author direction; derived-weight release permissions under review. See docs/RIGHTS.md."
+}

@@ -1,0 +1,546 @@
+{
+  "source_sha256": "b904d27427cbe0cbb8d44b646f2d60a5119ce24daffb5e42870c9f6425775feb",
+  "precision": "Supplied rounded aggregates; not independently recomputed from recording-level scores.",
+  "rows": [
+    {
+      "construct": "Accuracy",
+      "method": "Human raters",
+      "reference": "pairwise",
+      "n": 305,
+      "rho": "0.759",
+      "rho_ci": "[0.710, 0.799]",
+      "qwk": "0.642",
+      "qwk_ci": "[0.597, 0.685]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "Human raters",
+      "reference": "other two",
+      "n": 305,
+      "rho": "0.809",
+      "rho_ci": "[0.769, 0.842]",
+      "qwk": "0.704",
+      "qwk_ci": "[0.663, 0.743]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "Azure",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.776",
+      "rho_ci": "[0.723, 0.820]",
+      "qwk": "0.158",
+      "qwk_ci": "[0.126, 0.193]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "Azure",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.761",
+      "rho_ci": "[0.709, 0.804]",
+      "qwk": "0.161",
+      "qwk_ci": "[0.129, 0.196]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "speechocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.862",
+      "rho_ci": "[0.825, 0.890]",
+      "qwk": "0.555",
+      "qwk_ci": "[0.500, 0.605]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "speechocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.844",
+      "rho_ci": "[0.807, 0.872]",
+      "qwk": "0.546",
+      "qwk_ci": "[0.494, 0.592]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "korean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.872",
+      "rho_ci": "[0.839, 0.898]",
+      "qwk": "0.726",
+      "qwk_ci": "[0.686, 0.763]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "korean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.856",
+      "rho_ci": "[0.822, 0.882]",
+      "qwk": "0.702",
+      "qwk_ci": "[0.662, 0.739]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.869",
+      "rho_ci": "[0.836, 0.894]",
+      "qwk": "0.244",
+      "qwk_ci": "[0.217, 0.269]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.852",
+      "rho_ci": "[0.818, 0.878]",
+      "qwk": "0.241",
+      "qwk_ci": "[0.215, 0.265]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "koreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.870",
+      "rho_ci": "[0.833, 0.898]",
+      "qwk": "0.860",
+      "qwk_ci": "[0.832, 0.884]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "koreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.853",
+      "rho_ci": "[0.816, 0.882]",
+      "qwk": "0.821",
+      "qwk_ci": "[0.789, 0.847]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesopocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.889",
+      "rho_ci": "[0.859, 0.911]",
+      "qwk": "0.615",
+      "qwk_ci": "[0.579, 0.649]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesopocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.872",
+      "rho_ci": "[0.842, 0.894]",
+      "qwk": "0.598",
+      "qwk_ci": "[0.563, 0.631]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "koreanaesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.884",
+      "rho_ci": "[0.853, 0.908]",
+      "qwk": "0.486",
+      "qwk_ci": "[0.448, 0.522]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "koreanaesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.867",
+      "rho_ci": "[0.835, 0.891]",
+      "qwk": "0.477",
+      "qwk_ci": "[0.439, 0.512]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesopkoreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.888",
+      "rho_ci": "[0.857, 0.911]",
+      "qwk": "0.601",
+      "qwk_ci": "[0.563, 0.636]"
+    },
+    {
+      "construct": "Accuracy",
+      "method": "aesopkoreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.870",
+      "rho_ci": "[0.839, 0.894]",
+      "qwk": "0.585",
+      "qwk_ci": "[0.548, 0.620]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "Human raters",
+      "reference": "pairwise",
+      "n": 305,
+      "rho": "0.747",
+      "rho_ci": "[0.697, 0.791]",
+      "qwk": "0.680",
+      "qwk_ci": "[0.631, 0.724]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "Human raters",
+      "reference": "other two",
+      "n": 305,
+      "rho": "0.807",
+      "rho_ci": "[0.768, 0.840]",
+      "qwk": "0.739",
+      "qwk_ci": "[0.695, 0.777]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "Azure",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.649",
+      "rho_ci": "[0.571, 0.715]",
+      "qwk": "0.077",
+      "qwk_ci": "[0.055, 0.105]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "Azure",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.633",
+      "rho_ci": "[0.556, 0.698]",
+      "qwk": "0.078",
+      "qwk_ci": "[0.056, 0.107]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "speechocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.859",
+      "rho_ci": "[0.819, 0.891]",
+      "qwk": "0.704",
+      "qwk_ci": "[0.660, 0.740]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "speechocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.842",
+      "rho_ci": "[0.801, 0.874]",
+      "qwk": "0.671",
+      "qwk_ci": "[0.627, 0.707]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "korean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.879",
+      "rho_ci": "[0.844, 0.905]",
+      "qwk": "0.510",
+      "qwk_ci": "[0.466, 0.550]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "korean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.860",
+      "rho_ci": "[0.825, 0.888]",
+      "qwk": "0.495",
+      "qwk_ci": "[0.452, 0.535]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.868",
+      "rho_ci": "[0.833, 0.896]",
+      "qwk": "0.283",
+      "qwk_ci": "[0.253, 0.312]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.850",
+      "rho_ci": "[0.813, 0.879]",
+      "qwk": "0.276",
+      "qwk_ci": "[0.247, 0.305]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "koreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.857",
+      "rho_ci": "[0.817, 0.890]",
+      "qwk": "0.606",
+      "qwk_ci": "[0.557, 0.650]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "koreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.840",
+      "rho_ci": "[0.799, 0.873]",
+      "qwk": "0.585",
+      "qwk_ci": "[0.537, 0.628]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesopocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.893",
+      "rho_ci": "[0.863, 0.917]",
+      "qwk": "0.633",
+      "qwk_ci": "[0.595, 0.667]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesopocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.874",
+      "rho_ci": "[0.842, 0.899]",
+      "qwk": "0.613",
+      "qwk_ci": "[0.575, 0.647]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "koreanaesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.895",
+      "rho_ci": "[0.866, 0.917]",
+      "qwk": "0.474",
+      "qwk_ci": "[0.436, 0.509]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "koreanaesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.876",
+      "rho_ci": "[0.846, 0.900]",
+      "qwk": "0.462",
+      "qwk_ci": "[0.424, 0.496]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesopkoreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.892",
+      "rho_ci": "[0.861, 0.916]",
+      "qwk": "0.543",
+      "qwk_ci": "[0.501, 0.580]"
+    },
+    {
+      "construct": "Fluency",
+      "method": "aesopkoreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.874",
+      "rho_ci": "[0.842, 0.898]",
+      "qwk": "0.527",
+      "qwk_ci": "[0.486, 0.564]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "Human raters",
+      "reference": "pairwise",
+      "n": 305,
+      "rho": "0.751",
+      "rho_ci": "[0.702, 0.795]",
+      "qwk": "0.681",
+      "qwk_ci": "[0.634, 0.722]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "Human raters",
+      "reference": "other two",
+      "n": 305,
+      "rho": "0.807",
+      "rho_ci": "[0.768, 0.842]",
+      "qwk": "0.742",
+      "qwk_ci": "[0.701, 0.778]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "Azure",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.750",
+      "rho_ci": "[0.684, 0.806]",
+      "qwk": "0.369",
+      "qwk_ci": "[0.318, 0.422]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "Azure",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.737",
+      "rho_ci": "[0.672, 0.792]",
+      "qwk": "0.370",
+      "qwk_ci": "[0.318, 0.421]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "speechocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.865",
+      "rho_ci": "[0.829, 0.895]",
+      "qwk": "0.593",
+      "qwk_ci": "[0.547, 0.634]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "speechocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.847",
+      "rho_ci": "[0.810, 0.878]",
+      "qwk": "0.570",
+      "qwk_ci": "[0.525, 0.610]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "korean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.893",
+      "rho_ci": "[0.862, 0.917]",
+      "qwk": "0.502",
+      "qwk_ci": "[0.460, 0.540]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "korean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.874",
+      "rho_ci": "[0.842, 0.899]",
+      "qwk": "0.489",
+      "qwk_ci": "[0.447, 0.526]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.867",
+      "rho_ci": "[0.833, 0.895]",
+      "qwk": "0.266",
+      "qwk_ci": "[0.237, 0.295]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.850",
+      "rho_ci": "[0.814, 0.878]",
+      "qwk": "0.261",
+      "qwk_ci": "[0.232, 0.288]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "koreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.869",
+      "rho_ci": "[0.832, 0.900]",
+      "qwk": "0.563",
+      "qwk_ci": "[0.517, 0.604]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "koreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.850",
+      "rho_ci": "[0.812, 0.881]",
+      "qwk": "0.546",
+      "qwk_ci": "[0.501, 0.586]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesopocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.899",
+      "rho_ci": "[0.870, 0.922]",
+      "qwk": "0.557",
+      "qwk_ci": "[0.517, 0.592]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesopocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.881",
+      "rho_ci": "[0.850, 0.905]",
+      "qwk": "0.541",
+      "qwk_ci": "[0.502, 0.576]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "koreanaesop",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.902",
+      "rho_ci": "[0.873, 0.924]",
+      "qwk": "0.442",
+      "qwk_ci": "[0.404, 0.477]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "koreanaesop",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.883",
+      "rho_ci": "[0.852, 0.906]",
+      "qwk": "0.431",
+      "qwk_ci": "[0.394, 0.465]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesopkoreanocean",
+      "reference": "three",
+      "n": 305,
+      "rho": "0.900",
+      "rho_ci": "[0.870, 0.924]",
+      "qwk": "0.493",
+      "qwk_ci": "[0.452, 0.530]"
+    },
+    {
+      "construct": "Prosody",
+      "method": "aesopkoreanocean",
+      "reference": "two",
+      "n": 305,
+      "rho": "0.881",
+      "rho_ci": "[0.850, 0.906]",
+      "qwk": "0.480",
+      "qwk_ci": "[0.440, 0.516]"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "experiment_id": "korean-prn-pilot-v3-004",
+  "protocol_id": "speech-evaluation-workflow-v3.5-korean-invalid-duration-quarantine",
+  "encoders": [
+    "xeus",
+    "xlsr"
+  ],
+  "train_limit": 4000,
+  "validation_limit": 1000,
+  "ridge_alphas": [
+    10,
+    100,
+    1000,
+    10000,
+    100000
+  ],
+  "seed": 42,
+  "source": "AIHub 71463 supplied Training PRN archives",
+  "reference": "itemScript.contents.sentence; required; no sttText substitution",
+  "targets": [
+    "articulationScore",
+    "prosodyScore"
+  ],
+  "native_scale": [
+    1,
+    5
+  ],
+  "label_source": "corpus ratings; separate from Azure and SpeechOcean; exact rater aggregation not inferred",
+  "split": "60/20/20 deterministic hash of decoded-duplicate-linked recorderId; final partition sealed; pilot samples only Training archive; official Validation not used",
+  "selection": "training-speaker 5-fold mean Spearman then MAE then larger penalty; per construct; no outer-validation hyperparameter selection",
+  "comparison": "2000 paired speaker bootstrap XLSR minus XEUS; practical rho +.02, degradation -.02 or +.08 MAE on 1..5 scale. Exploratory unadjusted intervals; no SOTA claim.",
+  "chunk_seconds": 20,
+  "cache": "full float32 frame sequence, valid mask, original nominal starts and context boundaries; mean/std pooling",
+  "code_commit": "64e47decd2062b2d958b45ca17b1b8cea5d47631",
+  "estimated_frame_storage": "5000 recordings x 20 seconds planning average x 50 fps x1024 x4 bytes x2 encoders =40.96GB conservative; actual lengths recorded, no padding stored",
+  "stop": "No automatic expansion beyond pilot. Errors stop; no paid calls; model deployment excluded.",
+  "code_hashes": {
+    "scripts/korean_pronunciation_pilot.py": "f03b3e99ba2c666346f166359c89c101a9eb8bebb3ba0622fafda3661d7df7a2",
+    "scripts/single_encoder_comparison.py": "c4e60d3f92054d55958479c1155467b14d41642c35919c2def8d395c4e771ea6",
+    "pronunciation/encoders.py": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+    "pronunciation/audio.py": "462de5818a4c9881626745f97f4c205adf55426b9e4dd0ebc8d986b91c22ae10",
+    "pronunciation/development.py": "425d1bfdfbe9ebab5ffd2afce68f97c6903acebba8b2cd49fe637f5534d8fdfc"
+  },
+  "revision_reason": "001 and 002 stopped before training. Corpus metadata diagnostic shows offsets tracking 0.5*(number of reference sentences+1), with rare irregular cases. Verify this empirical packaging relation within 1ms on every recording; quarantine anomalies before score-blind round-robin selection, after duplicate-speaker grouping. Stop if >915 anomalies (~1% of 91,594). Preserve measured and metadata durations and full waveform. This relation is empirical, not validated provenance of inserted silence. Final tests remain sealed; no fluency labels or inference about original pause timing. Revision 004: full 91,594-row diagnostic found one zero metadata duration (1-second waveform). Invalid metadata duration now enters the existing duration quarantine instead of aborting; 915-row cap unchanged. No labels used to choose this repair.",
+  "duration_policy": "sentence_padding_quarantine_v1",
+  "max_duration_quarantine": 915
+}

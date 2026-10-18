@@ -1,0 +1,1219 @@
+[
+  {
+    "family": "speechocean",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8275657254563727,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.0022846372712469476,
+        "min_corpus_rho_delta": -0.0039139111691627315,
+        "max_corpus_mae_delta": 0.04883868893437793,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.006791301363663349,
+        "min_corpus_rho_delta": -0.012058787430271778,
+        "max_corpus_mae_delta": 0.040208719602422116,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.008566380114267913,
+        "min_corpus_rho_delta": -0.015934990609866362,
+        "max_corpus_mae_delta": 0.04368223111072411,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "speechocean",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8364236205718479,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.029047667580606285,
+        "min_corpus_rho_delta": -0.003918096838206098,
+        "max_corpus_mae_delta": 1.0668032985237743,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.024844095679572797,
+        "min_corpus_rho_delta": -0.004328566938757494,
+        "max_corpus_mae_delta": 0.8900523279881498,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.02046129334759228,
+        "min_corpus_rho_delta": -0.010224490747854809,
+        "max_corpus_mae_delta": 1.0083668675784456,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "speechocean",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.84102217876884,
+    "promoted": false,
+    "numerical_best": "xeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.023014607499111328,
+        "min_corpus_rho_delta": -0.010343958041237666,
+        "max_corpus_mae_delta": 0.7980717783229905,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.022523412034348045,
+        "min_corpus_rho_delta": -0.006711895265364642,
+        "max_corpus_mae_delta": 0.807468612677239,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.022068313540172246,
+        "min_corpus_rho_delta": -0.005025324995656444,
+        "max_corpus_mae_delta": 0.6530054716194928,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.021007547434700236,
+        "min_corpus_rho_delta": -0.007319182039407401,
+        "max_corpus_mae_delta": 0.6790592657659189,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "korean",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8212253944096278,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": 0.011018649690194837,
+        "min_corpus_rho_delta": -0.0023166023166022454,
+        "max_corpus_mae_delta": 0.22112570391895536,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.010860591100278372,
+        "min_corpus_rho_delta": -0.003348643212402358,
+        "max_corpus_mae_delta": 0.2532543644744787,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.010829389218746766,
+        "min_corpus_rho_delta": 0.0018018018018018944,
+        "max_corpus_mae_delta": 0.05759717276484011,
+        "ci": [
+          -0.007460239588555082,
+          0.03060182141711718
+        ],
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.008468075633947136,
+        "min_corpus_rho_delta": -0.011068211068210987,
+        "max_corpus_mae_delta": 0.01034295443360822,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "korean",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8443864349284776,
+    "promoted": false,
+    "numerical_best": "xeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.009966516960069116,
+        "min_corpus_rho_delta": -0.0009976077338403888,
+        "max_corpus_mae_delta": 0.24549213856613727,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.009882180007954156,
+        "min_corpus_rho_delta": 7.688623300883268e-05,
+        "max_corpus_mae_delta": 0.16249772479920876,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": 0.007180103505747049,
+        "min_corpus_rho_delta": -0.00031976880199535707,
+        "max_corpus_mae_delta": 0.11666855539395549,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.006386547271477583,
+        "min_corpus_rho_delta": -0.016617320140962955,
+        "max_corpus_mae_delta": 0.13742781599808074,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.0036973494577414723,
+        "min_corpus_rho_delta": -0.006516083636036729,
+        "max_corpus_mae_delta": 0.15051928758863298,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.002072091029950096,
+        "min_corpus_rho_delta": -0.025333472324097772,
+        "max_corpus_mae_delta": 0.054979994596136894,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.0013767437056358967,
+        "min_corpus_rho_delta": -0.011875231279344978,
+        "max_corpus_mae_delta": 0.09409789398833146,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "korean",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8482791314040198,
+    "promoted": false,
+    "numerical_best": "xeus",
+    "checks": [
+      {
+        "blocks": "xeus",
+        "delta": 0.007698934458073237,
+        "min_corpus_rho_delta": -0.0013185636933747968,
+        "max_corpus_mae_delta": 0.16220928231587894,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.004159558920427409,
+        "min_corpus_rho_delta": -0.0023558690663304516,
+        "max_corpus_mae_delta": 0.24414599236782708,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": 0.002932243650968891,
+        "min_corpus_rho_delta": -0.00031976880199535707,
+        "max_corpus_mae_delta": 0.11582931074755587,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesop",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.7812546971938957,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.008063287210477554,
+        "min_corpus_rho_delta": -0.016941288908175256,
+        "max_corpus_mae_delta": 0.1336901609244947,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "aesop",
+    "construct": "fluency",
+    "selected": "xeus+phoneticxeus",
+    "mean_rho": 0.7961342546193245,
+    "promoted": true,
+    "numerical_best": "xeus+phoneticxeus",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.034084816361946935,
+        "min_corpus_rho_delta": 0.014032829822420378,
+        "max_corpus_mae_delta": -0.08573664878598403,
+        "ci": [
+          0.011828139968884245,
+          0.061888483532037145
+        ],
+        "passes": true
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.024598466506281946,
+        "min_corpus_rho_delta": 0.010041841524300876,
+        "max_corpus_mae_delta": -0.09729034560842964,
+        "ci": [
+          0.0022689681673137103,
+          0.04924315959636851
+        ],
+        "passes": true
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "aesop",
+    "construct": "prosody",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.7892720294598345,
+    "promoted": true,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.038883785321089714,
+        "min_corpus_rho_delta": -0.005663534607349252,
+        "max_corpus_mae_delta": -0.03434692862946165,
+        "ci": [
+          0.01612680644755006,
+          0.0637971676928953
+        ],
+        "passes": true
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.036844364586366196,
+        "min_corpus_rho_delta": -0.0020594671299450917,
+        "max_corpus_mae_delta": 0.0380014037967954,
+        "ci": [
+          0.014037517973740305,
+          0.06291920003689284
+        ],
+        "passes": true
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.031306224031559915,
+        "min_corpus_rho_delta": -0.003346634086160871,
+        "max_corpus_mae_delta": -0.01722705091731147,
+        "ci": [
+          0.020264016261641926,
+          0.04336796132764463
+        ],
+        "passes": true
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "koreanocean",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8424369872231908,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.0013739141725753745,
+        "min_corpus_rho_delta": -0.00757757390887015,
+        "max_corpus_mae_delta": 0.04972975770803467,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.0017369851322008856,
+        "min_corpus_rho_delta": -0.009948278182135062,
+        "max_corpus_mae_delta": 0.07034187556107496,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": -0.006087135143795996,
+        "min_corpus_rho_delta": -0.020334620334620523,
+        "max_corpus_mae_delta": -0.0123491670208552,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.006183418682387809,
+        "min_corpus_rho_delta": -0.009108359931563781,
+        "max_corpus_mae_delta": 0.013328761557558688,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.007462578683380072,
+        "min_corpus_rho_delta": -0.013709724369855958,
+        "max_corpus_mae_delta": 0.0323974720333392,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "koreanocean",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8566985357820375,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.011813312262039632,
+        "min_corpus_rho_delta": 0.005954154547669233,
+        "max_corpus_mae_delta": 0.36001197671939167,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.009930958232530651,
+        "min_corpus_rho_delta": 9.022564987537507e-05,
+        "max_corpus_mae_delta": 0.4882358886794653,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.007165721641496647,
+        "min_corpus_rho_delta": 0.00040259443007684137,
+        "max_corpus_mae_delta": 0.23392720098390307,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.006286702735333494,
+        "min_corpus_rho_delta": 0.00012651259589480102,
+        "max_corpus_mae_delta": 0.2962700486012848,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.005090994429040263,
+        "min_corpus_rho_delta": -0.005438544246280874,
+        "max_corpus_mae_delta": 0.3900590299799447,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.0042379285288385304,
+        "min_corpus_rho_delta": 0.0021886064860655585,
+        "max_corpus_mae_delta": 0.11008145586159723,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": 0.002573899623955711,
+        "min_corpus_rho_delta": -0.005869491090066625,
+        "max_corpus_mae_delta": 0.04447500483256461,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "phoneticxeus",
+        "delta": 0.0024570349585514295,
+        "min_corpus_rho_delta": -0.0163826743837584,
+        "max_corpus_mae_delta": 0.3167723428438387,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "koreanocean",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8656529365948836,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0034013147294548185,
+        "min_corpus_rho_delta": -0.005032427478495194,
+        "max_corpus_mae_delta": 0.4769639182945129,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.0031738070125237883,
+        "min_corpus_rho_delta": -0.0022493318237473137,
+        "max_corpus_mae_delta": 0.29625409404495695,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.001134071439536477,
+        "min_corpus_rho_delta": -0.0024456172168096924,
+        "max_corpus_mae_delta": 0.22826203886588403,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.0007727177042211597,
+        "min_corpus_rho_delta": -0.0017138046176971011,
+        "max_corpus_mae_delta": 0.34618538812862787,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": 0.0006228647940689225,
+        "min_corpus_rho_delta": -0.006206541365719409,
+        "max_corpus_mae_delta": 0.06505333853774009,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.0005406020050171545,
+        "min_corpus_rho_delta": -0.0041189342598901835,
+        "max_corpus_mae_delta": 0.12323801840136217,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.0002512055047035888,
+        "min_corpus_rho_delta": -0.008536743528549273,
+        "max_corpus_mae_delta": 0.39160958463871887,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesopocean",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8308770684703332,
+    "promoted": false,
+    "numerical_best": "xeus+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": -0.0005073277132470189,
+        "min_corpus_rho_delta": -0.0006150064230308061,
+        "max_corpus_mae_delta": 0.03373631229645635,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.004294631379257119,
+        "min_corpus_rho_delta": -0.013641038425603713,
+        "max_corpus_mae_delta": 0.08586198439173115,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": -0.0052248227562134986,
+        "min_corpus_rho_delta": -0.017011152879068958,
+        "max_corpus_mae_delta": 0.1261702748844823,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.006010959994750764,
+        "min_corpus_rho_delta": -0.015340075320384838,
+        "max_corpus_mae_delta": 0.06598423410487492,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": -0.007415471779016358,
+        "min_corpus_rho_delta": -0.015436918542936384,
+        "max_corpus_mae_delta": 0.08002284365746215,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.007791425617790559,
+        "min_corpus_rho_delta": -0.01675669817781178,
+        "max_corpus_mae_delta": 0.04039644094144901,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.008289514016392552,
+        "min_corpus_rho_delta": -0.018696680218532435,
+        "max_corpus_mae_delta": 0.1000042731566515,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesopocean",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8599427914742721,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.005487322027360797,
+        "min_corpus_rho_delta": 0.0033962352233785076,
+        "max_corpus_mae_delta": 0.013650091562547484,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.005469369087718001,
+        "min_corpus_rho_delta": 0.004763437646142732,
+        "max_corpus_mae_delta": 0.021023947874029503,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.004558241480114966,
+        "min_corpus_rho_delta": 0.002317348044069467,
+        "max_corpus_mae_delta": 0.036195712073033626,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.004426684245212198,
+        "min_corpus_rho_delta": -0.0005199911430899817,
+        "max_corpus_mae_delta": 0.02020944350919751,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.00010436387773771205,
+        "min_corpus_rho_delta": -0.006822545663382251,
+        "max_corpus_mae_delta": 0.026340019912733492,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.0011754627897939685,
+        "min_corpus_rho_delta": -0.006782527412782846,
+        "max_corpus_mae_delta": 0.032252645008671976,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.0023430079601854947,
+        "min_corpus_rho_delta": -0.009048554700106237,
+        "max_corpus_mae_delta": 0.027450741739330597,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": false
+  },
+  {
+    "family": "aesopocean",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8652792621750235,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 4.9065541158910264e-05,
+        "min_corpus_rho_delta": -0.002028958925181512,
+        "max_corpus_mae_delta": 0.005883606192695234,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": -0.0003499490316833942,
+        "min_corpus_rho_delta": -0.008792922737151043,
+        "max_corpus_mae_delta": 0.029122593250047735,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": -0.0005436258956137419,
+        "min_corpus_rho_delta": -0.003475350781782627,
+        "max_corpus_mae_delta": 0.00641996562793834,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.0013898186291594339,
+        "min_corpus_rho_delta": -0.00775287433634031,
+        "max_corpus_mae_delta": 0.02096928851795532,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.003824443602708505,
+        "min_corpus_rho_delta": -0.008624018606645412,
+        "max_corpus_mae_delta": 0.03155049039112823,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.004417641309802045,
+        "min_corpus_rho_delta": -0.019765572966228606,
+        "max_corpus_mae_delta": 0.05499938601065946,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.005355946893967345,
+        "min_corpus_rho_delta": -0.011242005767911456,
+        "max_corpus_mae_delta": 0.03825938925347061,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8047968012089942,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.028900432200473003,
+        "min_corpus_rho_delta": 0.0018018018018018944,
+        "max_corpus_mae_delta": 0.31049067647108597,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": 0.027000242359386584,
+        "min_corpus_rho_delta": 0.00024502152149696865,
+        "max_corpus_mae_delta": 0.42066706607418425,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8573566255044773,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+phoneticxeus",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.0025978630327014862,
+        "min_corpus_rho_delta": -0.0015448986960464595,
+        "max_corpus_mae_delta": -0.007547878781212214,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.00040477404582972554,
+        "min_corpus_rho_delta": -0.0011940008668998026,
+        "max_corpus_mae_delta": -0.0015123307725242174,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": -0.0017204689070370316,
+        "min_corpus_rho_delta": -0.008869038636224236,
+        "max_corpus_mae_delta": -0.011169103097963928,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.0028996849222661103,
+        "min_corpus_rho_delta": -0.00481518492821098,
+        "max_corpus_mae_delta": 0.25649381130355264,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.0035807276940368338,
+        "min_corpus_rho_delta": -0.010602753261928721,
+        "max_corpus_mae_delta": 0.17148189476638231,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.004067499422573118,
+        "min_corpus_rho_delta": -0.010007023796873016,
+        "max_corpus_mae_delta": -0.004776730440781751,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "koreanaesop",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8599100537789849,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.0025981753934861684,
+        "min_corpus_rho_delta": -0.004749454765667127,
+        "max_corpus_mae_delta": 0.21307461873783273,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": -0.005878859151557503,
+        "min_corpus_rho_delta": -0.01182548697878405,
+        "max_corpus_mae_delta": 0.005331621298652112,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.009124144936935696,
+        "min_corpus_rho_delta": -0.020433108387801213,
+        "max_corpus_mae_delta": 0.0034376589543227976,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "accuracy",
+    "selected": "xeus+phoneticxeus+ipa",
+    "mean_rho": 0.8409290752942744,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.0016161849178772947,
+        "min_corpus_rho_delta": 4.5229793261158946e-05,
+        "max_corpus_mae_delta": 0.008824416930600765,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.0026869961618989358,
+        "min_corpus_rho_delta": -0.012755494497366127,
+        "max_corpus_mae_delta": 0.06666753382930973,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xlsr+phoneticxeus+ipa",
+        "delta": -0.0028275128817520923,
+        "min_corpus_rho_delta": -0.012097812097812133,
+        "max_corpus_mae_delta": 0.032157946707034424,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.004710715109917718,
+        "min_corpus_rho_delta": -0.012858523413744494,
+        "max_corpus_mae_delta": 0.005006504019097413,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": -0.004845708574682472,
+        "min_corpus_rho_delta": -0.014713093394105425,
+        "max_corpus_mae_delta": 0.11197044583492288,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "phoneticxeus+ipa",
+        "delta": -0.005355882433756398,
+        "min_corpus_rho_delta": -0.007792192741883031,
+        "max_corpus_mae_delta": 0.02196598373055536,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.005578719958614031,
+        "min_corpus_rho_delta": -0.013561663602418839,
+        "max_corpus_mae_delta": 0.04903114649014567,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": -0.005888723173419375,
+        "min_corpus_rho_delta": -0.013537415682617904,
+        "max_corpus_mae_delta": 0.05864051980185131,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.007331763663972257,
+        "min_corpus_rho_delta": -0.015286531954620486,
+        "max_corpus_mae_delta": 0.1279283668065443,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "fluency",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8659555016726429,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr+phoneticxeus+ipa",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": 0.005074433899752151,
+        "min_corpus_rho_delta": 0.0021368662915387526,
+        "max_corpus_mae_delta": 0.01722096538258233,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": 0.004286082694230142,
+        "min_corpus_rho_delta": 0.0025748311600771734,
+        "max_corpus_mae_delta": 0.026496962567696514,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": 0.003662456147283777,
+        "min_corpus_rho_delta": -0.001673640254050035,
+        "max_corpus_mae_delta": 0.0055816864541347044,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": 0.001785281015950435,
+        "min_corpus_rho_delta": -0.0005149662320155235,
+        "max_corpus_mae_delta": 0.036327555655237376,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": 0.00021879780439082452,
+        "min_corpus_rho_delta": -0.005908377213035276,
+        "max_corpus_mae_delta": 0.03778628828927544,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xlsr+phoneticxeus",
+        "delta": -0.0006214514763962509,
+        "min_corpus_rho_delta": -0.0036032669109812288,
+        "max_corpus_mae_delta": 0.011757025224202411,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xlsr+phoneticxeus+ipa",
+        "delta": -0.0006697879246644334,
+        "min_corpus_rho_delta": -0.005068338511031167,
+        "max_corpus_mae_delta": 0.011854032003052906,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.000798890494918103,
+        "min_corpus_rho_delta": -0.007966093016303688,
+        "max_corpus_mae_delta": 0.03185938969516633,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.001576835847095004,
+        "min_corpus_rho_delta": -0.006460658605071279,
+        "max_corpus_mae_delta": 0.03489662505589952,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  },
+  {
+    "family": "aesopkoreanocean",
+    "construct": "prosody",
+    "selected": "xeus+xlsr",
+    "mean_rho": 0.8720558966665751,
+    "promoted": false,
+    "numerical_best": "xeus+xlsr",
+    "checks": [
+      {
+        "blocks": "xeus+xlsr",
+        "delta": 0.0,
+        "min_corpus_rho_delta": 0.0,
+        "max_corpus_mae_delta": 0.0,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus+ipa",
+        "delta": -0.0005288219109900183,
+        "min_corpus_rho_delta": -0.005663534607349141,
+        "max_corpus_mae_delta": 0.017346053956678542,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+phoneticxeus",
+        "delta": -0.0013993049764242649,
+        "min_corpus_rho_delta": -0.009525035475996257,
+        "max_corpus_mae_delta": 0.010922638543809815,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+ipa",
+        "delta": -0.0027514664934986666,
+        "min_corpus_rho_delta": -0.006435834781078453,
+        "max_corpus_mae_delta": 0.02678474294954636,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus+ipa",
+        "delta": -0.0030900491449540324,
+        "min_corpus_rho_delta": -0.00654951781287616,
+        "max_corpus_mae_delta": 0.04564222476572466,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+xlsr+ipa",
+        "delta": -0.0033478834244293765,
+        "min_corpus_rho_delta": -0.008402482111574794,
+        "max_corpus_mae_delta": 0.030350961300156798,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus+phoneticxeus",
+        "delta": -0.003923290042971539,
+        "min_corpus_rho_delta": -0.01094091912783357,
+        "max_corpus_mae_delta": 0.04046208620674996,
+        "ci": null,
+        "passes": false
+      },
+      {
+        "blocks": "xeus",
+        "delta": -0.004093032167114763,
+        "min_corpus_rho_delta": -0.009010168693510012,
+        "max_corpus_mae_delta": 0.02570125884326291,
+        "ci": null,
+        "passes": false
+      }
+    ],
+    "numerically_equivalent_to_bundled_api_head": true
+  }
+]

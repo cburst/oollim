@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesop",
+  "model_version": "aesop-stella-seven-families-v1",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "03b539fabf487362b591526b620109c76a9d6c3a08d4acce092aa323cdb36784",
+    "accuracy.json": "a339577b480f345a478dcc1cf28868dec94eeb16ed5ae7909052daab9e29223c",
+    "fluency.npz": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+    "fluency.json": "167a2f648ce2d90f5c2b2d4fc329e45a6cd776bb30199761e55c81e60c07de49",
+    "prosody.npz": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+    "prosody.json": "bd87c216ac26d166e8f468500aa7023d8cff03d7c867dac346929c27c65897a2"
+  },
+  "training_corpora": [
+    "aesop"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "permission_status": "Included at author direction; derived-weight release permissions under review. See docs/RIGHTS.md."
+}

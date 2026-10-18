@@ -1,0 +1,448 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array,longtable}
+\usepackage{hyperref}
+\begin{document}
+\appendix
+\section{Full external agreement comparisons}\label{sec:fulltables}
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{3.7cm}rrlrl@{}}
+\caption{Supplementary accuracy comparisons on the matched cohort.}\label{tab:fullaccuracy}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endfirsthead
+\caption[]{Accuracy agreement (continued).}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{Human raters} & \textbf{Human--Human pairwise agreement} & \textbf{305} & \textbf{0.759} & \textbf{[0.710, 0.799]} & \textbf{0.642} & \textbf{[0.597, 0.685]}\\
+\textbf{Human raters} & \textbf{Human--Human consensus agreement (other two raters)} & \textbf{305} & \textbf{0.809} & \textbf{[0.769, 0.842]} & \textbf{0.704} & \textbf{[0.663, 0.743]}\\
+\midrule
+Azure & Model--Human consensus agreement (two raters) & 305 & 0.761 & [0.709, 0.804] & 0.161 & [0.129, 0.196]\\
+Azure & Model--Human consensus agreement (three raters) & 305 & 0.776 & [0.723, 0.820] & 0.158 & [0.126, 0.193]\\
+\midrule
+\texttt{speechocean} & Model--Human consensus agreement (two raters) & 305 & 0.844 & [0.807, 0.872] & 0.546 & [0.494, 0.592]\\
+\texttt{speechocean} & Model--Human consensus agreement (three raters) & 305 & 0.862 & [0.825, 0.890] & 0.555 & [0.500, 0.605]\\
+\midrule
+\texttt{korean} & Model--Human consensus agreement (two raters) & 305 & 0.856 & [0.822, 0.882] & 0.702 & [0.662, 0.739]\\
+\texttt{korean} & Model--Human consensus agreement (three raters) & 305 & 0.872 & [0.839, 0.898] & 0.726 & [0.686, 0.763]\\
+\midrule
+\texttt{aesop} & Model--Human consensus agreement (two raters) & 305 & 0.852 & [0.818, 0.878] & 0.241 & [0.215, 0.265]\\
+\texttt{aesop} & Model--Human consensus agreement (three raters) & 305 & 0.869 & [0.836, 0.894] & 0.244 & [0.217, 0.269]\\
+\midrule
+\texttt{koreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.853 & [0.816, 0.882] & 0.821 & [0.789, 0.847]\\
+\texttt{koreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.870 & [0.833, 0.898] & 0.860 & [0.832, 0.884]\\
+\midrule
+\texttt{aesopocean} & Model--Human consensus agreement (two raters) & 305 & 0.872 & [0.842, 0.894] & 0.598 & [0.563, 0.631]\\
+\texttt{aesopocean} & Model--Human consensus agreement (three raters) & 305 & 0.889 & [0.859, 0.911] & 0.615 & [0.579, 0.649]\\
+\midrule
+\texttt{koreanaesop} & Model--Human consensus agreement (two raters) & 305 & 0.867 & [0.835, 0.891] & 0.477 & [0.439, 0.512]\\
+\texttt{koreanaesop} & Model--Human consensus agreement (three raters) & 305 & 0.884 & [0.853, 0.908] & 0.486 & [0.448, 0.522]\\
+\midrule
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.870 & [0.839, 0.894] & 0.585 & [0.548, 0.620]\\
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.888 & [0.857, 0.911] & 0.601 & [0.563, 0.636]\\
+\end{longtable}
+\endgroup
+\noindent\footnotesize\textit{Note.} $N=305$ for every row. Human--Human pairwise agreement averages the three rater-pair statistics. Human--Human consensus agreement compares each rater with the other two raters\textquotesingle{} mean and averages the three statistics. Model--Human consensus agreement (two raters) averages the three statistics against each possible two-rater mean; the three-rater comparison uses the mean of all three humans. Two-rater model rows precede three-rater rows to align with the human consensus baseline. Intervals are percentile speaker-cluster bootstrap intervals for each statistic, not paired differences. QWK uses fixed 0--100 categories and half-up rounding without fitted calibration. Bold identifies human baselines only; model rankings are discussed in the text.
+ One AESOP accuracy prediction was capped at zero for both QWK comparisons and their bootstrap intervals; Spearman retained it unchanged.\normalsize
+
+\clearpage
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{3.7cm}rrlrl@{}}
+\caption{Supplementary fluency comparisons on the matched cohort.}\label{tab:fluency}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endfirsthead
+\caption[]{Fluency agreement (continued).}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{Human raters} & \textbf{Human--Human pairwise agreement} & \textbf{305} & \textbf{0.747} & \textbf{[0.697, 0.791]} & \textbf{0.680} & \textbf{[0.631, 0.724]}\\
+\textbf{Human raters} & \textbf{Human--Human consensus agreement (other two raters)} & \textbf{305} & \textbf{0.807} & \textbf{[0.768, 0.840]} & \textbf{0.739} & \textbf{[0.695, 0.777]}\\
+\midrule
+Azure & Model--Human consensus agreement (two raters) & 305 & 0.633 & [0.556, 0.698] & 0.078 & [0.056, 0.107]\\
+Azure & Model--Human consensus agreement (three raters) & 305 & 0.649 & [0.571, 0.715] & 0.077 & [0.055, 0.105]\\
+\midrule
+\texttt{speechocean} & Model--Human consensus agreement (two raters) & 305 & 0.842 & [0.801, 0.874] & 0.671 & [0.627, 0.707]\\
+\texttt{speechocean} & Model--Human consensus agreement (three raters) & 305 & 0.859 & [0.819, 0.891] & 0.704 & [0.660, 0.740]\\
+\midrule
+\texttt{korean} & Model--Human consensus agreement (two raters) & 305 & 0.860 & [0.825, 0.888] & 0.495 & [0.452, 0.535]\\
+\texttt{korean} & Model--Human consensus agreement (three raters) & 305 & 0.879 & [0.844, 0.905] & 0.510 & [0.466, 0.550]\\
+\midrule
+\texttt{aesop} & Model--Human consensus agreement (two raters) & 305 & 0.850 & [0.813, 0.879] & 0.276 & [0.247, 0.305]\\
+\texttt{aesop} & Model--Human consensus agreement (three raters) & 305 & 0.868 & [0.833, 0.896] & 0.283 & [0.253, 0.312]\\
+\midrule
+\texttt{koreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.840 & [0.799, 0.873] & 0.585 & [0.537, 0.628]\\
+\texttt{koreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.857 & [0.817, 0.890] & 0.606 & [0.557, 0.650]\\
+\midrule
+\texttt{aesopocean} & Model--Human consensus agreement (two raters) & 305 & 0.874 & [0.842, 0.899] & 0.613 & [0.575, 0.647]\\
+\texttt{aesopocean} & Model--Human consensus agreement (three raters) & 305 & 0.893 & [0.863, 0.917] & 0.633 & [0.595, 0.667]\\
+\midrule
+\texttt{koreanaesop} & Model--Human consensus agreement (two raters) & 305 & 0.876 & [0.846, 0.900] & 0.462 & [0.424, 0.496]\\
+\texttt{koreanaesop} & Model--Human consensus agreement (three raters) & 305 & 0.895 & [0.866, 0.917] & 0.474 & [0.436, 0.509]\\
+\midrule
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.874 & [0.842, 0.898] & 0.527 & [0.486, 0.564]\\
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.892 & [0.861, 0.916] & 0.543 & [0.501, 0.580]\\
+\end{longtable}
+\endgroup
+\noindent\footnotesize\textit{Note.} $N=305$ for every row. Human--Human pairwise agreement averages the three rater-pair statistics. Human--Human consensus agreement compares each rater with the other two raters\textquotesingle{} mean and averages the three statistics. Model--Human consensus agreement (two raters) averages the three statistics against each possible two-rater mean; the three-rater comparison uses the mean of all three humans. Two-rater model rows precede three-rater rows to align with the human consensus baseline. Intervals are percentile speaker-cluster bootstrap intervals for each statistic, not paired differences. QWK uses fixed 0--100 categories and half-up rounding without fitted calibration. Bold identifies human baselines only; model rankings are discussed in the text.
+ No prediction required QWK clipping for this construct.\normalsize
+
+\clearpage
+\begingroup
+\small
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{3.7cm}rrlrl@{}}
+\caption{Supplementary prosody comparisons on the matched cohort.}\label{tab:prosody}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endfirsthead
+\caption[]{Prosody agreement (continued).}\\
+\toprule
+Method & Agreement comparison & $N$ & $\rho$ & 95\% CI & QWK & 95\% CI\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\textbf{Human raters} & \textbf{Human--Human pairwise agreement} & \textbf{305} & \textbf{0.751} & \textbf{[0.702, 0.795]} & \textbf{0.681} & \textbf{[0.634, 0.722]}\\
+\textbf{Human raters} & \textbf{Human--Human consensus agreement (other two raters)} & \textbf{305} & \textbf{0.807} & \textbf{[0.768, 0.842]} & \textbf{0.742} & \textbf{[0.701, 0.778]}\\
+\midrule
+Azure & Model--Human consensus agreement (two raters) & 305 & 0.737 & [0.672, 0.792] & 0.370 & [0.318, 0.421]\\
+Azure & Model--Human consensus agreement (three raters) & 305 & 0.750 & [0.684, 0.806] & 0.369 & [0.318, 0.422]\\
+\midrule
+\texttt{speechocean} & Model--Human consensus agreement (two raters) & 305 & 0.847 & [0.810, 0.878] & 0.570 & [0.525, 0.610]\\
+\texttt{speechocean} & Model--Human consensus agreement (three raters) & 305 & 0.865 & [0.829, 0.895] & 0.593 & [0.547, 0.634]\\
+\midrule
+\texttt{korean} & Model--Human consensus agreement (two raters) & 305 & 0.874 & [0.842, 0.899] & 0.489 & [0.447, 0.526]\\
+\texttt{korean} & Model--Human consensus agreement (three raters) & 305 & 0.893 & [0.862, 0.917] & 0.502 & [0.460, 0.540]\\
+\midrule
+\texttt{aesop} & Model--Human consensus agreement (two raters) & 305 & 0.850 & [0.814, 0.878] & 0.261 & [0.232, 0.288]\\
+\texttt{aesop} & Model--Human consensus agreement (three raters) & 305 & 0.867 & [0.833, 0.895] & 0.266 & [0.237, 0.295]\\
+\midrule
+\texttt{koreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.850 & [0.812, 0.881] & 0.546 & [0.501, 0.586]\\
+\texttt{koreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.869 & [0.832, 0.900] & 0.563 & [0.517, 0.604]\\
+\midrule
+\texttt{aesopocean} & Model--Human consensus agreement (two raters) & 305 & 0.881 & [0.850, 0.905] & 0.541 & [0.502, 0.576]\\
+\texttt{aesopocean} & Model--Human consensus agreement (three raters) & 305 & 0.899 & [0.870, 0.922] & 0.557 & [0.517, 0.592]\\
+\midrule
+\texttt{koreanaesop} & Model--Human consensus agreement (two raters) & 305 & 0.883 & [0.852, 0.906] & 0.431 & [0.394, 0.465]\\
+\texttt{koreanaesop} & Model--Human consensus agreement (three raters) & 305 & 0.902 & [0.873, 0.924] & 0.442 & [0.404, 0.477]\\
+\midrule
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (two raters) & 305 & 0.881 & [0.850, 0.906] & 0.480 & [0.440, 0.516]\\
+\texttt{aesopkoreanocean} & Model--Human consensus agreement (three raters) & 305 & 0.900 & [0.870, 0.924] & 0.493 & [0.452, 0.530]\\
+\end{longtable}
+\endgroup
+\noindent\footnotesize\textit{Note.} $N=305$ for every row. Human--Human pairwise agreement averages the three rater-pair statistics. Human--Human consensus agreement compares each rater with the other two raters\textquotesingle{} mean and averages the three statistics. Model--Human consensus agreement (two raters) averages the three statistics against each possible two-rater mean; the three-rater comparison uses the mean of all three humans. Two-rater model rows precede three-rater rows to align with the human consensus baseline. Intervals are percentile speaker-cluster bootstrap intervals for each statistic, not paired differences. QWK uses fixed 0--100 categories and half-up rounding without fitted calibration. Bold identifies human baselines only; model rankings are discussed in the text.
+ No prediction required QWK clipping for this construct.\normalsize
+\clearpage
+
+
+\section{Paired differences and score distributions}
+The same 305 complete recordings were resampled jointly 200,000 times (seed 42), treating each distinct recording URL as one speaker. Human consensus agreement averages each rater's agreement with the other two; system agreement averages comparisons against those same three reference pairs. Differences are recomputed within each replicate. Intervals are percentile approximations; adjusted endpoints use probabilities $0.025/90$ and $1-0.025/90$, covering 90 reported contrasts. A second 200,000-replicate run (seed 2026) reproduced all 90 interval-exclusion decisions; adjusted endpoints differed by at most 0.00367. Each adjusted tail now contains approximately 56 draws, although percentile intervals remain approximations. The supplementary marginal intervals above retain the original 2,000-replicate export. These post-evaluation comparisons condition on the panel and fitted models, without correcting for prior model exploration. All 48 system point estimates match the supplied export to numerical precision. Private scores were used only for evaluation; no coefficients or calibration were fitted.
+\subsection{Accuracy differences}
+\begin{longtable}{@{}llrrrr@{}}
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endfirsthead
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endhead
+
+azure & Human & $\rho$ & -0.049 & [-0.096, -0.005] & [-0.137, 0.027] \\
+azure & Human & QWK & -0.543 & [-0.580, -0.504] & [-0.606, -0.471] \\
+speechocean & Human & $\rho$ & +0.035 & [0.004, 0.065] & [-0.021, 0.091] \\
+speechocean & Human & QWK & -0.158 & [-0.206, -0.110] & [-0.243, -0.073] \\
+speechocean & Azure & $\rho$ & +0.083 & [0.041, 0.128] & [0.009, 0.167] \\
+speechocean & Azure & QWK & +0.385 & [0.341, 0.426] & [0.306, 0.455] \\
+korean & Human & $\rho$ & +0.046 & [0.018, 0.075] & [-0.004, 0.101] \\
+korean & Human & QWK & -0.002 & [-0.041, 0.037] & [-0.071, 0.066] \\
+korean & Azure & $\rho$ & +0.095 & [0.055, 0.139] & [0.025, 0.177] \\
+korean & Azure & QWK & +0.541 & [0.500, 0.580] & [0.470, 0.609] \\
+aesop & Human & $\rho$ & +0.043 & [0.012, 0.074] & [-0.013, 0.101] \\
+aesop & Human & QWK & -0.463 & [-0.493, -0.431] & [-0.515, -0.405] \\
+aesop & Azure & $\rho$ & +0.092 & [0.054, 0.132] & [0.028, 0.169] \\
+aesop & Azure & QWK & +0.080 & [0.053, 0.105] & [0.030, 0.122] \\
+koreanocean & Human & $\rho$ & +0.044 & [0.013, 0.074] & [-0.012, 0.099] \\
+koreanocean & Human & QWK & +0.116 & [0.082, 0.152] & [0.055, 0.181] \\
+koreanocean & Azure & $\rho$ & +0.093 & [0.051, 0.137] & [0.020, 0.176] \\
+koreanocean & Azure & QWK & +0.660 & [0.626, 0.690] & [0.600, 0.712] \\
+aesopocean & Human & $\rho$ & +0.062 & [0.033, 0.093] & [0.010, 0.119] \\
+aesopocean & Human & QWK & -0.106 & [-0.140, -0.071] & [-0.165, -0.045] \\
+aesopocean & Azure & $\rho$ & +0.111 & [0.071, 0.155] & [0.043, 0.195] \\
+aesopocean & Azure & QWK & +0.437 & [0.402, 0.470] & [0.375, 0.495] \\
+koreanaesop & Human & $\rho$ & +0.057 & [0.028, 0.088] & [0.005, 0.114] \\
+koreanaesop & Human & QWK & -0.227 & [-0.261, -0.193] & [-0.287, -0.167] \\
+koreanaesop & Azure & $\rho$ & +0.106 & [0.066, 0.150] & [0.037, 0.191] \\
+koreanaesop & Azure & QWK & +0.316 & [0.281, 0.350] & [0.254, 0.376] \\
+aesopkoreanocean & Human & $\rho$ & +0.061 & [0.031, 0.091] & [0.009, 0.118] \\
+aesopkoreanocean & Human & QWK & -0.119 & [-0.153, -0.084] & [-0.179, -0.058] \\
+aesopkoreanocean & Azure & $\rho$ & +0.110 & [0.070, 0.154] & [0.041, 0.194] \\
+aesopkoreanocean & Azure & QWK & +0.425 & [0.389, 0.459] & [0.360, 0.486] \\
+\bottomrule
+\end{longtable}
+\subsection{Fluency differences}
+\begin{longtable}{@{}llrrrr@{}}
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endfirsthead
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endhead
+
+azure & Human & $\rho$ & -0.174 & [-0.244, -0.110] & [-0.304, -0.067] \\
+azure & Human & QWK & -0.661 & [-0.697, -0.621] & [-0.723, -0.588] \\
+speechocean & Human & $\rho$ & +0.035 & [0.000, 0.069] & [-0.029, 0.095] \\
+speechocean & Human & QWK & -0.068 & [-0.113, -0.024] & [-0.145, 0.010] \\
+speechocean & Azure & $\rho$ & +0.209 & [0.145, 0.279] & [0.099, 0.338] \\
+speechocean & Azure & QWK & +0.593 & [0.554, 0.627] & [0.523, 0.653] \\
+korean & Human & $\rho$ & +0.054 & [0.022, 0.085] & [-0.002, 0.111] \\
+korean & Human & QWK & -0.244 & [-0.281, -0.208] & [-0.308, -0.179] \\
+korean & Azure & $\rho$ & +0.228 & [0.164, 0.297] & [0.121, 0.355] \\
+korean & Azure & QWK & +0.417 & [0.379, 0.452] & [0.351, 0.478] \\
+aesop & Human & $\rho$ & +0.044 & [0.009, 0.077] & [-0.017, 0.104] \\
+aesop & Human & QWK & -0.463 & [-0.494, -0.430] & [-0.517, -0.403] \\
+aesop & Azure & $\rho$ & +0.218 & [0.157, 0.284] & [0.116, 0.342] \\
+aesop & Azure & QWK & +0.198 & [0.174, 0.221] & [0.155, 0.238] \\
+koreanocean & Human & $\rho$ & +0.033 & [-0.004, 0.068] & [-0.034, 0.096] \\
+koreanocean & Human & QWK & -0.154 & [-0.195, -0.114] & [-0.227, -0.084] \\
+koreanocean & Azure & $\rho$ & +0.207 & [0.140, 0.279] & [0.094, 0.339] \\
+koreanocean & Azure & QWK & +0.507 & [0.464, 0.546] & [0.428, 0.575] \\
+aesopocean & Human & $\rho$ & +0.068 & [0.038, 0.098] & [0.015, 0.123] \\
+aesopocean & Human & QWK & -0.126 & [-0.159, -0.093] & [-0.184, -0.066] \\
+aesopocean & Azure & $\rho$ & +0.242 & [0.180, 0.310] & [0.139, 0.369] \\
+aesopocean & Azure & QWK & +0.535 & [0.501, 0.566] & [0.473, 0.590] \\
+koreanaesop & Human & $\rho$ & +0.069 & [0.040, 0.099] & [0.019, 0.124] \\
+koreanaesop & Human & QWK & -0.277 & [-0.311, -0.243] & [-0.335, -0.216] \\
+koreanaesop & Azure & $\rho$ & +0.243 & [0.182, 0.311] & [0.142, 0.369] \\
+koreanaesop & Azure & QWK & +0.384 & [0.350, 0.416] & [0.325, 0.439] \\
+aesopkoreanocean & Human & $\rho$ & +0.067 & [0.037, 0.098] & [0.015, 0.123] \\
+aesopkoreanocean & Human & QWK & -0.212 & [-0.247, -0.179] & [-0.273, -0.152] \\
+aesopkoreanocean & Azure & $\rho$ & +0.241 & [0.177, 0.311] & [0.136, 0.370] \\
+aesopkoreanocean & Azure & QWK & +0.449 & [0.412, 0.482] & [0.382, 0.508] \\
+\bottomrule
+\end{longtable}
+\subsection{Prosody differences}
+\begin{longtable}{@{}llrrrr@{}}
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endfirsthead
+\toprule System & Reference & Metric & Difference & 95\% CI & Adjusted CI\\\midrule
+\endhead
+
+azure & Human & $\rho$ & -0.070 & [-0.124, -0.023] & [-0.172, 0.010] \\
+azure & Human & QWK & -0.372 & [-0.419, -0.325] & [-0.455, -0.289] \\
+speechocean & Human & $\rho$ & +0.040 & [0.009, 0.069] & [-0.017, 0.092] \\
+speechocean & Human & QWK & -0.172 & [-0.214, -0.128] & [-0.247, -0.094] \\
+speechocean & Azure & $\rho$ & +0.110 & [0.063, 0.163] & [0.032, 0.211] \\
+speechocean & Azure & QWK & +0.201 & [0.145, 0.256] & [0.100, 0.298] \\
+korean & Human & $\rho$ & +0.067 & [0.039, 0.096] & [0.018, 0.120] \\
+korean & Human & QWK & -0.253 & [-0.287, -0.220] & [-0.312, -0.193] \\
+korean & Azure & $\rho$ & +0.137 & [0.098, 0.183] & [0.073, 0.225] \\
+korean & Azure & QWK & +0.119 & [0.077, 0.160] & [0.043, 0.189] \\
+aesop & Human & $\rho$ & +0.043 & [0.012, 0.073] & [-0.012, 0.097] \\
+aesop & Human & QWK & -0.481 & [-0.510, -0.451] & [-0.530, -0.427] \\
+aesop & Azure & $\rho$ & +0.113 & [0.073, 0.159] & [0.048, 0.200] \\
+aesop & Azure & QWK & -0.109 & [-0.147, -0.072] & [-0.176, -0.044] \\
+koreanocean & Human & $\rho$ & +0.042 & [0.010, 0.074] & [-0.017, 0.098] \\
+koreanocean & Human & QWK & -0.196 & [-0.232, -0.161] & [-0.259, -0.135] \\
+koreanocean & Azure & $\rho$ & +0.113 & [0.069, 0.163] & [0.040, 0.208] \\
+koreanocean & Azure & QWK & +0.176 & [0.127, 0.223] & [0.088, 0.258] \\
+aesopocean & Human & $\rho$ & +0.073 & [0.048, 0.100] & [0.029, 0.123] \\
+aesopocean & Human & QWK & -0.201 & [-0.232, -0.170] & [-0.255, -0.146] \\
+aesopocean & Azure & $\rho$ & +0.144 & [0.099, 0.195] & [0.072, 0.243] \\
+aesopocean & Azure & QWK & +0.171 & [0.127, 0.213] & [0.092, 0.244] \\
+koreanaesop & Human & $\rho$ & +0.076 & [0.049, 0.104] & [0.029, 0.128] \\
+koreanaesop & Human & QWK & -0.311 & [-0.342, -0.279] & [-0.365, -0.254] \\
+koreanaesop & Azure & $\rho$ & +0.146 & [0.105, 0.194] & [0.080, 0.238] \\
+koreanaesop & Azure & QWK & +0.062 & [0.022, 0.100] & [-0.009, 0.128] \\
+aesopkoreanocean & Human & $\rho$ & +0.074 & [0.047, 0.101] & [0.027, 0.124] \\
+aesopkoreanocean & Human & QWK & -0.262 & [-0.293, -0.231] & [-0.315, -0.208] \\
+aesopkoreanocean & Azure & $\rho$ & +0.144 & [0.101, 0.194] & [0.074, 0.240] \\
+aesopkoreanocean & Azure & QWK & +0.111 & [0.068, 0.151] & [0.034, 0.181] \\
+\bottomrule
+\end{longtable}
+\subsection{Prediction-scale diagnostics}
+Means, sample standard deviations, mean signed errors (bias), and mean absolute errors (MAE) use unrounded predictions on the 0--100 scale. Errors compare predictions with the three-human mean; these descriptive summaries do not recalibrate scores.
+\begin{longtable}{@{}llrrrr@{}}
+\toprule Construct & System & Mean & SD & Bias & MAE\\\midrule
+\endfirsthead
+\toprule Construct & System & Mean & SD & Bias & MAE\\\midrule
+\endhead
+
+Accuracy & azure & 89.29 & 7.50 & +23.63 & 23.63 \\
+Accuracy & speechocean & 72.54 & 6.47 & +6.87 & 8.22 \\
+Accuracy & korean & 58.57 & 12.39 & -7.10 & 7.66 \\
+Accuracy & aesop & 38.49 & 13.31 & -27.17 & 27.17 \\
+Accuracy & koreanocean & 64.85 & 9.77 & -0.81 & 4.38 \\
+Accuracy & aesopocean & 55.27 & 11.66 & -10.40 & 10.51 \\
+Accuracy & koreanaesop & 50.09 & 14.23 & -15.58 & 15.59 \\
+Accuracy & aesopkoreanocean & 54.37 & 12.52 & -11.30 & 11.38 \\
+Fluency & azure & 94.18 & 5.87 & +27.88 & 27.88 \\
+Fluency & speechocean & 63.26 & 6.34 & -3.04 & 5.36 \\
+Fluency & korean & 53.31 & 10.75 & -12.99 & 12.99 \\
+Fluency & aesop & 44.43 & 10.97 & -21.87 & 21.87 \\
+Fluency & koreanocean & 57.68 & 8.45 & -8.62 & 8.74 \\
+Fluency & aesopocean & 56.63 & 10.99 & -9.67 & 9.79 \\
+Fluency & koreanaesop & 51.09 & 12.44 & -15.21 & 15.21 \\
+Fluency & aesopkoreanocean & 54.18 & 10.50 & -12.12 & 12.13 \\
+Prosody & azure & 77.13 & 6.15 & +10.57 & 11.04 \\
+Prosody & speechocean & 60.56 & 6.00 & -5.99 & 6.69 \\
+Prosody & korean & 53.31 & 10.75 & -13.25 & 13.25 \\
+Prosody & aesop & 44.14 & 10.62 & -22.42 & 22.42 \\
+Prosody & koreanocean & 56.89 & 8.32 & -9.66 & 9.72 \\
+Prosody & aesopocean & 55.25 & 9.89 & -11.31 & 11.33 \\
+Prosody & koreanaesop & 50.26 & 12.36 & -16.29 & 16.29 \\
+Prosody & aesopkoreanocean & 53.05 & 10.42 & -13.50 & 13.50 \\
+\bottomrule
+\end{longtable}
+\section{Public-development comparisons}
+The matched seven-family experiment uses fixed representation combinations and penalty selection over included-corpus development sets. All entries are development Spearman correlations, not final-test results. SpeechOcean rows here are fresh matched refits, not the original deployed SpeechOcean checkpoint in the external comparison. Korean fluency and prosody share a source target. J-AESOP has only 36 development recordings, so large correlations should not be read as precise generalization estimates.
+\begin{longtable}{@{}llrrr@{}}
+\toprule Construct & Family & SpeechOcean (500) & Korean (636) & J-AESOP (36)\\\midrule
+\endfirsthead
+\toprule Construct & Family & SpeechOcean (500) & Korean (636) & J-AESOP (36)\\\midrule
+\endhead
+
+Accuracy & speechocean & 0.816 & 0.699 & 0.967 \\
+Accuracy & korean & 0.735 & 0.759 & 0.969 \\
+Accuracy & aesop & 0.659 & 0.673 & 0.987 \\
+Accuracy & koreanocean & 0.808 & 0.755 & 0.964 \\
+Accuracy & aesopocean & 0.807 & 0.715 & 0.970 \\
+Accuracy & koreanaesop & 0.683 & 0.755 & 0.976 \\
+Accuracy & aesopkoreanocean & 0.804 & 0.748 & 0.971 \\
+Fluency & speechocean & 0.886 & 0.668 & 0.856 \\
+Fluency & korean & 0.837 & 0.778 & 0.919 \\
+Fluency & aesop & 0.682 & 0.586 & 0.966 \\
+Fluency & koreanocean & 0.876 & 0.770 & 0.924 \\
+Fluency & aesopocean & 0.881 & 0.728 & 0.952 \\
+Fluency & koreanaesop & 0.834 & 0.779 & 0.959 \\
+Fluency & aesopkoreanocean & 0.875 & 0.769 & 0.953 \\
+Prosody & speechocean & 0.890 & 0.653 & 0.929 \\
+Prosody & korean & 0.829 & 0.778 & 0.938 \\
+Prosody & aesop & 0.685 & 0.544 & 0.975 \\
+Prosody & koreanocean & 0.876 & 0.771 & 0.949 \\
+Prosody & aesopocean & 0.878 & 0.747 & 0.971 \\
+Prosody & koreanaesop & 0.830 & 0.777 & 0.973 \\
+Prosody & aesopkoreanocean & 0.872 & 0.770 & 0.974 \\
+\bottomrule
+\end{longtable}
+\section{Korean supervision and representation sensitivity}
+\subsection{Korean scoring and target mapping}
+Han, Chung, and Kim (2024; main-paper reference) define two 1--5 ratings: pronunciation accuracy and prosodic fluency. Accuracy addresses segmental clarity and errors; prosodic fluency combines stress, rhythm, intonation, speed, and pausing. The stored fields are \texttt{articulationScore} and \texttt{prosodyScore}. The second field supplies both fluency and prosody targets in the present implementation. Mapping $2.5(y-1)$ produces 0, 2.5, 5, 7.5, and 10 from the five integer levels; mapping does not equate the rubric with SpeechOcean or create an independent fluency annotation. Korean-only heads use the same features and targets for both constructs, yielding identical predictions in the evaluated configuration.
+\begin{center}\begin{tabular}{@{}crp{5.4cm}p{5.4cm}@{}}\toprule
+Source & Mapped & Accuracy (paraphrased) & Prosodic fluency (paraphrased)\\\midrule
+1 & 0 & Extensive segmental difficulty; understanding is hard. & Strongly disrupted prosody, very slow delivery, excessive pauses.\\
+2 & 2.5 & Frequent errors substantially burden understanding. & Awkward prosody and slow delivery with prolonged, poorly placed pauses.\\
+3 & 5 & Recurring errors interfere with understanding. & Uneven prosody and rate, with frequent or misplaced breaks.\\
+4 & 7.5 & Minor errors with little intelligibility impact. & Mostly steady delivery with mild prosodic or pausing irregularities.\\
+5 & 10 & Clear segments without noticeable errors. & Natural prosody, rate, and phrase boundaries.\\\bottomrule
+\end{tabular}\end{center}
+\subsection{Ablation protocol}
+The protocol was recorded before fitting on October 18, 2026 (repository: \nolinkurl{results/ablation-mac-v1/PROTOCOL.md}). The completed public-development sweep crossed seven training families, three constructs, and all 15 nonempty subsets of four feature blocks, giving 315 configurations and 945 corpus-level comparisons. X denotes XEUS, R XLS-R, P PhoneticXeus embeddings, and I the 17 phone diagnostics; I still requires PhoneticXeus inference, so omitting P does not necessarily avoid that encoder. Existing speaker-disjoint partitions, corpus-balanced weights, training-only standardization, and block gains were preserved. Each configuration selected a penalty from $\{0.001,0.01,0.1,1,10,100\}$ using equal-weight mean Spearman across all three development corpora, breaking ties by lower macro MAE and then larger penalty. This differs from the earlier included-corpus tuning; no corpus in these tables is an untouched cross-corpus test. Private recordings and ratings were excluded from fitting and selection.
+
+Each candidate was compared with the fixed-feature baseline refitted under the same sweep protocol (X+P+I for accuracy, X+R otherwise). Candidates within 0.01 of the numerical best were shortlisted. Promotion required macro Spearman gain at least 0.01, no corpus correlation loss exceeding 0.02, no corpus MAE increase exceeding 0.10 on the 0--10 scale, and a positive lower 95\% paired speaker-bootstrap bound (2,000 draws, seed 42). Fewer blocks were preferred where benefits were inconclusive. These screening gates do not constitute correction for all search comparisons. Deployed heads were not automatically replaced.
+
+The decision table distinguishes numerical maxima from candidates passing the complete gate. Two AESOP-only alternatives passed: X+P for fluency and X+P+I for prosody. Their macro gains over the refitted AESOP baselines were 0.0341 (95\% interval [0.0118, 0.0619]) for fluency and 0.0389 ([0.0161, 0.0638]) for prosody. Both exceed the 0.01 within-family threshold. Neither became the overall construct selection, and neither was substituted into the external seven-family evaluation. The overall retained choices were koreanocean X+P+I accuracy and aesopkoreanocean X+R fluency/prosody. Thus retaining the overall configurations does not mean that no individual family improved. XEUS-only macro correlations for the selected families were 0.8407 for koreanocean accuracy and 0.8644/0.8680 for aesopkoreanocean fluency/prosody, compared with 0.8424 and 0.8660/0.8721 for the retained combinations. These small development differences do not establish that all additional blocks are necessary; no XEUS-only private evaluation or matched resource benchmark is reported. The retained choices reflect the recorded development rule, not independently established representation optimality. Matrices report all 315 macro correlations; the accompanying CSV preserves all 945 corpus-specific correlations and MAEs.
+\begin{longtable}{@{}lllrll@{}}
+\toprule Family & Construct & Numerical best & Best $\rho$ & Retained/gated & Promotion\\\midrule\endhead
+speechocean & accuracy & X+P+I & 0.8276 & X+P+I & No \\
+speechocean & fluency & X+P+I & 0.8655 & X+R & No \\
+speechocean & prosody & X+I & 0.8640 & X+R & No \\
+korean & accuracy & X+R+I & 0.8322 & X+P+I & No \\
+korean & fluency & X+I & 0.8544 & X+R & No \\
+korean & prosody & X & 0.8560 & X+R & No \\
+aesop & accuracy & X+P+I & 0.7813 & X+P+I & No \\
+aesop & fluency & X+P & 0.7961 & X+P & Yes \\
+aesop & prosody & X+P+I & 0.7893 & X+P+I & Yes \\
+koreanocean & accuracy & X+P+I & 0.8424 & X+P+I & No \\
+koreanocean & fluency & X+P & 0.8685 & X+R & No \\
+koreanocean & prosody & X+P+I & 0.8691 & X+R & No \\
+aesopocean & accuracy & X+P+I & 0.8309 & X+P+I & No \\
+aesopocean & fluency & X+R+P+I & 0.8654 & X+R & No \\
+aesopocean & prosody & X+R+P+I & 0.8653 & X+R & No \\
+koreanaesop & accuracy & X+R & 0.8337 & X+P+I & No \\
+koreanaesop & fluency & X+R+P & 0.8600 & X+R & No \\
+koreanaesop & prosody & X+R & 0.8599 & X+R & No \\
+aesopkoreanocean & accuracy & X+R+P+I & 0.8425 & X+P+I & No \\
+aesopkoreanocean & fluency & X+R+P+I & 0.8710 & X+R & No \\
+aesopkoreanocean & prosody & X+R & 0.8721 & X+R & No \\
+\bottomrule\end{longtable}
+\clearpage
+\subsection{Accuracy representation matrix}
+Columns S, K, A, SK, SA, KA, and SKA denote the seven corpus families in that order. Values are macro development Spearman correlations.
+\begin{center}\begin{tabular}{@{}lrrrrrrr@{}}\toprule Features & S & K & A & SK & SA & KA & SKA\\\midrule
+X & 0.8208 & 0.8321 & 0.7655 & 0.8407 & 0.8226 & 0.8318 & 0.8336 \\
+R & 0.6715 & 0.7460 & 0.3186 & 0.7646 & 0.7465 & 0.7766 & 0.7972 \\
+P & 0.7860 & 0.7366 & 0.7292 & 0.8228 & 0.8065 & 0.7600 & 0.8273 \\
+I & 0.6080 & 0.6742 & 0.6201 & 0.6961 & 0.3225 & 0.5164 & 0.4372 \\
+X+R & 0.7957 & 0.8297 & 0.7414 & 0.8322 & 0.8257 & 0.8337 & 0.8361 \\
+X+P & 0.8190 & 0.8030 & 0.7732 & 0.8350 & 0.8231 & 0.8159 & 0.8354 \\
+X+I & 0.8253 & 0.8321 & 0.7522 & 0.8411 & 0.8249 & 0.8149 & 0.8362 \\
+R+P & 0.7505 & 0.7690 & 0.6650 & 0.8192 & 0.8008 & 0.7871 & 0.8287 \\
+R+I & 0.7290 & 0.7875 & 0.5625 & 0.7968 & 0.7765 & 0.7830 & 0.8085 \\
+P+I & 0.7991 & 0.7750 & 0.7582 & 0.8308 & 0.8155 & 0.7171 & 0.8356 \\
+X+R+P & 0.7962 & 0.8104 & 0.7453 & 0.8280 & 0.8235 & 0.8225 & 0.8350 \\
+X+R+I & 0.7984 & 0.8322 & 0.7223 & 0.8363 & 0.8266 & 0.8183 & 0.8382 \\
+X+P+I & 0.8276 & 0.8212 & 0.7813 & 0.8424 & 0.8309 & 0.8048 & 0.8409 \\
+R+P+I & 0.7723 & 0.7932 & 0.7065 & 0.8260 & 0.8104 & 0.7740 & 0.8381 \\
+X+R+P+I & 0.8048 & 0.8218 & 0.7565 & 0.8363 & 0.8304 & 0.8132 & 0.8425 \\
+\bottomrule\end{tabular}\end{center}
+\clearpage
+\subsection{Fluency representation matrix}
+Columns S, K, A, SK, SA, KA, and SKA denote the seven corpus families in that order. Values are macro development Spearman correlations.
+\begin{center}\begin{tabular}{@{}lrrrrrrr@{}}\toprule Features & S & K & A & SK & SA & KA & SKA\\\midrule
+X & 0.8551 & 0.8543 & 0.7782 & 0.8630 & 0.8588 & 0.8545 & 0.8644 \\
+R & 0.7312 & 0.7734 & 0.4373 & 0.8213 & 0.8000 & 0.8100 & 0.8319 \\
+P & 0.8428 & 0.7912 & 0.7640 & 0.8592 & 0.8495 & 0.8127 & 0.8599 \\
+I & 0.6288 & 0.6757 & 0.6577 & 0.6876 & 0.4060 & 0.5606 & 0.5002 \\
+X+R & 0.8364 & 0.8444 & 0.7620 & 0.8567 & 0.8599 & 0.8574 & 0.8660 \\
+X+P & 0.8613 & 0.8465 & 0.7961 & 0.8685 & 0.8645 & 0.8578 & 0.8702 \\
+X+I & 0.8569 & 0.8544 & 0.7671 & 0.8618 & 0.8576 & 0.8538 & 0.8662 \\
+R+P & 0.8178 & 0.8162 & 0.7153 & 0.8555 & 0.8498 & 0.8415 & 0.8653 \\
+R+I & 0.7833 & 0.8076 & 0.6342 & 0.8407 & 0.8291 & 0.8200 & 0.8458 \\
+P+I & 0.8469 & 0.8099 & 0.7748 & 0.8570 & 0.8511 & 0.8004 & 0.8593 \\
+X+R+P & 0.8481 & 0.8458 & 0.7730 & 0.8609 & 0.8654 & 0.8600 & 0.8696 \\
+X+R+I & 0.8443 & 0.8516 & 0.7400 & 0.8593 & 0.8598 & 0.8533 & 0.8652 \\
+X+P+I & 0.8655 & 0.8508 & 0.7866 & 0.8666 & 0.8644 & 0.8498 & 0.8677 \\
+R+P+I & 0.8340 & 0.8283 & 0.7268 & 0.8576 & 0.8515 & 0.8333 & 0.8653 \\
+X+R+P+I & 0.8509 & 0.8481 & 0.7635 & 0.8639 & 0.8654 & 0.8556 & 0.8710 \\
+\bottomrule\end{tabular}\end{center}
+\clearpage
+\subsection{Prosody representation matrix}
+Columns S, K, A, SK, SA, KA, and SKA denote the seven corpus families in that order. Values are macro development Spearman correlations.
+\begin{center}\begin{tabular}{@{}lrrrrrrr@{}}\toprule Features & S & K & A & SK & SA & KA & SKA\\\midrule
+X & 0.8631 & 0.8560 & 0.7817 & 0.8688 & 0.8599 & 0.8573 & 0.8680 \\
+R & 0.7489 & 0.7740 & 0.3583 & 0.8172 & 0.7891 & 0.8178 & 0.8377 \\
+P & 0.8313 & 0.7768 & 0.7520 & 0.8503 & 0.8416 & 0.7970 & 0.8526 \\
+I & 0.6228 & 0.6834 & 0.6322 & 0.6960 & 0.4179 & 0.5379 & 0.5035 \\
+X+R & 0.8410 & 0.8483 & 0.7504 & 0.8657 & 0.8653 & 0.8599 & 0.8721 \\
+X+P & 0.8620 & 0.8384 & 0.7872 & 0.8664 & 0.8615 & 0.8508 & 0.8681 \\
+X+I & 0.8640 & 0.8524 & 0.7627 & 0.8659 & 0.8609 & 0.8499 & 0.8693 \\
+R+P & 0.8077 & 0.8070 & 0.6886 & 0.8517 & 0.8409 & 0.8296 & 0.8586 \\
+R+I & 0.7789 & 0.8076 & 0.5893 & 0.8412 & 0.8229 & 0.8208 & 0.8498 \\
+P+I & 0.8361 & 0.7979 & 0.7792 & 0.8527 & 0.8449 & 0.7793 & 0.8539 \\
+X+R+P & 0.8444 & 0.8408 & 0.7602 & 0.8662 & 0.8647 & 0.8540 & 0.8707 \\
+X+R+I & 0.8485 & 0.8512 & 0.7281 & 0.8663 & 0.8639 & 0.8495 & 0.8687 \\
+X+P+I & 0.8635 & 0.8459 & 0.7893 & 0.8691 & 0.8649 & 0.8420 & 0.8690 \\
+R+P+I & 0.8235 & 0.8210 & 0.7086 & 0.8522 & 0.8437 & 0.8214 & 0.8608 \\
+X+R+P+I & 0.8485 & 0.8455 & 0.7554 & 0.8668 & 0.8653 & 0.8477 & 0.8715 \\
+\bottomrule\end{tabular}\end{center}
+\section{Execution environment}
+The same Windows/WSL machine used for the reported capacity test was inspected on October 19, 2026. The installation reports Ubuntu 26.04.1 LTS, kernel \texttt{6.18.54.1-microsoft-standard-WSL2}, Python 3.11.17, and PyTorch \texttt{2.11.0+cu128} (CUDA build 12.8). Hardware comprises an Intel Core i7-11700K with 16 logical CPUs and an NVIDIA RTX 3080 with 10 GiB VRAM; the host has 32 GB RAM, with approximately 24 GiB allocated to WSL and 8 GiB swap. The reported inference capacity test used the CPU, not CUDA. These versions document the inspected installation; the archived timing and memory trace, rather than a new benchmark, supplies the reported performance measurements.
+\section{External rater backgrounds and procedure}
+The original human-evaluation study reports three experienced university raters. The Korea-based rater had more than 20 years of teaching experience, including a decade of university pronunciation instruction and speaking assessment. The Japan-based rater had nearly 30 years of teaching experience and more than 10 years as a Cambridge English speaking assessor. The China-based rater had nearly 20 years of experience, including high-stakes speech rating and university speaking assessment in an international joint-degree program. All three held professorial positions, as confirmed by the study author.
+
+Before evaluating the source recordings, the raters jointly assessed separate Stella recordings spanning proficiency levels and discussed discrepancies to establish shared criteria for segmental accuracy, fluency, and prosody. They then scored the 306 source recordings independently in randomized order, blinded to participant identity and automated scores. Ratings used a 0--100 scale in five-point increments, with communicative-effectiveness anchors labelled ``High Intelligibility'' above 85 and ``Low Intelligibility'' below 40. These are the documented general scale anchors, not a newly constructed analytic rubric for each dimension. The original study's authors served as its raters; their ratings were reused as the external reference for the present model evaluation. One recording was subsequently excluded for excessive duration, leaving the matched 305-recording cohort. Human calibration used separate recordings and did not fit or calibrate any automated scorer.
+\end{document}

@@ -1,0 +1,56 @@
+{
+  "experiment_id": "koreanocean-v1",
+  "mapping": {
+    "accuracy": "2.5*(articulationScore-1)",
+    "fluency": "2.5*(prosodyScore-1)",
+    "prosody": "2.5*(prosodyScore-1)"
+  },
+  "mapping_status": "endpoint-aligned hypothesis; shared Korean prosodic-fluency supervision, not independent labels",
+  "korean_manifest": "resources/korean-prn-pilot-v3-004/development.json",
+  "korean_manifest_sha256": "06f49a4448501351ee91ef6d3176594abbd0039f7e5e3d90734587cd2137f037",
+  "korean_max_seconds": 20,
+  "source_features": "resources/koreanocean-v1-inputs/features.npz",
+  "source_features_sha256": "ddbcb71a2bf337bcb8d6c76b01cf42937a5e5bc7e83ace27b72010edb51c6a79",
+  "source_manifest": "resources/koreanocean-v1-inputs/speechocean.json",
+  "source_manifest_sha256": "ca4d64b0850f730a86e79d744a63646bffb6df9d3ea0036aedd54d4f8c89f8a6",
+  "baseline": {
+    "accuracy": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+phoneticxeus+ipa.npz",
+      "sha256": "dc2baf759c0eae83ac7d4cbdd885f2aa0d1e6f6d849e620d74350f4d1a36966a",
+      "metadata_sha256": "4266449814e7480b97ade6c2228e92eb26b21ea99607d0b34ff85c061025faed"
+    },
+    "fluency": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+xlsr.npz",
+      "sha256": "2238f2ef93483a25d08cecf476f26f74729c8d9d2e96e4f48c51e13aa7667ef9",
+      "metadata_sha256": "aee150a4a634d945b6bb7aabfd08fb0491c6d85fc600c3265bc191379b9768e8"
+    },
+    "prosody": {
+      "path": "resources/text-reference-v1/64737bc1eb9692c363ab46e519a768938081050ab843857a2694174a8de4a9c2/xeus+xlsr.npz",
+      "sha256": "2238f2ef93483a25d08cecf476f26f74729c8d9d2e96e4f48c51e13aa7667ef9",
+      "metadata_sha256": "aee150a4a634d945b6bb7aabfd08fb0491c6d85fc600c3265bc191379b9768e8"
+    }
+  },
+  "lambdas": [
+    0.001,
+    0.01,
+    0.1,
+    1,
+    10,
+    100
+  ],
+  "seed": 42,
+  "bootstrap": 2000,
+  "objective": "0.5 mean SO residual squared + 0.5 mean Korean residual squared + lambda*(squared coefficient displacement + squared intercept displacement); frozen original transforms",
+  "selection": "max equal-corpus development Spearman subject to SpeechOcean rho decrease <= .02 and MAE increase <= .2; then lower equal-corpus MAE then larger lambda; report nonzero hybrid even if not promoted",
+  "promotion": "macro rho gain >= .02; neither corpus rho decreases > .02 or MAE rises > .2; no automatic deployment",
+  "evaluation": "development screening only; official final tests and private ratings not read",
+  "compute": "CPU 2 torch and BLAS threads, serial encoders, no GPU or paid compute",
+  "cohort": "existing Korean pilot train/development only, duration <=20, complete CMUdict references; no label-based inclusion; same cohort for all heads",
+  "limitations": [
+    "Korean rubric differs despite numeric mapping",
+    "Korean audio has documented packaging silence",
+    "cached Korean GPU vs SpeechOcean CPU representations may differ numerically",
+    "previously inspected development sets; no independent-test claim",
+    "upstream model exposure unresolved"
+  ]
+}

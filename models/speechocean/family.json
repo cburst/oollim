@@ -1,0 +1,21 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "speechocean",
+  "model_version": "speechocean-stella-v2",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency-prosody.npz",
+    "prosody": "fluency-prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "dc2baf759c0eae83ac7d4cbdd885f2aa0d1e6f6d849e620d74350f4d1a36966a",
+    "accuracy.json": "ada2feaebff647c26d8010422ee9094ddbd60dc9e963965e9f4e0ce2720ab5ac",
+    "fluency-prosody.npz": "2238f2ef93483a25d08cecf476f26f74729c8d9d2e96e4f48c51e13aa7667ef9",
+    "fluency-prosody.json": "385f764dec070e66d5869175ad98e373e90a973fd748ad117acbc018bfab1017"
+  },
+  "training_corpora": [
+    "SpeechOcean762"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "koreanaesop",
+  "model_version": "koreanaesop-stella-seven-families-v1",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "4b6de82a7c1914a8349ceff4876b8057603cd27d15aed5e507d43b15334cc9c9",
+    "accuracy.json": "2132caef9f0400c0b05fda9acdec8742a15fc21ce22c6e4f7e4110a5e8e32061",
+    "fluency.npz": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+    "fluency.json": "62858de9723ac5c4954c70701520f1f6fcd7f701d75b92fb7a752940a3260f21",
+    "prosody.npz": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+    "prosody.json": "50e5b6e8939b772bd3091479ce5a7dd581a12fb6e07b34c646b76f2a63a5a1b5"
+  },
+  "training_corpora": [
+    "korean",
+    "aesop"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "permission_status": "Included at author direction; derived-weight release permissions under review. See docs/RIGHTS.md."
+}

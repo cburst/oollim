@@ -1,0 +1,46 @@
+{
+  "experiment_id": "speechocean-text-reference-v1",
+  "seed": 42,
+  "backbones": [
+    "xeus",
+    "xlsr",
+    "phoneticxeus"
+  ],
+  "splits": {
+    "train": 2000,
+    "validation": 500
+  },
+  "dimensions": [
+    "accuracy",
+    "fluency",
+    "prosody"
+  ],
+  "primary_dimension": "accuracy",
+  "alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "selection": "lowest validation accuracy MAE; ties use grid order",
+  "encoder_training": "frozen",
+  "pooling": "native frame mean/std epsilon 1e-5",
+  "fusion": "concatenate train-standardized blocks; divide each block by sqrt(width), then multiply all features by sqrt(2048)",
+  "scorer": "same multioutput ridge for all variants",
+  "reference": "reference_text only; pinned CMUdict unnumbered entry; unknown words flagged, no corpus-phone fallback",
+  "reference_mapping": "speechocean-arpabet-approx-ipa-v1",
+  "ipa_ablation": "each nonempty embedding subset with and without fixed IPA diagnostic block; IPA-only control",
+  "clipping": false,
+  "threads": 2,
+  "bootstrap_speaker_replicates": 2000,
+  "test_policy": "do not extract or evaluate",
+  "interpretation": "validation screening, not independent test or SOTA evidence; pretrained-source overlap unverified",
+  "reference_source": "cmudict",
+  "reference_resource": {
+    "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+    "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+    "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22"
+  }
+}

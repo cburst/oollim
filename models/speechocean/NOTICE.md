@@ -1,0 +1,3 @@
+# SpeechOcean scoring coefficients
+
+Original deployed `speechocean-stella-v2` ridge coefficients, trained on SpeechOcean762 public training speakers. No private recordings or human ratings were used in fitting. The source dataset is by Junbo Zhang and colleagues, CC BY 4.0: https://www.openslr.org/101/ . These are small scoring heads, not pretrained encoder weights. Project license applies to the supplied implementation and authored assets; it does not override dataset or encoder rights. XEUS/PhoneticXeus pretrained weights are downloaded separately under their upstream terms. Other families have separate notices and permission status.

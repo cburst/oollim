@@ -1,0 +1,4 @@
+{
+  "limits_version": "stella-api-limits-v3",
+  "max_duration_seconds": 120
+}

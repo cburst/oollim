@@ -1,0 +1,20 @@
+{
+  "schema_version": "portable-ridge-v1",
+  "mode": "all",
+  "selection": "all",
+  "alphas": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "inputs": {
+    "speechocean": "88198610da535b7a7bf03e13c173795a31400f29ae8104bed0d25b1f3b1528f7",
+    "korean": "8ab89fdb2f04ca5270c737c31d2cc18c4832b0acfc52b481aca1d256dc119959",
+    "aesop": "10b3e3e92dd161870b07e77fcd3ea6f1ded1ed9426f7d06809442064044a9560"
+  },
+  "code_sha256": "e59faa52b4b0d703641e132bf22f212c3009561be891ab79c0bd9c62b37a2575",
+  "extractor_sha256": null
+}

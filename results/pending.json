@@ -1,0 +1,18 @@
+{
+  "independent_seven_family": {
+    "status": "completed_aggregate_export",
+    "results": "external-matched-full-2026-10-18.json"
+  },
+  "full_representation_ablation": {
+    "status": "completed",
+    "results": "ablation-mac-v1/comparison.json"
+  },
+  "policy": "Private recording-level inputs excluded from release; used only for statistical evaluation, never fitting or calibration. No automatic model deployment.",
+  "paired_external": {
+    "status": "completed_200000_two_seeds",
+    "results": [
+      "external-paired-200k-seed42.json",
+      "external-paired-200k-seed2026.json"
+    ]
+  }
+}

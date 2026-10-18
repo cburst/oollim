@@ -1,0 +1,1700 @@
+{
+  "bootstrap": 200000,
+  "seed": 42,
+  "n": 305,
+  "grouping": "one unique recording URL per assumed speaker",
+  "source_sha256": "cc5a3439269fcaf40f449551d399bdd24757aa819f75db7f2a5a157c88d62eff",
+  "reference": "mean of three pair-specific metrics; humans evaluated against other two",
+  "comparisons": [
+    {
+      "construct": "Accuracy",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": -0.048835597926452756,
+      "ci95": [
+        -0.0961113715086436,
+        -0.004953330853361339
+      ],
+      "familywise95_bonferroni90": [
+        -0.1368544053880779,
+        0.02727017298565737
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.5433570760600034,
+      "ci95": [
+        -0.5797335346043266,
+        -0.5041551445629657
+      ],
+      "familywise95_bonferroni90": [
+        -0.606397944628776,
+        -0.4712073420710154
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.03459506736655038,
+      "ci95": [
+        0.003706386528764772,
+        0.06485256005654991
+      ],
+      "familywise95_bonferroni90": [
+        -0.02147331279939133,
+        0.09070708910528576
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.1583446866161301,
+      "ci95": [
+        -0.20641107575024287,
+        -0.11001310739483905
+      ],
+      "familywise95_bonferroni90": [
+        -0.24319617311308078,
+        -0.07250249797747868
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.08343066529300314,
+      "ci95": [
+        0.040854582747534125,
+        0.12839951373792957
+      ],
+      "familywise95_bonferroni90": [
+        0.008834540549854261,
+        0.1668739621371662
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.3850123894438733,
+      "ci95": [
+        0.3409701314738215,
+        0.42577464897481193
+      ],
+      "familywise95_bonferroni90": [
+        0.3064019767468025,
+        0.45524698570742383
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.046213445077512794,
+      "ci95": [
+        0.01751556249778409,
+        0.07503424947699337
+      ],
+      "familywise95_bonferroni90": [
+        -0.0042648802443830715,
+        0.10093948433229244
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.002362981869809211,
+      "ci95": [
+        -0.04112737237077787,
+        0.03683098930615398
+      ],
+      "familywise95_bonferroni90": [
+        -0.07118485815469172,
+        0.066090036697257
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.09504904300396555,
+      "ci95": [
+        0.05470756121592245,
+        0.13878013037378029
+      ],
+      "familywise95_bonferroni90": [
+        0.025121471323998917,
+        0.17739954605654928
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.5409940941901942,
+      "ci95": [
+        0.5001753510603193,
+        0.580101227788668
+      ],
+      "familywise95_bonferroni90": [
+        0.4698945501174035,
+        0.6092829884681897
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.04270731540985273,
+      "ci95": [
+        0.01156714696915579,
+        0.0742382826786587
+      ],
+      "familywise95_bonferroni90": [
+        -0.013076410257683345,
+        0.10079615863615589
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.46344051954577803,
+      "ci95": [
+        -0.4929547609444557,
+        -0.4314798375559626
+      ],
+      "familywise95_bonferroni90": [
+        -0.5146638843638895,
+        -0.40470174792699787
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.09154291333630549,
+      "ci95": [
+        0.05420931526600816,
+        0.13215456011354548
+      ],
+      "familywise95_bonferroni90": [
+        0.028105478601328917,
+        0.16887360022776446
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.07991655651422533,
+      "ci95": [
+        0.05295731158479629,
+        0.10477568501553715
+      ],
+      "familywise95_bonferroni90": [
+        0.029636413857990623,
+        0.12236536548291471
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.0437786674150773,
+      "ci95": [
+        0.012612943237300696,
+        0.07419638739326516
+      ],
+      "familywise95_bonferroni90": [
+        -0.012354082790273849,
+        0.09947341768518542
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": 0.11649985004189789,
+      "ci95": [
+        0.08166410570322617,
+        0.15228721714128823
+      ],
+      "familywise95_bonferroni90": [
+        0.05463287304765247,
+        0.18066768021110227
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.09261426534153006,
+      "ci95": [
+        0.05097125721594599,
+        0.13711609753096232
+      ],
+      "familywise95_bonferroni90": [
+        0.020362993210372573,
+        0.17618809292388982
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.6598569261019013,
+      "ci95": [
+        0.6264625663834542,
+        0.6901711901548568
+      ],
+      "familywise95_bonferroni90": [
+        0.5999580902996751,
+        0.7117774881579051
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.06227476185294112,
+      "ci95": [
+        0.03269128064259978,
+        0.09271640169261935
+      ],
+      "familywise95_bonferroni90": [
+        0.010257459783622535,
+        0.1188291388140466
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.1061698730920323,
+      "ci95": [
+        -0.13989329971911837,
+        -0.07143061966887675
+      ],
+      "familywise95_bonferroni90": [
+        -0.1648387564209827,
+        -0.04457815904779821
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.11111035977939387,
+      "ci95": [
+        0.07083316862877481,
+        0.155337362126267
+      ],
+      "familywise95_bonferroni90": [
+        0.04277168984497669,
+        0.19537978604118666
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.4371872029679711,
+      "ci95": [
+        0.40229507944662546,
+        0.47039000493129524
+      ],
+      "familywise95_bonferroni90": [
+        0.37536074026987404,
+        0.49546459555335454
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.05741575399331378,
+      "ci95": [
+        0.027694882617843176,
+        0.08782972877640881
+      ],
+      "familywise95_bonferroni90": [
+        0.005213620867495406,
+        0.11447370475047623
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.22744685907036383,
+      "ci95": [
+        -0.2611481816689863,
+        -0.1931713896360091
+      ],
+      "familywise95_bonferroni90": [
+        -0.28658805548894956,
+        -0.16679499537918985
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.10625135191976653,
+      "ci95": [
+        0.06600739628323715,
+        0.1500793621430145
+      ],
+      "familywise95_bonferroni90": [
+        0.037463908153482675,
+        0.19067039415760353
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.31591021698963956,
+      "ci95": [
+        0.28083212892805864,
+        0.34988427286185764
+      ],
+      "familywise95_bonferroni90": [
+        0.2539705828993066,
+        0.37615447250348444
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.060983819743344325,
+      "ci95": [
+        0.03147104969941916,
+        0.09120339367654888
+      ],
+      "familywise95_bonferroni90": [
+        0.009389302229239518,
+        0.11770838171991557
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.11882400768003454,
+      "ci95": [
+        -0.1530805969716204,
+        -0.08406015205329552
+      ],
+      "familywise95_bonferroni90": [
+        -0.17854600387709113,
+        -0.05764951598075878
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.10981941766979708,
+      "ci95": [
+        0.0699129042070559,
+        0.1536969442216687
+      ],
+      "familywise95_bonferroni90": [
+        0.0413886830581356,
+        0.1937955014887845
+      ]
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.42453306837996885,
+      "ci95": [
+        0.3885450720197499,
+        0.4590012456441978
+      ],
+      "familywise95_bonferroni90": [
+        0.3602754107868666,
+        0.48555591682868277
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": -0.17402915345894465,
+      "ci95": [
+        -0.24376581254332347,
+        -0.11040969672957052
+      ],
+      "familywise95_bonferroni90": [
+        -0.30432372125205176,
+        -0.06745394927889095
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.6610479005542216,
+      "ci95": [
+        -0.697205844525093,
+        -0.6205551321535123
+      ],
+      "familywise95_bonferroni90": [
+        -0.7227496234375987,
+        -0.5877133474527181
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.035338219430468554,
+      "ci95": [
+        1.6045638358541706e-05,
+        0.06879007718709705
+      ],
+      "familywise95_bonferroni90": [
+        -0.028729632938160877,
+        0.0951460319846481
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.06849865839459146,
+      "ci95": [
+        -0.11260561613058066,
+        -0.023551202504041198
+      ],
+      "familywise95_bonferroni90": [
+        -0.14542704396367376,
+        0.010386015806644382
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.2093673728894132,
+      "ci95": [
+        0.14495624796778697,
+        0.2787472451011534
+      ],
+      "familywise95_bonferroni90": [
+        0.09921886312569446,
+        0.3381692242716974
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.5925492421596301,
+      "ci95": [
+        0.5541495355148583,
+        0.6272925297528988
+      ],
+      "familywise95_bonferroni90": [
+        0.5230104246685193,
+        0.6525993982016391
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.05360500755797226,
+      "ci95": [
+        0.02172377972910892,
+        0.08519359990305674
+      ],
+      "familywise95_bonferroni90": [
+        -0.002099610388878741,
+        0.11051145972338368
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.24404260342145656,
+      "ci95": [
+        -0.2808838769958735,
+        -0.2076335225945297
+      ],
+      "familywise95_bonferroni90": [
+        -0.3080267402453782,
+        -0.178954734250337
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.2276341610169169,
+      "ci95": [
+        0.16402683314715463,
+        0.2967384634817752
+      ],
+      "familywise95_bonferroni90": [
+        0.1213122456174949,
+        0.35536409701449834
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.4170052971327651,
+      "ci95": [
+        0.3792400140125405,
+        0.4518858334407685
+      ],
+      "familywise95_bonferroni90": [
+        0.351020932883174,
+        0.47808315536363033
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.04361978898725305,
+      "ci95": [
+        0.009457948363599958,
+        0.07700763257745229
+      ],
+      "familywise95_bonferroni90": [
+        -0.016718926381004195,
+        0.10403730564191496
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.46286158577797637,
+      "ci95": [
+        -0.4942339699286956,
+        -0.4297909377918979
+      ],
+      "familywise95_bonferroni90": [
+        -0.5171572662514254,
+        -0.4032144562738863
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.2176489424461977,
+      "ci95": [
+        0.15692834703482988,
+        0.28400091651906695
+      ],
+      "familywise95_bonferroni90": [
+        0.1162377043896079,
+        0.3418038498973213
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.19818631477624526,
+      "ci95": [
+        0.17396890769672216,
+        0.2208937460656638
+      ],
+      "familywise95_bonferroni90": [
+        0.15503939001970232,
+        0.23821916321542821
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.03289358168073797,
+      "ci95": [
+        -0.0043991976855131155,
+        0.0683180813156306
+      ],
+      "familywise95_bonferroni90": [
+        -0.0344766658685152,
+        0.09580252808701187
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.15399325136160436,
+      "ci95": [
+        -0.19462299703916955,
+        -0.11396110380376329
+      ],
+      "familywise95_bonferroni90": [
+        -0.22652269291747937,
+        -0.08394701373182344
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.20692273513968262,
+      "ci95": [
+        0.13983309842464534,
+        0.2788322345469303
+      ],
+      "familywise95_bonferroni90": [
+        0.09396273253218765,
+        0.33869823611869637
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.5070546491926172,
+      "ci95": [
+        0.4640104161232436,
+        0.5464724137459266
+      ],
+      "familywise95_bonferroni90": [
+        0.4284317146020659,
+        0.5748632554713672
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.0678105501313544,
+      "ci95": [
+        0.037928925335275795,
+        0.09810648694897191
+      ],
+      "familywise95_bonferroni90": [
+        0.015064823414639194,
+        0.12328758445403996
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.1261242140777331,
+      "ci95": [
+        -0.1593424475417761,
+        -0.09274536210622718
+      ],
+      "familywise95_bonferroni90": [
+        -0.18406535440483335,
+        -0.0662458177098665
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.24183970359029905,
+      "ci95": [
+        0.1801187962169511,
+        0.30952979183110374
+      ],
+      "familywise95_bonferroni90": [
+        0.13935961432166918,
+        0.3689214412183589
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.5349236864764885,
+      "ci95": [
+        0.5009638723504066,
+        0.5659447436214113
+      ],
+      "familywise95_bonferroni90": [
+        0.47300261142608907,
+        0.5901549881597103
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.06942491075448554,
+      "ci95": [
+        0.04032593781512754,
+        0.09910019312800408
+      ],
+      "familywise95_bonferroni90": [
+        0.018819220091675103,
+        0.12393932105179327
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.27715212377864346,
+      "ci95": [
+        -0.3107003262440147,
+        -0.24340097005886888
+      ],
+      "familywise95_bonferroni90": [
+        -0.3354725984716169,
+        -0.21641958443669748
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.2434540642134302,
+      "ci95": [
+        0.18193978148745507,
+        0.31103560769386684
+      ],
+      "familywise95_bonferroni90": [
+        0.14175464388823847,
+        0.3694306115315912
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.3838957767755782,
+      "ci95": [
+        0.34999950621768483,
+        0.4155684145543041
+      ],
+      "familywise95_bonferroni90": [
+        0.3248083923198423,
+        0.4388954551979376
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.06715120964744026,
+      "ci95": [
+        0.03697779107593317,
+        0.09754590132040138
+      ],
+      "familywise95_bonferroni90": [
+        0.014529083288938056,
+        0.1234336039777075
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.2124401076140794,
+      "ci95": [
+        -0.246650834569084,
+        -0.17857646302238853
+      ],
+      "familywise95_bonferroni90": [
+        -0.27263019304486635,
+        -0.15184157451536429
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.2411803631063849,
+      "ci95": [
+        0.17734469452818405,
+        0.3107823954550277
+      ],
+      "familywise95_bonferroni90": [
+        0.1355157462618099,
+        0.37029832827940545
+      ]
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.44860779294014225,
+      "ci95": [
+        0.41189014913725736,
+        0.4822985877783955
+      ],
+      "familywise95_bonferroni90": [
+        0.3820831083203812,
+        0.5077739454286111
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": -0.07043538025942786,
+      "ci95": [
+        -0.12445109014417878,
+        -0.022670214911315073
+      ],
+      "familywise95_bonferroni90": [
+        -0.17216858288359257,
+        0.010149448841009032
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "azure",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.3723086131229421,
+      "ci95": [
+        -0.4186256779305793,
+        -0.3250730855698203
+      ],
+      "familywise95_bonferroni90": [
+        -0.4545605233893076,
+        -0.2887322175721437
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.03973515603031419,
+      "ci95": [
+        0.009102262775057067,
+        0.06904509028833024
+      ],
+      "familywise95_bonferroni90": [
+        -0.01663141989070059,
+        0.09210959076765804
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.1716628516646871,
+      "ci95": [
+        -0.21428820755626968,
+        -0.12806938317216934
+      ],
+      "familywise95_bonferroni90": [
+        -0.24654643641633145,
+        -0.09412995571962074
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.11017053628974205,
+      "ci95": [
+        0.06280794471718697,
+        0.16304916807496853
+      ],
+      "familywise95_bonferroni90": [
+        0.031650104614496605,
+        0.21089174592220475
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.20064576145825502,
+      "ci95": [
+        0.14486274828369555,
+        0.25590017287206845
+      ],
+      "familywise95_bonferroni90": [
+        0.10026993891900114,
+        0.29790415135669623
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.06704683408962397,
+      "ci95": [
+        0.03888480452867358,
+        0.09559970499718753
+      ],
+      "familywise95_bonferroni90": [
+        0.017882516872237034,
+        0.11971984393994871
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.2530252928108671,
+      "ci95": [
+        -0.28673820569640196,
+        -0.21950224183695033
+      ],
+      "familywise95_bonferroni90": [
+        -0.3120743534236623,
+        -0.1931315876795308
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.13748221434905183,
+      "ci95": [
+        0.09782020673492446,
+        0.18328270539867664
+      ],
+      "familywise95_bonferroni90": [
+        0.07295047520363492,
+        0.22490762484014998
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.119283320312075,
+      "ci95": [
+        0.07683920421192293,
+        0.16002789143478083
+      ],
+      "familywise95_bonferroni90": [
+        0.043198997973774855,
+        0.18916443932590207
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.04276096010891561,
+      "ci95": [
+        0.011830869537482922,
+        0.0731880728470475
+      ],
+      "familywise95_bonferroni90": [
+        -0.012346409252592012,
+        0.09747408194894043
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.48116485817982657,
+      "ci95": [
+        -0.5096216523876783,
+        -0.4510704989985619
+      ],
+      "familywise95_bonferroni90": [
+        -0.5299308119200975,
+        -0.4272734895531377
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.11319634036834347,
+      "ci95": [
+        0.07259499863918116,
+        0.15922229181328076
+      ],
+      "familywise95_bonferroni90": [
+        0.04753351909873813,
+        0.20035762130059787
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": -0.10885624505688446,
+      "ci95": [
+        -0.1469746654014241,
+        -0.07151594839353184
+      ],
+      "familywise95_bonferroni90": [
+        -0.17618937323220998,
+        -0.04442436433261219
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.04236742838536933,
+      "ci95": [
+        0.009657393423632013,
+        0.0735173537441253
+      ],
+      "familywise95_bonferroni90": [
+        -0.017480991221044205,
+        0.09837804655139437
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.1961500481155325,
+      "ci95": [
+        -0.2317884126068118,
+        -0.16110810238320966
+      ],
+      "familywise95_bonferroni90": [
+        -0.25915870253086637,
+        -0.13502611113452584
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.11280280864479719,
+      "ci95": [
+        0.06874989283311769,
+        0.16285087447315938
+      ],
+      "familywise95_bonferroni90": [
+        0.040212109583539254,
+        0.20791712221419917
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.17615856500740962,
+      "ci95": [
+        0.12739036149796884,
+        0.2234658664466276
+      ],
+      "familywise95_bonferroni90": [
+        0.08773386458511137,
+        0.2583144307776903
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.07347406058715122,
+      "ci95": [
+        0.0478705134250411,
+        0.09980144968336394
+      ],
+      "familywise95_bonferroni90": [
+        0.02865325555655661,
+        0.12266355955713755
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.20105537527849904,
+      "ci95": [
+        -0.23201890648925017,
+        -0.17008359755014024
+      ],
+      "familywise95_bonferroni90": [
+        -0.25478988489003523,
+        -0.14580585622520909
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.14390944084657908,
+      "ci95": [
+        0.09934036350150809,
+        0.1952781350578634
+      ],
+      "familywise95_bonferroni90": [
+        0.07159137217129884,
+        0.24300224249062788
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.17125323784444307,
+      "ci95": [
+        0.12742304821078435,
+        0.21347127971001353
+      ],
+      "familywise95_bonferroni90": [
+        0.09192597605948147,
+        0.24443074776256601
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.07600901075791089,
+      "ci95": [
+        0.049149817982276564,
+        0.10371459627579326
+      ],
+      "familywise95_bonferroni90": [
+        0.02935925921449392,
+        0.12753314785455697
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.31051500238952245,
+      "ci95": [
+        -0.34175168308258724,
+        -0.27891095735967464
+      ],
+      "familywise95_bonferroni90": [
+        -0.36529623307058184,
+        -0.2544785486658761
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.14644439101733875,
+      "ci95": [
+        0.10525248792527679,
+        0.19428169321834599
+      ],
+      "familywise95_bonferroni90": [
+        0.0796418873498877,
+        0.23750018530916428
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.06179361073341966,
+      "ci95": [
+        0.0222107696719823,
+        0.10019659702980853
+      ],
+      "familywise95_bonferroni90": [
+        -0.008585915640767923,
+        0.1284920264831625
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "difference": 0.07397235300700844,
+      "ci95": [
+        0.04697892922980673,
+        0.10131052617704317
+      ],
+      "familywise95_bonferroni90": [
+        0.026547683498431954,
+        0.12394106528065588
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "difference": -0.2617746907059284,
+      "ci95": [
+        -0.29253540037267634,
+        -0.23112295139590047
+      ],
+      "familywise95_bonferroni90": [
+        -0.3154720136972808,
+        -0.20795836718292635
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "difference": 0.1444077332664363,
+      "ci95": [
+        0.10122555320063174,
+        0.1944016638691951
+      ],
+      "familywise95_bonferroni90": [
+        0.07419059537956287,
+        0.2402205851121951
+      ]
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "difference": 0.11053392241701371,
+      "ci95": [
+        0.06816206689141843,
+        0.1513293495448167
+      ],
+      "familywise95_bonferroni90": [
+        0.03411007764746197,
+        0.1813026584443095
+      ]
+    }
+  ],
+  "scale_summaries": [
+    {
+      "construct": "Accuracy",
+      "system": "azure",
+      "mean": 89.29426229508196,
+      "sd": 7.498470778093513,
+      "bias_vs_mean_three": 23.6275956284153,
+      "mae_vs_mean_three": 23.6275956284153
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "mean": 72.53570571165879,
+      "sd": 6.470528314342506,
+      "bias_vs_mean_three": 6.869039044992133,
+      "mae_vs_mean_three": 8.223356965151106
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "mean": 58.569240539254025,
+      "sd": 12.387350811916894,
+      "bias_vs_mean_three": -7.097426127412647,
+      "mae_vs_mean_three": 7.661516169880636
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "mean": 38.49410405137671,
+      "sd": 13.311604609481668,
+      "bias_vs_mean_three": -27.17256261528996,
+      "mae_vs_mean_three": 27.17256261528996
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "mean": 64.85228457827523,
+      "sd": 9.768464226719777,
+      "bias_vs_mean_three": -0.8143820883914399,
+      "mae_vs_mean_three": 4.376848393366771
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "mean": 55.26804924350058,
+      "sd": 11.656421309945511,
+      "bias_vs_mean_three": -10.398617423166087,
+      "mae_vs_mean_three": 10.513812902311875
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "mean": 50.086778968036626,
+      "sd": 14.230918004397994,
+      "bias_vs_mean_three": -15.579887698630033,
+      "mae_vs_mean_three": 15.594909964026183
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "mean": 54.365509449569956,
+      "sd": 12.517136572706216,
+      "bias_vs_mean_three": -11.301157217096705,
+      "mae_vs_mean_three": 11.380149924320605
+    },
+    {
+      "construct": "Fluency",
+      "system": "azure",
+      "mean": 94.18059016393443,
+      "sd": 5.8694415176836205,
+      "bias_vs_mean_three": 27.880043715846995,
+      "mae_vs_mean_three": 27.880043715846995
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "mean": 63.261898553918414,
+      "sd": 6.34199997092751,
+      "bias_vs_mean_three": -3.03864789416902,
+      "mae_vs_mean_three": 5.36307235016892
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "mean": 53.31176618368362,
+      "sd": 10.754050027675968,
+      "bias_vs_mean_three": -12.988780264403808,
+      "mae_vs_mean_three": 12.988780264403808
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "mean": 44.428376586754204,
+      "sd": 10.968729790662556,
+      "bias_vs_mean_three": -21.872169861333226,
+      "mae_vs_mean_three": 21.872169861333226
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "mean": 57.6844975859438,
+      "sd": 8.452098616724996,
+      "bias_vs_mean_three": -8.616048862143632,
+      "mae_vs_mean_three": 8.742093572219648
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "mean": 56.634945735404415,
+      "sd": 10.9880551149121,
+      "bias_vs_mean_three": -9.665600712683018,
+      "mae_vs_mean_three": 9.793001141441097
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "mean": 51.09453541180106,
+      "sd": 12.437461207876348,
+      "bias_vs_mean_three": -15.206011036286371,
+      "mae_vs_mean_three": 15.206011036286371
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "mean": 54.179696611665044,
+      "sd": 10.496611245355314,
+      "bias_vs_mean_three": -12.120849836422398,
+      "mae_vs_mean_three": 12.126249929217849
+    },
+    {
+      "construct": "Prosody",
+      "system": "azure",
+      "mean": 77.13222950819673,
+      "sd": 6.150686173727207,
+      "bias_vs_mean_three": 10.574852459016393,
+      "mae_vs_mean_three": 11.044994535519125
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "mean": 60.56465547633325,
+      "sd": 6.00034569423263,
+      "bias_vs_mean_three": -5.992721572847085,
+      "mae_vs_mean_three": 6.690757263297838
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "mean": 53.31176618368362,
+      "sd": 10.754050027675968,
+      "bias_vs_mean_three": -13.245610865496701,
+      "mae_vs_mean_three": 13.245610865496701
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "mean": 44.13506920236061,
+      "sd": 10.619964394149736,
+      "bias_vs_mean_three": -22.422307846819717,
+      "mae_vs_mean_three": 22.422307846819717
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "mean": 56.89486877364413,
+      "sd": 8.32416198639177,
+      "bias_vs_mean_three": -9.662508275536203,
+      "mae_vs_mean_three": 9.72250835596516
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "mean": 55.25187068407162,
+      "sd": 9.890024564845449,
+      "bias_vs_mean_three": -11.305506365108707,
+      "mae_vs_mean_three": 11.328429879453944
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "mean": 50.2646403788314,
+      "sd": 12.360810853570342,
+      "bias_vs_mean_three": -16.292736670348923,
+      "mae_vs_mean_three": 16.292736670348923
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "mean": 53.05483652502434,
+      "sd": 10.41548156135286,
+      "bias_vs_mean_three": -13.502540524155988,
+      "mae_vs_mean_three": 13.502540524155988
+    }
+  ],
+  "point_estimates": [
+    {
+      "construct": "Accuracy",
+      "system": "azure",
+      "rho": 0.7605883550249294,
+      "qwk": 0.16073761194054903
+    },
+    {
+      "construct": "Accuracy",
+      "system": "speechocean",
+      "rho": 0.8440190203179325,
+      "qwk": 0.5457500013844223
+    },
+    {
+      "construct": "Accuracy",
+      "system": "korean",
+      "rho": 0.8556373980288949,
+      "qwk": 0.7017317061307432
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesop",
+      "rho": 0.8521312683612349,
+      "qwk": 0.24065416845477436
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanocean",
+      "rho": 0.8532026203664594,
+      "qwk": 0.8205945380424503
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopocean",
+      "rho": 0.8716987148043233,
+      "qwk": 0.5979248149085201
+    },
+    {
+      "construct": "Accuracy",
+      "system": "koreanaesop",
+      "rho": 0.8668397069446959,
+      "qwk": 0.4766478289301886
+    },
+    {
+      "construct": "Accuracy",
+      "system": "aesopkoreanocean",
+      "rho": 0.8704077726947265,
+      "qwk": 0.5852706803205179
+    },
+    {
+      "construct": "Fluency",
+      "system": "azure",
+      "rho": 0.6326086141281196,
+      "qwk": 0.07828898651291578
+    },
+    {
+      "construct": "Fluency",
+      "system": "speechocean",
+      "rho": 0.8419759870175328,
+      "qwk": 0.6708382286725459
+    },
+    {
+      "construct": "Fluency",
+      "system": "korean",
+      "rho": 0.8602427751450366,
+      "qwk": 0.49529428364568084
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesop",
+      "rho": 0.8502575565743173,
+      "qwk": 0.27647530128916104
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanocean",
+      "rho": 0.8395313492678023,
+      "qwk": 0.585343635705533
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopocean",
+      "rho": 0.8744483177184187,
+      "qwk": 0.6132126729894043
+    },
+    {
+      "construct": "Fluency",
+      "system": "koreanaesop",
+      "rho": 0.8760626783415498,
+      "qwk": 0.46218476328849395
+    },
+    {
+      "construct": "Fluency",
+      "system": "aesopkoreanocean",
+      "rho": 0.8737889772345045,
+      "qwk": 0.526896779453058
+    },
+    {
+      "construct": "Prosody",
+      "system": "azure",
+      "rho": 0.7368492533262221,
+      "qwk": 0.369531564788851
+    },
+    {
+      "construct": "Prosody",
+      "system": "speechocean",
+      "rho": 0.8470197896159641,
+      "qwk": 0.570177326247106
+    },
+    {
+      "construct": "Prosody",
+      "system": "korean",
+      "rho": 0.8743314676752739,
+      "qwk": 0.488814885100926
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesop",
+      "rho": 0.8500455936945656,
+      "qwk": 0.26067531973196656
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanocean",
+      "rho": 0.8496520619710193,
+      "qwk": 0.5456901297962606
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopocean",
+      "rho": 0.8807586941728012,
+      "qwk": 0.5407848026332941
+    },
+    {
+      "construct": "Prosody",
+      "system": "koreanaesop",
+      "rho": 0.8832936443435608,
+      "qwk": 0.4313251755222707
+    },
+    {
+      "construct": "Prosody",
+      "system": "aesopkoreanocean",
+      "rho": 0.8812569865926584,
+      "qwk": 0.4800654872058647
+    }
+  ]
+}

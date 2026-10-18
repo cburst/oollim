@@ -1,0 +1,293 @@
+{
+  "source_commit": "df5f7bd16dbcda05975215f8a43e3e2d6297b573",
+  "files": [
+    {
+      "path": "speech/pronunciation/frame_cache.py",
+      "source_sha256": "bf289d55b3f0fdde8aff966f0cbfaa5834d24dc203f11177a124612ba96da5c9",
+      "release_sha256": "bf289d55b3f0fdde8aff966f0cbfaa5834d24dc203f11177a124612ba96da5c9",
+      "source_path": "xlsr/pronunciation/frame_cache.py"
+    },
+    {
+      "path": "speech/pronunciation/explicit.py",
+      "source_sha256": "e0b7dd3da810479a2c4d971c583d8aee1b71ff7663ce84d1ca74fa70f209c47b",
+      "release_sha256": "e0b7dd3da810479a2c4d971c583d8aee1b71ff7663ce84d1ca74fa70f209c47b",
+      "source_path": "xlsr/pronunciation/explicit.py"
+    },
+    {
+      "path": "speech/pronunciation/phonetic_encoder.py",
+      "source_sha256": "8d419a67c2da2675d3532f0c5e7716ff8a416d1e5d8acc7016c823247d03dde3",
+      "release_sha256": "8d419a67c2da2675d3532f0c5e7716ff8a416d1e5d8acc7016c823247d03dde3",
+      "source_path": "xlsr/pronunciation/phonetic_encoder.py"
+    },
+    {
+      "path": "speech/pronunciation/phone_features.py",
+      "source_sha256": "0206f489625d4115cb4d2be523568a7f078bfeb7f79665af2e16c43a24347b0b",
+      "release_sha256": "0206f489625d4115cb4d2be523568a7f078bfeb7f79665af2e16c43a24347b0b",
+      "source_path": "xlsr/pronunciation/phone_features.py"
+    },
+    {
+      "path": "speech/pronunciation/checkpoint.py",
+      "source_sha256": "10bff87385b51eb7e6e562116ae2051269dd879adc788084c2ed831b16f20a43",
+      "release_sha256": "10bff87385b51eb7e6e562116ae2051269dd879adc788084c2ed831b16f20a43",
+      "source_path": "xlsr/pronunciation/checkpoint.py"
+    },
+    {
+      "path": "speech/pronunciation/boundaries.py",
+      "source_sha256": "62600486bf28695ac221dc8709758ec5545c1177fd45529c2897e1d6ca247c47",
+      "release_sha256": "62600486bf28695ac221dc8709758ec5545c1177fd45529c2897e1d6ca247c47",
+      "source_path": "xlsr/pronunciation/boundaries.py"
+    },
+    {
+      "path": "speech/pronunciation/alignment.py",
+      "source_sha256": "a00ba2aa5dc884a1f4d6a1ef41b5f9330f0a9a133e7bc13da14ebb13f6015a3b",
+      "release_sha256": "a00ba2aa5dc884a1f4d6a1ef41b5f9330f0a9a133e7bc13da14ebb13f6015a3b",
+      "source_path": "xlsr/pronunciation/alignment.py"
+    },
+    {
+      "path": "speech/pronunciation/hierarchical.py",
+      "source_sha256": "9d9888e4563c77b5cd8a49406ffe02f5d7e42a82d75793424d44641b224ab702",
+      "release_sha256": "9d9888e4563c77b5cd8a49406ffe02f5d7e42a82d75793424d44641b224ab702",
+      "source_path": "xlsr/pronunciation/hierarchical.py"
+    },
+    {
+      "path": "speech/pronunciation/stella.py",
+      "source_sha256": "eba168d0da90a9e5c66ed6b88db05b9c3c7c356c0d40375ce4dde9ef3d32b738",
+      "release_sha256": "eba168d0da90a9e5c66ed6b88db05b9c3c7c356c0d40375ce4dde9ef3d32b738",
+      "source_path": "xlsr/pronunciation/stella.py"
+    },
+    {
+      "path": "speech/pronunciation/scoring.py",
+      "source_sha256": "c0a5a00205867d963cac9600f7c5e00dbeda791c96783c3ea563b646bdd8a7d9",
+      "release_sha256": "c0a5a00205867d963cac9600f7c5e00dbeda791c96783c3ea563b646bdd8a7d9",
+      "source_path": "xlsr/pronunciation/scoring.py"
+    },
+    {
+      "path": "speech/pronunciation/transfer_stages.py",
+      "source_sha256": "fef430bf440760213dd66e988f810101154f7687850ae19cf3808cfe9ba5fa09",
+      "release_sha256": "fef430bf440760213dd66e988f810101154f7687850ae19cf3808cfe9ba5fa09",
+      "source_path": "xlsr/pronunciation/transfer_stages.py"
+    },
+    {
+      "path": "speech/pronunciation/azure_data.py",
+      "source_sha256": "c98bc9cecebef384701615255436579d4c19a04da5ec729958719b38191c2a5d",
+      "release_sha256": "c98bc9cecebef384701615255436579d4c19a04da5ec729958719b38191c2a5d",
+      "source_path": "xlsr/pronunciation/azure_data.py"
+    },
+    {
+      "path": "speech/pronunciation/l2arctic.py",
+      "source_sha256": "e5ecc1d41da5b480db6dfc3e4461fa485142148273e7266eacb1a7d61dab777e",
+      "release_sha256": "e5ecc1d41da5b480db6dfc3e4461fa485142148273e7266eacb1a7d61dab777e",
+      "source_path": "xlsr/pronunciation/l2arctic.py"
+    },
+    {
+      "path": "speech/pronunciation/__init__.py",
+      "source_sha256": "abfc3ade57b31bf8aa9d5b058f71ff0e3df54b255143c13375962d88821e9758",
+      "release_sha256": "abfc3ade57b31bf8aa9d5b058f71ff0e3df54b255143c13375962d88821e9758",
+      "source_path": "xlsr/pronunciation/__init__.py"
+    },
+    {
+      "path": "speech/pronunciation/encoders.py",
+      "source_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+      "release_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+      "source_path": "xlsr/pronunciation/encoders.py"
+    },
+    {
+      "path": "speech/pronunciation/development.py",
+      "source_sha256": "425d1bfdfbe9ebab5ffd2afce68f97c6903acebba8b2cd49fe637f5534d8fdfc",
+      "release_sha256": "425d1bfdfbe9ebab5ffd2afce68f97c6903acebba8b2cd49fe637f5534d8fdfc",
+      "source_path": "xlsr/pronunciation/development.py"
+    },
+    {
+      "path": "speech/pronunciation/encoder_extensions.py",
+      "source_sha256": "c81ec26d28f0233f57e24fd9cc516aef2b70a765525c09e7df99dbb9880474be",
+      "release_sha256": "c81ec26d28f0233f57e24fd9cc516aef2b70a765525c09e7df99dbb9880474be",
+      "source_path": "xlsr/pronunciation/encoder_extensions.py"
+    },
+    {
+      "path": "speech/pronunciation/inference_memory.py",
+      "source_sha256": "01e75ee10c6083b79bfa99f46dacc8ef0de74c2267ee98aad8b1d9090a357128",
+      "release_sha256": "01e75ee10c6083b79bfa99f46dacc8ef0de74c2267ee98aad8b1d9090a357128",
+      "source_path": "xlsr/pronunciation/inference_memory.py"
+    },
+    {
+      "path": "speech/pronunciation/transfer.py",
+      "source_sha256": "ded2e03abebe020f64742ef5cfc71ba7e1272b50aa0cc8b51219d807d2722e4a",
+      "release_sha256": "ded2e03abebe020f64742ef5cfc71ba7e1272b50aa0cc8b51219d807d2722e4a",
+      "source_path": "xlsr/pronunciation/transfer.py"
+    },
+    {
+      "path": "speech/pronunciation/text_reference.py",
+      "source_sha256": "88b4b9b4c742d8665415587a331e3594acf06475d5405cd41b0a727842e1fe7b",
+      "release_sha256": "88b4b9b4c742d8665415587a331e3594acf06475d5405cd41b0a727842e1fe7b",
+      "source_path": "xlsr/pronunciation/text_reference.py"
+    },
+    {
+      "path": "speech/pronunciation/fusion.py",
+      "source_sha256": "df6abf011b72b17db36c7c12567915d013135207c85c8aa0d81077fc28465905",
+      "release_sha256": "df6abf011b72b17db36c7c12567915d013135207c85c8aa0d81077fc28465905",
+      "source_path": "xlsr/pronunciation/fusion.py"
+    },
+    {
+      "path": "speech/pronunciation/phone_cache.py",
+      "source_sha256": "561775efcde9a9af3f48450376f29848976b833b27386cca251d87002a5e9942",
+      "release_sha256": "561775efcde9a9af3f48450376f29848976b833b27386cca251d87002a5e9942",
+      "source_path": "xlsr/pronunciation/phone_cache.py"
+    },
+    {
+      "path": "speech/pronunciation/audio.py",
+      "source_sha256": "462de5818a4c9881626745f97f4c205adf55426b9e4dd0ebc8d986b91c22ae10",
+      "release_sha256": "462de5818a4c9881626745f97f4c205adf55426b9e4dd0ebc8d986b91c22ae10",
+      "source_path": "xlsr/pronunciation/audio.py"
+    },
+    {
+      "path": "speech/pronunciation/phonetic.py",
+      "source_sha256": "91b67b8c1c9d8886f277cea7f167de7c0ba6ebe2de63195400c85287a637c9b2",
+      "release_sha256": "91b67b8c1c9d8886f277cea7f167de7c0ba6ebe2de63195400c85287a637c9b2",
+      "source_path": "xlsr/pronunciation/phonetic.py"
+    },
+    {
+      "path": "speech/pronunciation/gopt.py",
+      "source_sha256": "b92ebf67e8aa7dd98a9dd60ac1e6a90c28910203454027692fa1a69348da11d5",
+      "release_sha256": "b92ebf67e8aa7dd98a9dd60ac1e6a90c28910203454027692fa1a69348da11d5",
+      "source_path": "xlsr/pronunciation/gopt.py"
+    },
+    {
+      "path": "speech/pronunciation/temporal_combination.py",
+      "source_sha256": "d7fd96e273edadb7326f85b061eefdd1ccd10d3c6d14303bb6838501daaa0682",
+      "release_sha256": "d7fd96e273edadb7326f85b061eefdd1ccd10d3c6d14303bb6838501daaa0682",
+      "source_path": "xlsr/pronunciation/temporal_combination.py"
+    },
+    {
+      "path": "speech/pronunciation/praat_features.py",
+      "source_sha256": "854262e5e0d79ba1df8987758e0e5b9f36d9fecbea86f892eecdd46a3b356f98",
+      "release_sha256": "854262e5e0d79ba1df8987758e0e5b9f36d9fecbea86f892eecdd46a3b356f98",
+      "source_path": "xlsr/pronunciation/praat_features.py"
+    },
+    {
+      "path": "speech/scripts/report_praat_fluency_top4.py",
+      "source_sha256": "ab04f6b66c62e2b2719b9432273f29023956754de95ae8ca585a0b603decd0a9",
+      "release_sha256": "ab04f6b66c62e2b2719b9432273f29023956754de95ae8ca585a0b603decd0a9",
+      "source_path": "xlsr/scripts/report_praat_fluency_top4.py"
+    },
+    {
+      "path": "speech/scripts/praat_fluency_top4.py",
+      "source_sha256": "de1fa914656e488425411b539bef137692aeb43b90e649c230897ccb71c7d0b6",
+      "release_sha256": "de1fa914656e488425411b539bef137692aeb43b90e649c230897ccb71c7d0b6",
+      "source_path": "xlsr/scripts/praat_fluency_top4.py"
+    },
+    {
+      "path": "speech/scripts/explicit_baseline.py",
+      "source_sha256": "bd409213204d7e50af57ee7f88aeeedbf91c1394b6f3ede527497cb0241b21e5",
+      "release_sha256": "bd409213204d7e50af57ee7f88aeeedbf91c1394b6f3ede527497cb0241b21e5",
+      "source_path": "xlsr/scripts/explicit_baseline.py"
+    },
+    {
+      "path": "speech/scripts/report_fusion_baselines.py",
+      "source_sha256": "146a07372a7112ace6c27f2f30ad13f3c0e87cdf73f7529d0f70e35df1e9cbc5",
+      "release_sha256": "146a07372a7112ace6c27f2f30ad13f3c0e87cdf73f7529d0f70e35df1e9cbc5",
+      "source_path": "xlsr/scripts/report_fusion_baselines.py"
+    },
+    {
+      "path": "speech/scripts/report_text_reference.py",
+      "source_sha256": "730612d7d6ddd62ced82580ca002f134f5e46ceb59ef59fd72516f6e8860b001",
+      "release_sha256": "730612d7d6ddd62ced82580ca002f134f5e46ceb59ef59fd72516f6e8860b001",
+      "source_path": "xlsr/scripts/report_text_reference.py"
+    },
+    {
+      "path": "speech/scripts/check_unified.py",
+      "source_sha256": "2c3c7bbd9483759dbbfc89ee550de5aa3cc4e436cf36e8513dfce69471caaea5",
+      "release_sha256": "2c3c7bbd9483759dbbfc89ee550de5aa3cc4e436cf36e8513dfce69471caaea5",
+      "source_path": "xlsr/scripts/check_unified.py"
+    },
+    {
+      "path": "speech/scripts/train_unified.py",
+      "source_sha256": "25dde6596663ca61988ba311c547e5d1bcfe44e2d7442f2eba46d035199fedbb",
+      "release_sha256": "25dde6596663ca61988ba311c547e5d1bcfe44e2d7442f2eba46d035199fedbb",
+      "source_path": "xlsr/scripts/train_unified.py"
+    },
+    {
+      "path": "speech/scripts/run_baseline.py",
+      "source_sha256": "3c52e57ba87651feb631338ed6bd993ae1520f8be266a0d7bb0f52ff76a837d5",
+      "release_sha256": "3c52e57ba87651feb631338ed6bd993ae1520f8be266a0d7bb0f52ff76a837d5",
+      "source_path": "xlsr/scripts/run_baseline.py"
+    },
+    {
+      "path": "speech/scripts/baseline_suite.py",
+      "source_sha256": "a17a745476bab0ba3c3222deea239a7bc74a3c49f097f5d5b4eb5b4af12c1a6e",
+      "release_sha256": "a17a745476bab0ba3c3222deea239a7bc74a3c49f097f5d5b4eb5b4af12c1a6e",
+      "source_path": "xlsr/scripts/baseline_suite.py"
+    },
+    {
+      "path": "speech/scripts/extract_frames.py",
+      "source_sha256": "0a42dd0abbe49f5f793f5b11cfcd64512d003a5a3292c59d52b88aa4f1c88ab2",
+      "release_sha256": "0a42dd0abbe49f5f793f5b11cfcd64512d003a5a3292c59d52b88aa4f1c88ab2",
+      "source_path": "xlsr/scripts/extract_frames.py"
+    },
+    {
+      "path": "speech/scripts/acquire.py",
+      "source_sha256": "85f102df2777eb143804f5cb7812657c1480e6b0d513d7e8dceadba5ca9f231a",
+      "release_sha256": "85f102df2777eb143804f5cb7812657c1480e6b0d513d7e8dceadba5ca9f231a",
+      "source_path": "xlsr/scripts/acquire.py"
+    },
+    {
+      "path": "speech/scripts/fusion_data.py",
+      "source_sha256": "ccb2c68dcd21070e8d73eefed2e28a3a852c9bef3a18ec0d6c7f15037cbf6273",
+      "release_sha256": "ccb2c68dcd21070e8d73eefed2e28a3a852c9bef3a18ec0d6c7f15037cbf6273",
+      "source_path": "xlsr/scripts/fusion_data.py"
+    },
+    {
+      "path": "speech/scripts/single_encoder_comparison.py",
+      "source_sha256": "c4e60d3f92054d55958479c1155467b14d41642c35919c2def8d395c4e771ea6",
+      "release_sha256": "c4e60d3f92054d55958479c1155467b14d41642c35919c2def8d395c4e771ea6",
+      "source_path": "xlsr/scripts/single_encoder_comparison.py"
+    },
+    {
+      "path": "speech/scripts/extract_phonetic_baseline.py",
+      "source_sha256": "f923246b008938f4f34d13adf9186d64d3e4205051150d27a3cb4607dc4fedb4",
+      "release_sha256": "f923246b008938f4f34d13adf9186d64d3e4205051150d27a3cb4607dc4fedb4",
+      "source_path": "xlsr/scripts/extract_phonetic_baseline.py"
+    },
+    {
+      "path": "speech/scripts/reference_baselines.py",
+      "source_sha256": "62cc4b76f56d9dba67ec63e36203a133eb5f45ae43cc6a8320422c4d6c9549a6",
+      "release_sha256": "62cc4b76f56d9dba67ec63e36203a133eb5f45ae43cc6a8320422c4d6c9549a6",
+      "source_path": "xlsr/scripts/reference_baselines.py"
+    },
+    {
+      "path": "speech/scripts/run_fusion_baselines.py",
+      "source_sha256": "2022d093ac6a856c2ec1d03d1ba7cdfc8fde398f7e428425a779b841bf64aeba",
+      "release_sha256": "2022d093ac6a856c2ec1d03d1ba7cdfc8fde398f7e428425a779b841bf64aeba",
+      "source_path": "xlsr/scripts/run_fusion_baselines.py"
+    },
+    {
+      "path": "speech/scripts/audit_corpus.py",
+      "source_sha256": "52fdfbadf19699a6e9e1d68af96a2a12c642e5556e3634524191032e2bdeb51f",
+      "release_sha256": "52fdfbadf19699a6e9e1d68af96a2a12c642e5556e3634524191032e2bdeb51f",
+      "source_path": "xlsr/scripts/audit_corpus.py"
+    },
+    {
+      "path": "speech/scripts/korean_pronunciation_pilot.py",
+      "source_sha256": "f03b3e99ba2c666346f166359c89c101a9eb8bebb3ba0622fafda3661d7df7a2",
+      "release_sha256": "f03b3e99ba2c666346f166359c89c101a9eb8bebb3ba0622fafda3661d7df7a2",
+      "source_path": "xlsr/scripts/korean_pronunciation_pilot.py"
+    },
+    {
+      "path": "speech/scripts/train_koreanocean.py",
+      "source_sha256": "0de692ce31a87635bd1231c3faa0c59a2672a1ce200f30b2ba85fa83d09c66f7",
+      "release_sha256": "0de692ce31a87635bd1231c3faa0c59a2672a1ce200f30b2ba85fa83d09c66f7",
+      "source_path": "xlsr/scripts/train_koreanocean.py"
+    },
+    {
+      "path": "speech/scripts/run_seven_families.py",
+      "source_sha256": "3b1998f935d951e04b213146ef17536b72f7503ce5dc8634956abeabc09972c2",
+      "release_sha256": "3b1998f935d951e04b213146ef17536b72f7503ce5dc8634956abeabc09972c2",
+      "source_path": "xlsr/scripts/run_seven_families.py"
+    }
+  ],
+  "excluded_from_local_release": [
+    "speech/scripts/stella_client.py",
+    "speech/scripts/stella_batch.py",
+    "speech/scripts/score_stella.py",
+    "speech/scripts/serve_stella.py"
+  ]
+}

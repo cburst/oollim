@@ -1,0 +1,25 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopocean",
+  "model_version": "aesopocean-stella-seven-families-v1",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "f03b04c363919f0b73d904e493dfe2ebbeaf74419dad45cf8b7cd0fc69e4f12b",
+    "accuracy.json": "aafe246fb7fb5bbf04e1a62cb2ebe5f74bc3937fd6bfcc934edf7cb8931805ef",
+    "fluency.npz": "e48a8fd056d0213e1fa920d6cbede68bb937bc40ac32522843bcf00623ce2676",
+    "fluency.json": "f013be374e610c5535e3bfb171d1d4d9f9ad1b8e50fedd13ee2a0cb700fec39b",
+    "prosody.npz": "d2e7acb65e36e074c7365ecddeba131f8573e13b474039e28cb9967c005963fd",
+    "prosody.json": "af50993c9cb56dd7114d05c873c2f3e9898e9ff476e53eb88738c0a5eba7ce37"
+  },
+  "training_corpora": [
+    "speechocean",
+    "aesop"
+  ],
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "permission_status": "Included at author direction; derived-weight release permissions under review. See docs/RIGHTS.md."
+}
