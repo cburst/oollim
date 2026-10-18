@@ -70,7 +70,7 @@ Frozen **XLS-R**, **XEUS**, and **PhoneticXeus** representations combine with re
 | Fluency | XEUS + XLS-R |
 | Prosody | XEUS + XLS-R |
 
-👪 Seven training families are included: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`. Korean fluency and prosody use the **same source label**; mapping endpoints to 0–10 does not make different rating rubrics equivalent.
+👪 Seven training families are included: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`.
 
 ## 🔬 Reproduce the work
 
