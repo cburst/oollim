@@ -1,6 +1,6 @@
-# 🎙️ oollim
+# <img src="assets/oollim.png" width="40" alt="Studio microphone"> oollim
 
-**Expert L2 English speech evaluation on a gaming PC.**
+**Expert L2 English speech evaluation on a gaming PC**
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Apple Silicon](https://img.shields.io/badge/macOS-Apple_Silicon-000000?logo=apple&logoColor=white)
@@ -8,31 +8,66 @@
 ![Local inference](https://img.shields.io/badge/Inference-local_CPU-success)
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
 
-## 🚀 Install first
+## 🚀 Install
 
-Download and extract the repository into a writable folder, then install native **64-bit Python 3.11** from [python.org](https://www.python.org/downloads/). Open a terminal in the extracted `oollim` folder.
+Download an installer from the [latest release](https://github.com/cburst/oollim/releases/latest). No separate Python installation, API key, CUDA, or WSL is required.
 
-### 🍎 Apple Silicon Mac
+| Platform | Download |
+|---|---|
+| 🍎 Apple Silicon Mac | [oollim-mac.zip](https://github.com/cburst/oollim/releases/latest/download/oollim-mac.zip) |
+| 🪟 Windows · Intel/AMD 64-bit | [oollim-windows.exe](https://github.com/cburst/oollim/releases/latest/download/oollim-windows.exe) |
+
+### 🍎 macOS
+
+1. Extract **oollim-mac.zip** and open **Install oollim.app**.
+2. Follow the instructions and keep Terminal open while dependencies and models download.
+3. The evaluation window opens when setup finishes. Reopen oollim from **~/Applications** afterward.
+
+The published Mac package is Developer ID signed and notarized by Apple. macOS may ask you to confirm opening a downloaded app. **Homebrew is required** for the Pango PDF library: if setup reports that Homebrew is missing, install it from [brew.sh](https://brew.sh), then reopen oollim. Setup installs Pango when Homebrew is available.
+
+### 🪟 Windows
+
+1. Run **oollim-windows.exe** and follow the installer.
+2. Open the **oollim desktop or Start menu shortcut**.
+3. Keep the setup window open while dependencies and models download.
+
+The Windows installer is **unsigned**. If SmartScreen displays “Windows protected your PC,” choose **More info → Run anyway** after confirming the download came from this repository. Managed computers may restrict this option.
+
+### 💾 Setup, privacy, and troubleshooting
+
+- Allow approximately **10 GB** for dependencies and models, plus temporary download space. Initial setup needs internet access; speech evaluation runs locally.
+- Recordings are not sent to a cloud scoring service. Application files, environments, caches, models, and default results are stored under **oollim in your home folder**.
+- First setup takes longer than later launches. If setup fails, resolve the displayed error and reopen oollim to retry. Removing a shortcut does not remove downloaded models or results.
+- Start with a short recording: memory use rises sharply with duration, and CPU inference is not real time. Close memory-heavy applications if needed.
+- For support, include your operating system, error message, and relevant setup log. Do not post private recordings or credentials.
+
+Short-audio scoring and PDF generation have passed native Mac GUI testing and interactive **Windows Server 2022** testing, including the Windows installer wizard. **Windows 11 has not been independently verified.** Signing and notarization were subsequently completed by the author; test the signed Mac package before publishing. See [installation troubleshooting](docs/INSTALL.md) and [native build notes](packaging/README.md).
+
+### 🧰 Install from source
+
+Install native **64-bit Python 3.11** from [python.org](https://www.python.org/downloads/), extract this repository into a writable folder, and open a terminal there.
 
 ```sh
+# macOS
 python3.11 install.py
-python3.11 oollim.py
+python3.11 oollim.py --gui
 ```
-
-### 🪟 Windows 11 · AMD64
 
 ```powershell
+# Windows
 py -3.11 install.py
-py -3.11 oollim.py
+py -3.11 oollim.py --gui
 ```
 
-🧰 The installer creates a `.venv`, installs dependencies and FFmpeg, and downloads pinned speech encoders with progress indicators. No environment activation, API key, CUDA, or WSL is required. Launching `oollim.py` opens the interactive prompts and Rich progress dashboard.
+The installer creates a `.venv`, installs dependencies and FFmpeg, and downloads pinned speech encoders with progress indicators. PDF export uses WeasyPrint 70.0 with Homebrew Pango on Mac and a verified standalone runtime on Windows. Omit `--gui` for terminal prompts and the Rich dashboard.
 
-💾 Allow approximately **10 GB** for dependencies and encoders, plus temporary download space. Internet access is needed for installation; evaluation runs locally. Start with a short recording: memory use rises sharply with audio duration, and CPU inference is not real time.
+Use `install.py --plan` to preview setup, `--skip-models` to defer model downloads, or `--current` to use the invoking Python environment. Do not run the source installer with sudo or administrator privileges.
 
-⚙️ Use `install.py --plan` to preview installation, `--skip-models` to defer model downloads, or `--current` to install into the invoking Python instead of a virtual environment. Do not use sudo or administrator privileges.
+## 🖥️ Desktop interface
 
-📖 See the [installation and troubleshooting guide](docs/INSTALL.md) for full instructions. Apple Silicon has passed the recorded smoke test; **native Windows acceptance testing remains pending**. See [platform validation](docs/VALIDATION.md).
+Select **Audio**, browse to a plain-text **Reference text** file, choose the **Results** location and **Scoring** family, then click **Evaluate**. Click **Open PDF** when processing finishes. The GUI handles one recording at a time; folder processing is available through the command line.
+
+The CSV contains whole-recording scores. The PDF includes sentence-level accuracy, fluency, and prosody, plus **experimental, uncalibrated word-accuracy highlights**. Word highlights are phone-support scores, not validated diagnoses of individual pronunciation errors. See the sentence and word report notes below.
 
 ## 🎧 Score a recording or folder
 
@@ -143,3 +178,7 @@ pdflatex -interaction=nonstopmode -halt-on-error oollim-arxiv.tex
 ## ⚖️ License
 
 Original code and documentation are **source-available** under the [Custom Source-Available License (Non-Production Use Only)](LICENSE.md), copyright 2026 R ROSE. Production use requires a separate license. Third-party model and dataset terms remain separate; the author’s license does not grant rights to those resources.
+
+### Sentence and word report
+
+The single-file GUI saves a PDF alongside its CSV. NLTK splits the supplied reference into sentences; PhoneticXeus CTC alignment locates reference phones in the audio. Sentence audio is scored with the selected family’s accuracy, fluency and prosody ridges. Word accuracy colors use **experimental, uncalibrated reference-phone support**, not a human-trained word-accuracy ridge. Forced alignment can misplace omitted or substituted words. Whole-recording scores remain available; the new segment scores have not inherited their validation results. Detailed scores and timestamps are retained in the CSV’s `.state.json` sidecar. CLI users can request the same analysis with `--granular`. No Azure, email, or cloud processing is involved.
