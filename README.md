@@ -2,7 +2,7 @@
 
 **Expert L2 English speech evaluation on a gaming PC**
 
-*oollim* takes its name from the Korean **울림**: the resonance of a voice and the impression it leaves.
+*oollim* takes its name from the Korean **울림**: the resonance of a voice and the impression that remains.
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Apple Silicon](https://img.shields.io/badge/macOS-Apple_Silicon-000000?logo=apple&logoColor=white)
