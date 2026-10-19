@@ -10,7 +10,7 @@
 
 ## 🚀 Install
 
-Download an installer from the [latest release](https://github.com/cburst/oollim/releases/latest). No separate Python installation, API key, CUDA, or WSL is required.
+Download an installer from the [latest release](https://github.com/cburst/oollim/releases/latest). 
 
 | Platform | Download |
 |---|---|
