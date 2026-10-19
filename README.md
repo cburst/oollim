@@ -178,7 +178,3 @@ pdflatex -interaction=nonstopmode -halt-on-error oollim-arxiv.tex
 ## ⚖️ License
 
 Original code and documentation are **source-available** under the [Custom Source-Available License (Non-Production Use Only)](LICENSE.md), copyright 2026 R ROSE. Production use requires a separate license. Third-party model and dataset terms remain separate; the author’s license does not grant rights to those resources.
-
-### Sentence and word report
-
-The single-file GUI saves a PDF alongside its CSV. NLTK splits the supplied reference into sentences; PhoneticXeus CTC alignment locates reference phones in the audio. Sentence audio is scored with the selected family’s accuracy, fluency and prosody ridges. Word accuracy colors use **experimental, uncalibrated reference-phone support**, not a human-trained word-accuracy ridge. Forced alignment can misplace omitted or substituted words. Whole-recording scores remain available; the new segment scores have not inherited their validation results. Detailed scores and timestamps are retained in the CSV’s `.state.json` sidecar. CLI users can request the same analysis with `--granular`. No Azure, email, or cloud processing is involved.
