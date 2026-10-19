@@ -7,6 +7,7 @@
 ![Windows AMD64](https://img.shields.io/badge/Windows-AMD64-0078D4)
 ![Local inference](https://img.shields.io/badge/Inference-local_CPU-success)
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
+
 [![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.23467863-blue)](https://doi.org/10.5281/zenodo.23467863)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23468266-blue)](https://doi.org/10.5281/zenodo.23468266)
 
