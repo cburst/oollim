@@ -13,7 +13,11 @@ def main():
  for key in ('OMP_NUM_THREADS','MKL_NUM_THREADS','OPENBLAS_NUM_THREADS'):os.environ[key]=str(r['threads'])
  try:
   from .engine import assess
-  result=assess(r['audio'],read_reference(r['transcript']),r['model'],r['temp'],emit,r['threads']);atomic_json(r['result'],{'status':'completed',**result});return 0
+  result=assess(r['audio'],read_reference(r['transcript']),r['model'],r['temp'],emit,r['threads'])
+  if r.get('granular'):
+   from .granular import assess_segments
+   result['granular']=assess_segments(Path(r['temp'])/'decoded.wav',read_reference(r['transcript']),r['model'],r['temp'],emit)
+  atomic_json(r['result'],{'status':'completed',**result});return 0
  except Exception as exc:
   traceback.print_exc()
   if isinstance(exc,OollimError):error={'code':exc.code,'message':exc.message,'fix':exc.fix}

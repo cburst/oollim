@@ -7,13 +7,13 @@ Download/extract this source repository into a writable folder. Install the matc
 macOS:
 ```sh
 python3.11 install.py
-python3.11 oollim.py
+python3.11 oollim.py --gui
 ```
 
 Windows PowerShell:
 ```powershell
 py -3.11 install.py
-py -3.11 oollim.py
+py -3.11 oollim.py --gui
 ```
 
 The default installs into `.venv`; no activation is necessary. `install.py --current` explicitly installs into the invoking Python instead. `--plan` prints the plan, and `--skip-models` defers encoder downloads. Installation logs are under `work/install`. Rerun after an interrupted download; verified assets are reused. Do not run the installer with administrator/sudo privileges.
@@ -22,7 +22,7 @@ Allow approximately 10 GB for dependencies and encoder files, plus temporary dow
 
 ## Evaluate
 
-No arguments opens the interactive prompt and Rich dashboard. Commands below use `python` to mean the interpreter/launcher used above.
+`--gui` opens the cross-platform Qt desktop interface. No arguments opens the interactive prompt and Rich dashboard. Commands below use `python` to mean the interpreter/launcher used above.
 
 ```sh
 python oollim.py --audio "recording.m4a" --transcript "reference.txt" --output scores.csv
@@ -61,3 +61,9 @@ py -3.11 oollim.py --verify-install --audio "C:\path\recording.m4a" --transcript
 ```
 
 This runs the doctor, scores one whole recording, and reruns it to check resume. Reports/logs are written under `work/acceptance`. Share the compact JSON report first; no audio or reference upload is needed. Native Windows acceptance remains pending until this test succeeds on Windows.
+
+## Native launcher layout
+
+The NSIS and Platypus packaging sources are in `packaging/`. Native launchers use `~/oollim` on both platforms: `launcher/` for the source payload, `versions/` for isolated application/runtime installations, `cache/` and `tmp/` for installer caches, and `results/` for default CSV outputs. The Mac .app is a lightweight stub in `~/Applications`; Windows creates desktop and Start-menu shortcuts. User-selected input recordings stay in place. Compiled and signed installers still require native acceptance testing.
+
+PDF export uses WeasyPrint 70.0. On Apple Silicon, install Homebrew if absent; the installer then runs `brew install pango` when needed and verifies PDF creation. Windows setup downloads the official WeasyPrint onedir package, verifies its SHA-256, and keeps it under `~/oollim/pdf-runtime`. Poppler is not required for report generation.

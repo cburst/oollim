@@ -1,6 +1,6 @@
-# 🎙️ oollim
+# <img src="assets/oollim.png" width="40" alt="Studio microphone"> oollim
 
-**Expert L2 English speech evaluation on a gaming PC**
+**Expert L2 English speech evaluation on a gaming PC.**
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Apple Silicon](https://img.shields.io/badge/macOS-Apple_Silicon-000000?logo=apple&logoColor=white)
@@ -154,7 +154,7 @@ Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run
 ## 📌 Scope and provenance
 
 - 🔒 No private recordings, row-level ratings, credentials, or dataset archives are included; private evaluation data are not used for training or calibration.
-- 📦 Small ridge heads for all seven families are included at the author’s direction. Encoders download separately; derived-weight permissions remain under review. See [rights and restrictions](docs/RIGHTS.md).
+- 📦 Small ridge heads for all seven families are released with permissions confirmed by the author, under the [non-commercial weight terms](models/WEIGHTS-LICENSE.md). Encoders download separately. See [rights and restrictions](docs/RIGHTS.md).
 - 🧭 Development partitions guide model choices; reserved final partitions remain excluded.
 - 🔍 Speaker-disjoint splits do not resolve possible pretrained-model exposure to evaluation corpora.
 - 🏷️ The default SpeechOcean bundle is the original API-evaluated ridge. The matched fresh SpeechOcean refit uses the standardized family-comparison training procedure and has different coefficients; results belong to their respective versions.

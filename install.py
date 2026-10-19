@@ -43,6 +43,7 @@ def main():
  if os.name=='nt':torch+=['--index-url','https://download.pytorch.org/whl/cpu']
  steps=[('Install CPU PyTorch',lambda:run(torch,log)),('Install application dependencies',lambda:run(pip+['-r',str(ROOT/'requirements-runtime.txt')],log)),('Install pinned ESPnet source',lambda:run([sys.executable,'-m','oollim_app.assets','--source-only'],log))]
  if not a.skip_models:steps.append(('Download verified pretrained encoders',lambda:run([sys.executable,'-m','oollim_app.assets'],log)))
+ steps.append(('Install and verify WeasyPrint',lambda:run([sys.executable,'-m','oollim_app.pdf_runtime'],log)))
  steps.append(('Verify runtime and FFmpeg',lambda:run([sys.executable,'oollim.py','--doctor','--runtime-only'],log)))
  with tqdm(total=len(steps),unit='stage',desc='Installing oollim') as progress:
   for label,action in steps:

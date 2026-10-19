@@ -14,6 +14,9 @@ if __name__=='__main__':
   if target.exists() and str(target.absolute())!=str(Path(sys.executable).absolute()):
    raise SystemExit(subprocess.call([str(target),str(Path(__file__).resolve()),*sys.argv[1:]],env={**os.environ,'OOLLiM_SELECTED':'1'}))
  try:
+  if '--gui' in sys.argv:
+   from oollim_app.gui import main
+   raise SystemExit(main())
   from oollim_app.cli import main
   raise SystemExit(main())
  except ModuleNotFoundError as exc:

@@ -11,7 +11,7 @@ def runtime_signature():
  h=hashlib.sha256()
  for folder in ('oollim_app','speech/pronunciation'):
   for path in sorted((ROOT/folder).glob('*.py')):h.update(sha(path).encode())
- for package in ('torch','torchaudio','numpy','scipy','transformers','imageio-ffmpeg'):
+ for package in ('torch','torchaudio','numpy','scipy','transformers','imageio-ffmpeg','nltk'):
   try:value=version(package)
   except PackageNotFoundError:value='missing'
   h.update((package+value).encode())
@@ -51,13 +51,14 @@ def stop(process):
   try:os.killpg(process.pid,signal.SIGKILL)
   except ProcessLookupError:pass
 
-def main(argv=None):
+def main(argv=None, event_callback=None, cancel_event=None):
  p=argparse.ArgumentParser(description='oollim: local whole-utterance pronunciation scoring')
  source=p.add_mutually_exclusive_group();source.add_argument('--audio',type=Path);source.add_argument('--folder',type=Path)
  p.add_argument('--transcript',type=Path,help='Common reference text; otherwise use a .txt beside each audio file')
  p.add_argument('--family',choices=['speechocean','korean','aesop','koreanocean','aesopocean','koreanaesop','aesopkoreanocean'],default='speechocean');p.add_argument('--verify-install',action='store_true');p.add_argument('--recursive',action='store_true');p.add_argument('--model',type=Path,default=None)
  p.add_argument('--output',type=Path,default=Path('scores.csv'));p.add_argument('--threads',type=int,default=4);p.add_argument('--timeout',type=float,default=3600)
  p.add_argument('--retry-failed',action='store_true');p.add_argument('--no-live',action='store_true');p.add_argument('--doctor',action='store_true');p.add_argument('--runtime-only',action='store_true');p.add_argument('--download-models',action='store_true')
+ p.add_argument('--granular',action='store_true',help='Experimental sentence construct scores and word phone-support scores')
  a=p.parse_args(argv)
  if a.verify_install:
   if not a.audio or not a.transcript:p.error('--verify-install requires --audio and --transcript')
@@ -105,24 +106,28 @@ def main(argv=None):
    if set(records)-{str(f) for f in files}:raise OollimError('E_RESUME_INPUT','This output contains recordings outside the selected input set.','Use a new output path for a different folder or recording selection.')
    save(output,records)  # Rebuild CSV if the previous run stopped between atomic writes.
    logs=output.parent/(output.stem+'_logs');logs.mkdir(exist_ok=True)
-   view=dict(mode='Batch' if a.folder else 'Single file',current='',family=a.model.parent.name,threads=a.threads,done=0,failed=0,skipped=0,total=len(files),stages=[],scores={},activity=[],output=str(output))
+   view=dict(mode='Batch' if a.folder else 'Single file',current='',family=a.model.parent.name,threads=a.threads,done=0,failed=0,skipped=0,processed=0,total=len(files),stages=[],scores={},activity=[],output=str(output))
    with _Live(Live,console,a.no_live) as live:
+    def publish():
+     if event_callback:event_callback(view)
+     live.update(dashboard(view),refresh=True)
     for audio in files:
+     if cancel_event is not None and cancel_event.is_set():raise KeyboardInterrupt
      view.update(current=audio.name,stages=[{'status':'waiting'} for _ in STAGES],scores={},error=None)
      key=str(audio);fingerprint=''
      try:
-      ref=(a.transcript or audio.with_suffix('.txt')).resolve();text=read_reference(ref);fingerprint=identity(audio,text,a.model)
+      ref=(a.transcript or audio.with_suffix('.txt')).resolve();text=read_reference(ref);fingerprint=identity(audio,text,a.model)+('-granular-v2' if a.granular else '')
       old=records.get(key,{})
       if old.get('fingerprint')==fingerprint and (old.get('status')=='completed' or (old.get('status')=='failed' and not a.retry_failed)):
-       view['skipped']+=1
+       view['skipped']+=1;view['processed']+=1
        if old.get('status')=='failed':view['failed']+=1
-       live.update(dashboard(view),refresh=True);continue
+       publish();continue
       with tempfile.TemporaryDirectory(prefix='oollim-') as directory:
-       tmp=Path(directory);request=dict(audio=str(audio),transcript=str(ref),model=str(a.model.resolve()),temp=directory,events=str(tmp/'events.jsonl'),result=str(tmp/'result.json'),threads=a.threads)
+       tmp=Path(directory);request=dict(audio=str(audio),transcript=str(ref),model=str(a.model.resolve()),temp=directory,events=str(tmp/'events.jsonl'),result=str(tmp/'result.json'),threads=a.threads,granular=a.granular)
        atomic_json(tmp/'request.json',request)
        log=logs/(hashlib.sha256(key.encode()).hexdigest()[:16]+'.log');view['log']=str(log)
        with log.open('w',encoding='utf-8') as f:
-        process=subprocess.Popen([sys.executable,'-m','oollim_app.worker','--request',str(tmp/'request.json')],cwd=ROOT,stdout=f,stderr=subprocess.STDOUT,start_new_session=os.name!='nt')
+        process=subprocess.Popen([sys.executable,'-m','oollim_app.worker','--request',str(tmp/'request.json')],cwd=ROOT,env={**os.environ,"PYTHONUTF8":"1"},stdout=f,stderr=subprocess.STDOUT,start_new_session=os.name!='nt')
         start=time.monotonic()
         try:
          while process.poll() is None:
@@ -133,7 +138,8 @@ def main(argv=None):
             except json.JSONDecodeError:continue
             if e['status']=='running':e['elapsed']=time.time()-e.get('at',time.time())
             view['stages'][e['stage']]=e
-          live.update(dashboard(view),refresh=True)
+          publish()
+          if cancel_event is not None and cancel_event.is_set():raise KeyboardInterrupt
           if time.monotonic()-start>a.timeout:raise OollimError('E_TIMEOUT',f'Inference exceeded {a.timeout:g} seconds.','Inspect the log and available memory; increase --timeout only if the process is making progress.')
           time.sleep(.3)
         finally:stop(process)
@@ -147,7 +153,7 @@ def main(argv=None):
        if not resultpath.exists():raise OollimError('E_WORKER_EXIT',f'Worker exited with code {process.returncode} without a result.','Inspect the recording log and system memory. Run --doctor before retrying.')
        result=json.loads(resultpath.read_text())
        if process.returncode!=0 and result.get('status')=='completed':raise OollimError('E_WORKER_EXIT','Worker did not exit successfully.','Inspect the log before retrying; its incomplete result was rejected.')
-       if identity(audio,read_reference(ref),a.model)!=fingerprint:raise OollimError('E_INPUT_CHANGED','Audio, reference or model changed during scoring.','Keep inputs unchanged and rerun.')
+       if identity(audio,read_reference(ref),a.model)+('-granular-v2' if a.granular else '')!=fingerprint:raise OollimError('E_INPUT_CHANGED','Audio, reference or model changed during scoring.','Keep inputs unchanged and rerun.')
      except (OSError,ValueError,OollimError) as exc:
       result={'status':'failed','error':{'code':getattr(exc,'code','E_INPUT'),'message':str(exc),'fix':getattr(exc,'fix','Check paths, permissions and the diagnostic log.')}}
      if result['status']=='failed':
@@ -156,13 +162,16 @@ def main(argv=None):
      records[key]={'audio':key,'fingerprint':fingerprint,**result};save(output,records)
      if result['status']=='completed':view['done']+=1;view['scores']=result['scores'];view['stages'][-1]={'status':'done','detail':'CSV and resume state saved'}
      else:view['failed']+=1;view['error']=result['error']
-     live.update(dashboard(view),refresh=True)
+     view['processed']+=1
+     publish()
    console.print(f'Saved {output}: {view["done"]} new results, {view["skipped"]} reused, {view["failed"]} failures. Use --retry-failed to retry.')
    return 1 if view['failed'] else 0
   finally:lock.unlink(missing_ok=True)
  except KeyboardInterrupt:print('\nStopped. Completed results are saved; rerun to resume.');return 130
  except ModuleNotFoundError as exc:print(f'Missing dependency: {exc.name}. Rerun install.py with native Python 3.11.',file=sys.stderr);return 1
- except Exception as exc:print(str(exc),file=sys.stderr);return 1
+ except Exception as exc:
+  if event_callback:event_callback({'error':{'message':str(exc)}})
+  print(str(exc),file=sys.stderr);return 1
 
 class _Live:
  def __init__(self,cls,console,disabled):self.live=None if disabled or not console.is_terminal else cls(console=console,auto_refresh=False)
