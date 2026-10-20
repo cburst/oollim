@@ -20,7 +20,7 @@ Download an installer from the [latest release](https://github.com/cburst/oollim
 | Platform | Download |
 |---|---|
 | 🍎 Apple Silicon Mac | [oollim-mac.zip](https://github.com/cburst/oollim/releases/latest/download/oollim-mac.zip) |
-| 🪟 Windows · Intel/AMD 64-bit | [oollim-windows.exe](https://github.com/cburst/oollim/releases/latest/download/oollim-windows.exe) |
+| 🪟 Windows Intel/AMD 64-bit | [oollim-windows.exe](https://github.com/cburst/oollim/releases/latest/download/oollim-windows.exe) |
 
 ### 🍎 macOS
 
