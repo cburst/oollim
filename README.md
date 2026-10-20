@@ -162,7 +162,7 @@ Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run
 - 📦 Small ridge heads for all seven families are released with permissions confirmed by the author, under the [non-commercial weight terms](models/WEIGHTS-LICENSE.md). Encoders download separately. See [rights and restrictions](docs/RIGHTS.md).
 - 🧭 Development partitions guide model choices; reserved final partitions remain excluded.
 - 🔍 Speaker-disjoint splits do not resolve possible pretrained-model exposure to evaluation corpora.
-- 🏷️ The default SpeechOcean bundle is the original API-evaluated ridge. The matched fresh SpeechOcean refit uses the standardized family-comparison training procedure and has different coefficients; results belong to their respective versions.
+
 
 ## 📄 Paper and supplementary materials
 
