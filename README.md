@@ -1,4 +1,4 @@
-# <img src="assets/oollim.png" width="40" alt="Studio microphone"> oollim
+# <img src="assets/oollim.png" width="40" alt="Studio microphone" align="absmiddle"> oollim
 
 **Expert L2 English speech evaluation on a gaming PC**
 
