@@ -154,7 +154,7 @@ python -m reproduce.train --help
 
 ## 🧑‍🏫 Independent evaluation
 
-Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run_statistics.py` and `reproduce/external_tables.py` regenerate the compact paper table and supplementary comparisons. `evaluation/statistics.py` preserves the Spearman, QWK, and paired-bootstrap calculations. Private ratings remain on the evaluator’s machine.
+Evaluation runs locally through `oollim.py`. The repository provides analysis code for Spearman correlation, QWK, and paired-bootstrap comparisons, alongside aggregate results for reconstructing the published tables. Independently recomputing the external evaluation statistics requires recording-level human ratings and system predictions, which are private and not included in the release.
 
 ## 📌 Scope and provenance
 
