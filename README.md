@@ -10,7 +10,7 @@
 ![Local inference](https://img.shields.io/badge/Inference-local_CPU-success)
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
 
-[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.5281%2Fzenodo.23467863-blue)](https://doi.org/10.5281/zenodo.23467863)
+[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.48550%2FarXiv.2610.26406-blue)](https://doi.org/10.48550/arXiv.2610.26406)
 [![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23468266-blue)](https://doi.org/10.5281/zenodo.23468266)
 
 ## 🚀 Install
@@ -166,7 +166,7 @@ Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run
 
 ## 📄 Paper and supplementary materials
 
-- 📚 [arXiv-format paper with all appendices](paper/oollim-arxiv.pdf) · [LaTeX source](paper/oollim-arxiv.tex)
+- 📚 [arXiv paper with all appendices](https://arxiv.org/abs/2610.26406) · [PDF](https://arxiv.org/pdf/2610.26406) · [LaTeX source](paper/oollim-arxiv.tex)
 - 🎤 [Interspeech-format paper](paper/oollim-interspeech.pdf) · [LaTeX source](paper/oollim-interspeech.tex)
 - 📎 [Interspeech supplement](paper/oollim-interspeech-supplementary.pdf) · [LaTeX source](paper/oollim-interspeech-supplementary.tex)
 
