@@ -1,6 +1,8 @@
-# <img src="assets/oollim.png" width="40" alt="Studio microphone"> oollim
+# <img src="assets/oollim.png" width="40" alt="Studio microphone" align="absmiddle"> oollim
 
 **Expert L2 English speech evaluation on a gaming PC**
+
+*oollim* takes its name from the Korean **울림**: the resonance of a voice and the impression that remains.
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
 ![Apple Silicon](https://img.shields.io/badge/macOS-Apple_Silicon-000000?logo=apple&logoColor=white)
@@ -8,14 +10,17 @@
 ![Local inference](https://img.shields.io/badge/Inference-local_CPU-success)
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
 
+[![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.48550%2FarXiv.2610.26406-blue)](https://doi.org/10.48550/arXiv.2610.26406)
+[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23468266-blue)](https://doi.org/10.5281/zenodo.23468266)
+
 ## 🚀 Install
 
-Download an installer from the [latest release](https://github.com/cburst/oollim/releases/latest). 
+Download an installer from the [latest release](https://github.com/cburst/oollim/releases/latest).
 
 | Platform | Download |
 |---|---|
 | 🍎 Apple Silicon Mac | [oollim-mac.zip](https://github.com/cburst/oollim/releases/latest/download/oollim-mac.zip) |
-| 🪟 Windows · Intel/AMD 64-bit | [oollim-windows.exe](https://github.com/cburst/oollim/releases/latest/download/oollim-windows.exe) |
+| 🪟 Windows Intel/AMD 64-bit | [oollim-windows.exe](https://github.com/cburst/oollim/releases/latest/download/oollim-windows.exe) |
 
 ### 🍎 macOS
 
@@ -23,7 +28,7 @@ Download an installer from the [latest release](https://github.com/cburst/oollim
 2. Follow the instructions and keep Terminal open while dependencies and models download.
 3. The evaluation window opens when setup finishes. Reopen oollim from **~/Applications** afterward.
 
-The published Mac package is Developer ID signed and notarized by Apple. macOS may ask you to confirm opening a downloaded app. **Homebrew is required** for the Pango PDF library: if setup reports that Homebrew is missing, install it from [brew.sh](https://brew.sh), then reopen oollim. Setup installs Pango when Homebrew is available.
+The previously published Mac package was Developer ID signed and notarized by Apple. Newly built 0.3 packages require fresh signing and notarization before publication. macOS may ask you to confirm opening a downloaded app. **Homebrew is required** for the Pango PDF library: if setup reports that Homebrew is missing, install it from [brew.sh](https://brew.sh), then reopen oollim. Setup installs Pango when Homebrew is available.
 
 ### 🪟 Windows
 
@@ -41,7 +46,7 @@ The Windows installer is **unsigned**. If SmartScreen displays “Windows protec
 - Start with a short recording: memory use rises sharply with duration, and CPU inference is not real time. Close memory-heavy applications if needed.
 - For support, include your operating system, error message, and relevant setup log. Do not post private recordings or credentials.
 
-Short-audio scoring and PDF generation have passed native Mac GUI testing and interactive **Windows Server 2022** testing, including the Windows installer wizard. **Windows 11 has not been independently verified.** Signing and notarization were subsequently completed by the author; test the signed Mac package before publishing. See [installation troubleshooting](docs/INSTALL.md) and [native build notes](packaging/README.md).
+Version 0.3 passed native Mac GUI and interactive **Windows Server 2022** short-audio/PDF tests, including the Windows installer wizard and combined scoring selector. See [validation details](docs/VALIDATION.md). **Windows 11 has not been independently verified.** The rebuilt Mac installer requires author signing and notarization before publication; test the signed package before publishing. See [installation troubleshooting](docs/INSTALL.md) and [native build notes](packaging/README.md).
 
 ### 🧰 Install from source
 
@@ -65,7 +70,7 @@ Use `install.py --plan` to preview setup, `--skip-models` to defer model downloa
 
 ## 🖥️ Desktop interface
 
-Select **Audio**, browse to a plain-text **Reference text** file, choose the **Results** location and **Scoring** family, then click **Evaluate**. Click **Open PDF** when processing finishes. The GUI handles one recording at a time; folder processing is available through the command line.
+Select **Audio**, browse to a plain-text **Reference text** file, choose the **Results** location, one combined **Scoring** option (family and selection rule), then click **Evaluate**. Click **Open PDF** when processing finishes. The GUI handles one recording at a time; folder processing is available through the command line.
 
 The CSV contains whole-recording scores. The PDF includes sentence-level accuracy, fluency, and prosody, plus **experimental, uncalibrated word-accuracy highlights**. Word highlights are phone-support scores, not validated diagnoses of individual pronunciation errors. See the sentence and word report notes below.
 
@@ -83,8 +88,8 @@ python3.11 oollim.py --folder "audio" --transcript "reference.txt" --output scor
 # 📝 A folder with a matching .txt transcript beside each recording
 python3.11 oollim.py --folder "audio" --recursive --output scores.csv
 
-# 🧪 Choose a different training family
-python3.11 oollim.py --folder "audio" --transcript "reference.txt" --family korean --output korean.csv
+# 🧪 Choose any family and public-development selection rule
+python3.11 oollim.py --folder "audio" --transcript "reference.txt" --family korean --selection historical_grid_damae --output korean-historical.csv
 ```
 
 🪟 On Windows, replace `python3.11` with `py -3.11` in these commands.
@@ -105,7 +110,17 @@ Frozen **XLS-R**, **XEUS**, and **PhoneticXeus** representations combine with re
 | Fluency | XEUS + XLS-R |
 | Prosody | XEUS + XLS-R |
 
-👪 Seven training families are included: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`.
+👪 **21 matched scoring options** combine three selection rules with seven training families: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`.
+
+| Selection (`--selection`) | How the ridge penalty was chosen on public development data |
+|---|---|
+| `spearman` (default) | Each construct’s Spearman correlation; standardized grid |
+| `damae` | Accuracy mean absolute error (DAMAE); same standardized grid |
+| `historical_grid_damae` | Accuracy MAE; historical grid converted to normalized loss |
+
+**Version 0.3 changes the default to the matched Spearman bundle.** The previous deployed SpeechOcean ridge is preserved: use `--model models/speechocean/family.json` to reproduce that version. Other original bundles remain under `models/<family>/family.json`. New choices use the exact evaluated weights in `models/selection-comparison-v1/`; no retraining or private-data calibration is performed. CSVs identify the family, selection rule, and model version. Use a separate output filename for each combination; resume fingerprints distinguish model versions.
+
+For DAMAE conditions, accuracy selects the penalty for each representation combination; fluency and prosody share the penalty chosen for their common features but retain separate output coefficients. These rules describe training-time selection, not live adaptation to your recording.
 
 ## 🔬 Reproduce the work
 
@@ -118,6 +133,7 @@ python3.11 -m venv .venv
 .venv/bin/python -m pip install -e '.[test,evaluation]'
 .venv/bin/python -m pytest -q
 .venv/bin/python -m reproduce.tables
+.venv/bin/python -m reproduce.leader_tables --output output/leaders
 ```
 
 On Windows PowerShell:
@@ -127,6 +143,7 @@ py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e '.[test,evaluation]'
 .\.venv\Scripts\python.exe -m pytest -q
 .\.venv\Scripts\python.exe -m reproduce.tables
+.\.venv\Scripts\python.exe -m reproduce.leader_tables --output output/leaders
 ```
 
 📊 [Completed development tables](results/seven-families-v1.md) report all 63 aggregate comparisons; the underlying data are in `results/seven-families-v1.json`.
@@ -143,13 +160,13 @@ python -m reproduce.train --help
 
 🗂️ `reproduce/` provides portable entry points, `speech/pronunciation/` contains encoder and scoring implementations, and `models/` holds the trained ridge bundles. `speech/scripts/` preserves historical research runners with their experiment-specific layouts.
 
-✅ The seven-family evaluation, **315-configuration representation ablation**, and paired external comparisons are complete. The paired analysis uses **200,000 bootstrap replicates** and a second-seed stability check. The ablation retains the **.01 promotion threshold**; `configs/selected-constructs.json` records the unchanged overall selections: koreanocean accuracy and aesopkoreanocean fluency/prosody. Full ablation results are in `results/ablation-mac-v1/`.
+✅ The **21-combination selection comparison**, **315-configuration representation ablation**, and matched-Spearman paired comparisons are complete. The main table includes all construct-specific leaders within .001 of the unrounded maximum, with marginal 95% confidence intervals. The paired analysis covers the matched-Spearman subset using **200,000 bootstrap replicates** and a second-seed check (89/90 adjusted decisions agree). See [complete comparisons](results/selection-comparison-v1/README.md). The ablation retains the **.01 promotion threshold**; `configs/selected-constructs.json` records the unchanged overall selections: koreanocean accuracy and aesopkoreanocean fluency/prosody. Full ablation results are in `results/ablation-mac-v1/`.
 
 🔎 The portable solver is checked against direct normal equations and the historical solver, with synthetic integration tests. A complete clean-environment raw-corpus → encoder → seven-family rerun has **not** been performed for this release. Pinned source and model manifests support that verification; see [validation details](docs/VALIDATION.md).
 
 ## 🧑‍🏫 Independent evaluation
 
-Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run_statistics.py` and `reproduce/external_tables.py` regenerate the compact paper table and supplementary comparisons. `evaluation/statistics.py` preserves the Spearman, QWK, and paired-bootstrap calculations. Private ratings remain on the evaluator’s machine.
+Evaluation runs locally through `oollim.py`. The repository provides analysis code for Spearman correlation, QWK, and paired-bootstrap comparisons, alongside aggregate results for reconstructing the published tables. Independently recomputing the external evaluation statistics requires recording-level human ratings and system predictions, which are private and not included in the release.
 
 ## 📌 Scope and provenance
 
@@ -157,11 +174,11 @@ Evaluation runs locally through `oollim.py`. Offline commands in `evaluation/run
 - 📦 Small ridge heads for all seven families are released with permissions confirmed by the author, under the [non-commercial weight terms](models/WEIGHTS-LICENSE.md). Encoders download separately. See [rights and restrictions](docs/RIGHTS.md).
 - 🧭 Development partitions guide model choices; reserved final partitions remain excluded.
 - 🔍 Speaker-disjoint splits do not resolve possible pretrained-model exposure to evaluation corpora.
-- 🏷️ The default SpeechOcean bundle is the original API-evaluated ridge. The matched fresh SpeechOcean refit uses the standardized family-comparison training procedure and has different coefficients; results belong to their respective versions.
+
 
 ## 📄 Paper and supplementary materials
 
-- 📚 [arXiv-format paper with all appendices](paper/oollim-arxiv.pdf) · [LaTeX source](paper/oollim-arxiv.tex)
+- 📚 [arXiv paper with all appendices](https://arxiv.org/abs/2610.26406) · [PDF](https://arxiv.org/pdf/2610.26406) · [LaTeX source](paper/oollim-arxiv.tex)
 - 🎤 [Interspeech-format paper](paper/oollim-interspeech.pdf) · [LaTeX source](paper/oollim-interspeech.tex)
 - 📎 [Interspeech supplement](paper/oollim-interspeech-supplementary.pdf) · [LaTeX source](paper/oollim-interspeech-supplementary.tex)
 

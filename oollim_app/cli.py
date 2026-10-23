@@ -4,6 +4,7 @@ from pathlib import Path
 from functools import lru_cache
 from importlib.metadata import version,PackageNotFoundError
 from .common import ROOT,STAGES,OollimError,atomic_json,read_reference,sha
+from .scoring import FAMILIES, SELECTIONS, DEFAULT_SELECTION, bundle_path
 EXTENSIONS={'.wav','.mp3','.m4a','.mp4','.mov','.flac','.ogg','.opus','.webm','.mkv','.aac','.aiff','.aif','.wma','.amr'}
 
 @lru_cache(maxsize=1)
@@ -24,7 +25,7 @@ def identity(audio,text,model):
 
 def save(output,records):
  atomic_json(output.with_suffix(output.suffix+'.state.json'),records)
- fields=['audio','status','family','model_version','duration_seconds','accuracy','fluency','prosody','error_code','error_message','fingerprint']
+ fields=['audio','status','family','selection','model_version','duration_seconds','accuracy','fluency','prosody','error_code','error_message','fingerprint']
  temp=output.with_name(output.name+'.tmp')
  with temp.open('w',newline='',encoding='utf-8') as f:
   w=csv.DictWriter(f,fieldnames=fields,extrasaction='ignore');w.writeheader()
@@ -55,16 +56,18 @@ def main(argv=None, event_callback=None, cancel_event=None):
  p=argparse.ArgumentParser(description='oollim: local whole-utterance pronunciation scoring')
  source=p.add_mutually_exclusive_group();source.add_argument('--audio',type=Path);source.add_argument('--folder',type=Path)
  p.add_argument('--transcript',type=Path,help='Common reference text; otherwise use a .txt beside each audio file')
- p.add_argument('--family',choices=['speechocean','korean','aesop','koreanocean','aesopocean','koreanaesop','aesopkoreanocean'],default='speechocean');p.add_argument('--verify-install',action='store_true');p.add_argument('--recursive',action='store_true');p.add_argument('--model',type=Path,default=None)
+ p.add_argument('--family',choices=FAMILIES,default='speechocean');p.add_argument('--verify-install',action='store_true');p.add_argument('--recursive',action='store_true');p.add_argument('--model',type=Path,default=None)
  p.add_argument('--output',type=Path,default=Path('scores.csv'));p.add_argument('--threads',type=int,default=4);p.add_argument('--timeout',type=float,default=3600)
  p.add_argument('--retry-failed',action='store_true');p.add_argument('--no-live',action='store_true');p.add_argument('--doctor',action='store_true');p.add_argument('--runtime-only',action='store_true');p.add_argument('--download-models',action='store_true')
+ p.add_argument('--selection',choices=tuple(SELECTIONS),default=DEFAULT_SELECTION,help='Public-development tuning rule; default: matched Spearman. --model overrides both selectors.')
  p.add_argument('--granular',action='store_true',help='Experimental sentence construct scores and word phone-support scores')
  a=p.parse_args(argv)
  if a.verify_install:
   if not a.audio or not a.transcript:p.error('--verify-install requires --audio and --transcript')
   from .acceptance import main as verify
   return verify(['--audio',str(a.audio),'--transcript',str(a.transcript)])
- a.model=a.model or ROOT/'models'/a.family/'family.json'
+ custom_model=a.model is not None
+ a.model=a.model or bundle_path(a.family,a.selection)
  try:
   from .common import platform_check
   platform_check()
@@ -106,7 +109,7 @@ def main(argv=None, event_callback=None, cancel_event=None):
    if set(records)-{str(f) for f in files}:raise OollimError('E_RESUME_INPUT','This output contains recordings outside the selected input set.','Use a new output path for a different folder or recording selection.')
    save(output,records)  # Rebuild CSV if the previous run stopped between atomic writes.
    logs=output.parent/(output.stem+'_logs');logs.mkdir(exist_ok=True)
-   view=dict(mode='Batch' if a.folder else 'Single file',current='',family=a.model.parent.name,threads=a.threads,done=0,failed=0,skipped=0,processed=0,total=len(files),stages=[],scores={},activity=[],output=str(output))
+   view=dict(mode='Batch' if a.folder else 'Single file',current='',family=a.model.parent.name if custom_model else f'{a.family} / {a.selection}',threads=a.threads,done=0,failed=0,skipped=0,processed=0,total=len(files),stages=[],scores={},activity=[],output=str(output))
    with _Live(Live,console,a.no_live) as live:
     def publish():
      if event_callback:event_callback(view)

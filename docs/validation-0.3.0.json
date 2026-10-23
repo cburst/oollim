@@ -1,0 +1,27 @@
+{
+  "release": "0.3.0",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "qt_platform": "cocoa",
+  "public_audio_seconds": 8.21,
+  "gui_passed": true,
+  "gui_seconds": 75.51,
+  "gui_model_version": "tuning-rule-v1-spearman__speechocean",
+  "pdf_generated": true,
+  "real_feature_all_choices_passed": true,
+  "choices_checked": 21,
+  "unit_tests_passed": 49,
+  "mac_installer_rebuilt": true,
+  "mac_signing": "requires owner signing/notarization",
+  "windows_status": "passed",
+  "distinct_sample_scores_six_decimals": {
+    "accuracy": 18,
+    "fluency": 18,
+    "prosody": 19
+  },
+  "uniqueness_note": "Some selection rules produce numerically equivalent construct scores; differences at machine precision are not meaningful.",
+  "interface": "single combined scoring dropdown with 21 choices",
+  "windows_platform": "Windows Server 2022 AMD64",
+  "windows_installer_sha256": "876ed1e066a5e9ba891093016cce81fc5000f89e6bff8a6c235d197f80c04312",
+  "windows_native_gui_audio_pdf_passed": true,
+  "windows_model_version": "tuning-rule-v1-historical_grid_damae__koreanocean"
+}

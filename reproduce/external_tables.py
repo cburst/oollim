@@ -21,8 +21,8 @@ def render(source,output):
    for metric in ('rho','qwk'):
     cells.append(f"{r[metric]} {r[metric+'_ci']}")
     value=r[metric]
-    best=max(Decimal(lookup[m,c,'two'][metric]) for m in METHODS[2:])
-    leader=method in METHODS[2:] and best-Decimal(value)<=Decimal('0.001')
+    best=max(Decimal(str(lookup[m,c,'two'].get(metric+'_raw',lookup[m,c,'two'][metric]))) for m in METHODS[2:])
+    leader=method in METHODS[2:] and best-Decimal(str(r.get(metric+'_raw',value)))<=Decimal('0.001')
     if method=='Human raters' or leader:value=r'\textbf{'+value+'}'
     tc.append(value)
   main.append(cells);tex.append(' & '.join(tc)+r'\\')
@@ -38,5 +38,5 @@ def render(source,output):
  return main
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,default=Path('results/external-matched-full-2026-10-18.json'));p.add_argument('--output',type=Path,required=True);a=p.parse_args();render(a.input,a.output)
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,default=Path('results/selection-comparison-v1/external-matched.json'));p.add_argument('--output',type=Path,required=True);a=p.parse_args();render(a.input,a.output)
 if __name__=='__main__':main()

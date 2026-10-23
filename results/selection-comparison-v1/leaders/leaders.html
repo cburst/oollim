@@ -1,0 +1,17 @@
+<meta charset="utf-8"><style>body{font:17px Georgia;margin:30px}td,th{padding:8px;border-bottom:1px solid #ddd;white-space:nowrap}table{border-collapse:collapse}</style><h1>Observed leaders and ties</h1><table><tr><th>Construct</th><th>Family</th><th>Rule</th><th>Spearman</th><th>95% CI</th><th>QWK</th><th>95% CI</th></tr>
+<tr><td>Accuracy</td><td>Human consensus</td><td>--</td><td><b>0.809</b></td><td>[0.769, 0.842]</td><td><b>0.704</b></td><td>[0.663, 0.743]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.761</td><td>[0.709, 0.804]</td><td>0.161</td><td>[0.129, 0.196]</td></tr>
+<tr><td></td><td>aesopocean</td><td>S</td><td><b>0.872</b></td><td>[0.842, 0.894]</td><td>0.598</td><td>[0.563, 0.631]</td></tr>
+<tr><td></td><td>aesopocean</td><td>H</td><td><b>0.872</b></td><td>[0.841, 0.894]</td><td>0.607</td><td>[0.572, 0.640]</td></tr>
+<tr><td></td><td>koreanocean</td><td>S</td><td>0.853</td><td>[0.816, 0.882]</td><td><b>0.821</b></td><td>[0.789, 0.847]</td></tr>
+<tr><td>Fluency</td><td>Human consensus</td><td>--</td><td><b>0.807</b></td><td>[0.768, 0.840]</td><td><b>0.739</b></td><td>[0.695, 0.777]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.633</td><td>[0.556, 0.698]</td><td>0.078</td><td>[0.056, 0.107]</td></tr>
+<tr><td></td><td>aesopkoreanocean</td><td>D</td><td><b>0.877</b></td><td>[0.846, 0.902]</td><td>0.577</td><td>[0.539, 0.612]</td></tr>
+<tr><td></td><td>koreanaesop</td><td>H</td><td><b>0.878</b></td><td>[0.848, 0.901]</td><td>0.469</td><td>[0.431, 0.502]</td></tr>
+<tr><td></td><td>koreanocean</td><td>H</td><td>0.838</td><td>[0.799, 0.870]</td><td><b>0.744</b></td><td>[0.702, 0.779]</td></tr>
+<tr><td>Prosody</td><td>Human consensus</td><td>--</td><td><b>0.807</b></td><td>[0.768, 0.842]</td><td><b>0.742</b></td><td>[0.701, 0.778]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.737</td><td>[0.672, 0.792]</td><td>0.370</td><td>[0.318, 0.421]</td></tr>
+<tr><td></td><td>koreanaesop</td><td>S</td><td><b>0.883</b></td><td>[0.852, 0.906]</td><td>0.431</td><td>[0.394, 0.465]</td></tr>
+<tr><td></td><td>koreanaesop</td><td>D</td><td><b>0.883</b></td><td>[0.852, 0.906]</td><td>0.431</td><td>[0.394, 0.465]</td></tr>
+<tr><td></td><td>koreanaesop</td><td>H</td><td><b>0.883</b></td><td>[0.853, 0.906]</td><td>0.433</td><td>[0.397, 0.468]</td></tr>
+<tr><td></td><td>koreanocean</td><td>H</td><td>0.840</td><td>[0.802, 0.872]</td><td><b>0.675</b></td><td>[0.632, 0.712]</td></tr></table><p>Human agreement averages each rater versus the other two; model agreement averages the same three two-rater references. S: construct-specific development Spearman; D: development accuracy MAE on the same standardized grid; H: development accuracy MAE on the historical grid converted to normalized loss. Every configuration within .001 of the highest observed Spearman or QWK for its construct among 21 combinations is shown, using unrounded estimates. Bold marks qualifying metrics and human baselines. Ties are descriptive, not tests of equivalence or superiority. Rows were chosen after external evaluation; all fitting and hyperparameter selection used public training/development data. Both metrics belong to each displayed configuration. No displayed prediction required clipping; QWK uses 0–100 integer categories with half-up rounding, and Spearman uses raw scores. Intervals are marginal 95% percentile-bootstrap intervals (2,000 draws, seed 42), not selection-adjusted. Full results are in the supplement. Its paired tests concern the matched-Spearman subset, not all displayed leaders.</p>

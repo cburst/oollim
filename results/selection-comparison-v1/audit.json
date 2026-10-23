@@ -1,0 +1,11 @@
+{
+  "recordings": 305,
+  "conditions": 3,
+  "families": 7,
+  "completed_assessments": 6405,
+  "aggregate_rows": 144,
+  "max_point_estimate_error": 0.0,
+  "all_progress_complete": true,
+  "private_data_published": false,
+  "source_archive_sha256": "e44211f6623d95e763db7eea85fd095bb8b014d19474115f048252a29f457582"
+}

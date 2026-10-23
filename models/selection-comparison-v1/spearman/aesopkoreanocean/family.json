@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopkoreanocean",
+  "selection": "spearman",
+  "model_version": "tuning-rule-v1-spearman__aesopkoreanocean",
+  "configuration_sha256": "827f655594201676f7a69fe40d41b5ef43ba391cca59214eb59f3d8cdadaf40e",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "2e04ae6d665609676cc59120b27ea4be48a3b3fce214d0673ab466e5dd89fb5a",
+    "accuracy.json": "8de37f01a617e4c285e52433d8b72087381479bcb0d2ef2403b79f61535d36ca",
+    "fluency.npz": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+    "fluency.json": "04714632c59a07a1e693d654c6ffec5d0e4a2537a8f327375f4eb3117ca24b1b",
+    "prosody.npz": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+    "prosody.json": "ad475ac0372e15d3e7f0e7bcb1bc040e44059fcbcc917a034340bc82d423be0c"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

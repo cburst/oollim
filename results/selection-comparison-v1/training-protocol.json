@@ -1,0 +1,29 @@
+{
+  "version": "tuning-rule-v1",
+  "standard_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "historical_grid": [
+    5e-05,
+    0.0005,
+    0.005,
+    0.05,
+    0.5,
+    5.0
+  ],
+  "historical_conversion": "fixed historical SpeechOcean n=2000; alpha_sum/2000 applied unchanged to all corpus-balanced mean-loss families",
+  "selection_corpora": "included only, equal corpus average",
+  "damae": "minimum accuracy MAE per block combination, ties larger alpha",
+  "spearman": "maximum construct Spearman, then minimum MAE, then larger alpha",
+  "inputs": {
+    "speechocean": "88198610da535b7a7bf03e13c173795a31400f29ae8104bed0d25b1f3b1528f7",
+    "korean": "8ab89fdb2f04ca5270c737c31d2cc18c4832b0acfc52b481aca1d256dc119959",
+    "aesop": "10b3e3e92dd161870b07e77fcd3ea6f1ded1ed9426f7d06809442064044a9560"
+  },
+  "code_sha256": "654006a5929c5e57fe94cae8a0a43088def3702b9018d271a0be7338f5d110f2"
+}

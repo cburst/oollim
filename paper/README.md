@@ -1,15 +1,14 @@
-# Manuscript editions — 2026-10-19
+# Manuscript editions — selection-comparison revision
 
-- `oollim-arxiv.tex/pdf`: current single-column paper with all supplementary sections embedded as appendices.
-- `oollim-interspeech.tex/pdf`: current two-column paper; main text within four pages, references through page five.
-- `oollim-interspeech-supplementary.tex/pdf`: complete external tables, 200,000-draw paired comparisons, score diagnostics, public-development results, Korean rubric, all 315 representation configurations, selection decisions, environment and rater details.
-- `main.tex/pdf`: working copy of the Interspeech paper; `supplementary.tex/pdf` mirrors its supplement.
-- `ablation-corpus-results.csv`: all 945 corpus-level ablation comparisons (Spearman and MAE).
+- `oollim-arxiv.tex/pdf`: single-column manuscript with all supplementary sections embedded.
+- `oollim-interspeech.tex/pdf`: two-column manuscript.
+- `oollim-interspeech-supplementary.tex/pdf`: full matched tables, three-condition sensitivity comparison, paired differences, score diagnostics, public-development results, Korean rubric, representation ablation, environment and rater details.
+- `main.tex/pdf` and `supplementary.tex/pdf`: working mirrors of the Interspeech files.
 
-Compile each named source twice with pdfLaTeX. Interspeech requires the included unmodified `Interspeech.cls`; arXiv uses standard article packages. No external images or bibliography files are required. The source ZIPs include the ablation CSV.
+The main table reports construct-specific leaders across all three selection rules, including every configuration within .001 of the highest unrounded Spearman or QWK. These are descriptive external leaders; complete common-condition comparisons remain in the supplement. The main table includes marginal 95% bootstrap intervals for both metrics; those intervals are not adjusted for selecting the displayed leaders. Both DAMAE conditions and the historical deployed SpeechOcean results remain disclosed in `../results/selection-comparison-v1/`. All 21 combinations have 305 completed evaluations; no private data were used for fitting or calibration. Existing application defaults remain unchanged.
 
-The 54 marginal external rows retain the supplied 2,000-draw export. Paired intervals were recomputed from the complete evaluation scores with 200,000 draws, seeds 42 and 2026; all 90 interval-exclusion decisions agree. Only aggregate outputs and generic analysis code are released. See `../results/external-paired-200k-seed42.json` and its second-seed counterpart. No private scores were used for training or calibration.
+Marginal intervals use the supplied 2,000-draw export. Matched-Spearman paired differences were recomputed with 200,000 draws each for seeds 42 and 2026. Adjusted interval decisions agree for 89/90 contrasts; matched SpeechOcean prosody correlation versus Azure is borderline. The 90-contrast adjustment applies to that subset, not all displayed leaders or the selection-condition search.
 
-The 0.01 public-development promotion rule retains the overall configurations. Two AESOP-only alternatives passed within-family gates but did not replace the externally evaluated models. See `../results/ablation-mac-v1/`.
+Compile each named source twice with pdfLaTeX. Interspeech uses the included unmodified class; arXiv uses standard article packages. Sources embed their tables and references. The reproduction release includes all aggregate results, exact evaluated heads, and the existing 945-row public representation-ablation CSV. No private filenames, identifiers, or recording-level scores are included.
 
-Named-author editions are publication drafts, not anonymized submissions or evidence of venue acceptance. See `TEMPLATE.md` and `../docs/RIGHTS.md` for submission and release constraints.
+The original .01 representation-promotion rule and public-development construct selections remain unchanged. These named-author drafts are not anonymized conference submissions. See `TEMPLATE.md` and `../docs/RIGHTS.md` for release constraints.

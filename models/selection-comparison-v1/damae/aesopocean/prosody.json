@@ -1,0 +1,244 @@
+{
+  "format_version": 1,
+  "checkpoint_type": "frozen_feature_fusion_ridge",
+  "coefficient_layout": "features_by_outputs",
+  "blocks": [
+    "xeus",
+    "xlsr"
+  ],
+  "block_widths": {
+    "xeus": 2048,
+    "xlsr": 2048
+  },
+  "output_dimensions": [
+    "accuracy",
+    "fluency",
+    "prosody"
+  ],
+  "target_scale": "0..10 endpoint-mapped corpus labels",
+  "backbone_provenance": {
+    "xeus": {
+      "backbone": {
+        "name": "xeus",
+        "model_id": "espnet/xeus",
+        "revision": "b651261280bf792df4632ccb2d1ba4eeaabeaee2",
+        "directory": "resources/xeus",
+        "weights_sha256": "4fd02581b4dd06736d1a6aa29e20c442afe3d9b299c88359f63320292a5c5cff",
+        "config_sha256": "382ab33c232e14ccf3eabdd0129db239ae0420fc2d8546098a4260820255062e",
+        "implementation_revision": "5b52d57b4f872ff7babded35316a79642e9e6c12",
+        "frozen": true,
+        "layer": -1,
+        "sample_rate": 16000,
+        "adapter_version": "unpadded-per-utterance-keymap-v1"
+      },
+      "preprocessing": "mono-resample-poly-v1",
+      "pooling": "native_frame_mean_std_epsilon_1e-5",
+      "split_sha256": "13b883856fa2bd1a518b0bd737930daa72b55b17840f9e01eae32f5a6b054989",
+      "manifest_sha256": "df826d120d2011e267781ca97ec8329c5446658fc5b47079f664c10ddc32afe1",
+      "torch_version": "2.11.0",
+      "adapter_source_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+      "pooling_source_sha256": "4c01f1770f1e1452f07ab7931b88240b263419aa029d34c5d781720030767fcb"
+    },
+    "xlsr": {
+      "backbone": {
+        "name": "xlsr",
+        "model_id": "facebook/wav2vec2-xls-r-300m",
+        "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+        "directory": "resources/xlsr-300m",
+        "weights_sha256": "d5e490574712ad0a6736923b9ed11d4cd51c78609c36205f704fc4e87b11d2e0",
+        "config_sha256": "0bffa0d0e98153e883b828d86491f3c6062cb563dc9d7a9cfd1790da30c286ac",
+        "implementation_revision": "transformers-5.19.0",
+        "frozen": true,
+        "layer": -1,
+        "sample_rate": 16000,
+        "adapter_version": "unpadded-per-utterance-keymap-v1"
+      },
+      "preprocessing": "mono-resample-poly-v1",
+      "pooling": "native_frame_mean_std_epsilon_1e-5",
+      "split_sha256": "13b883856fa2bd1a518b0bd737930daa72b55b17840f9e01eae32f5a6b054989",
+      "manifest_sha256": "df826d120d2011e267781ca97ec8329c5446658fc5b47079f664c10ddc32afe1",
+      "torch_version": "2.11.0",
+      "adapter_source_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+      "pooling_source_sha256": "4c01f1770f1e1452f07ab7931b88240b263419aa029d34c5d781720030767fcb"
+    }
+  },
+  "ipa_generator_provenance": null,
+  "experiment_provenance": {
+    "config_sha256": "6b7de239f04e1d4dffedd10ab3922433e3a24361c52819172b249acb8df8ec99",
+    "labels_sha256": "31c847b8ee29d61d8fe338bcbb1d4c4721425f05481d2144ad57cd19ea1159f8",
+    "reference_sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22",
+    "reference_generator": {
+      "version": "cmudict-first-entry-text-v1",
+      "resource": {
+        "url": "https://raw.githubusercontent.com/cmusphinx/cmudict/74790861f652b15e4ac49015a90074ad62a27690/cmudict.dict",
+        "revision": "74790861f652b15e4ac49015a90074ad62a27690",
+        "sha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22"
+      },
+      "code_sha256": "88b4b9b4c742d8665415587a331e3594acf06475d5405cd41b0a727842e1fe7b"
+    },
+    "mapping_version": "speechocean-arpabet-approx-ipa-v1",
+    "feature_names": [
+      "entropy_mean",
+      "entropy_std",
+      "max_probability_mean",
+      "blank_probability_mean",
+      "greedy_blank_fraction",
+      "greedy_tokens_per_second",
+      "reference_tokens_per_second",
+      "reference_coverage",
+      "reference_complete",
+      "greedy_reference_length_ratio",
+      "edit_rate",
+      "substitution_rate",
+      "deletion_rate",
+      "insertion_rate",
+      "ctc_alignable",
+      "ctc_nll_per_frame",
+      "ctc_nll_per_reference_token"
+    ],
+    "feature_code_sha256": "0206f489625d4115cb4d2be523568a7f078bfeb7f79665af2e16c43a24347b0b",
+    "upstream_exposure_audit_sha256": "ee171639762c149435e71e991698e81eca36ea73e6272ab7d985854291cd78b7",
+    "runner_sha256": "2022d093ac6a856c2ec1d03d1ba7cdfc8fde398f7e428425a779b841bf64aeba",
+    "manifest_sha256": "df826d120d2011e267781ca97ec8329c5446658fc5b47079f664c10ddc32afe1",
+    "split_sha256": "13b883856fa2bd1a518b0bd737930daa72b55b17840f9e01eae32f5a6b054989",
+    "backbones": {
+      "xeus": {
+        "backbone": {
+          "name": "xeus",
+          "model_id": "espnet/xeus",
+          "revision": "b651261280bf792df4632ccb2d1ba4eeaabeaee2",
+          "directory": "resources/xeus",
+          "weights_sha256": "4fd02581b4dd06736d1a6aa29e20c442afe3d9b299c88359f63320292a5c5cff",
+          "config_sha256": "382ab33c232e14ccf3eabdd0129db239ae0420fc2d8546098a4260820255062e",
+          "implementation_revision": "5b52d57b4f872ff7babded35316a79642e9e6c12",
+          "frozen": true,
+          "layer": -1,
+          "sample_rate": 16000,
+          "adapter_version": "unpadded-per-utterance-keymap-v1"
+        },
+        "preprocessing": "mono-resample-poly-v1",
+        "pooling": "native_frame_mean_std_epsilon_1e-5",
+        "split_sha256": "13b883856fa2bd1a518b0bd737930daa72b55b17840f9e01eae32f5a6b054989",
+        "manifest_sha256": "df826d120d2011e267781ca97ec8329c5446658fc5b47079f664c10ddc32afe1",
+        "torch_version": "2.11.0",
+        "adapter_source_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+        "pooling_source_sha256": "4c01f1770f1e1452f07ab7931b88240b263419aa029d34c5d781720030767fcb"
+      },
+      "xlsr": {
+        "backbone": {
+          "name": "xlsr",
+          "model_id": "facebook/wav2vec2-xls-r-300m",
+          "revision": "1a640f32ac3e39899438a2931f9924c02f080a54",
+          "directory": "resources/xlsr-300m",
+          "weights_sha256": "d5e490574712ad0a6736923b9ed11d4cd51c78609c36205f704fc4e87b11d2e0",
+          "config_sha256": "0bffa0d0e98153e883b828d86491f3c6062cb563dc9d7a9cfd1790da30c286ac",
+          "implementation_revision": "transformers-5.19.0",
+          "frozen": true,
+          "layer": -1,
+          "sample_rate": 16000,
+          "adapter_version": "unpadded-per-utterance-keymap-v1"
+        },
+        "preprocessing": "mono-resample-poly-v1",
+        "pooling": "native_frame_mean_std_epsilon_1e-5",
+        "split_sha256": "13b883856fa2bd1a518b0bd737930daa72b55b17840f9e01eae32f5a6b054989",
+        "manifest_sha256": "df826d120d2011e267781ca97ec8329c5446658fc5b47079f664c10ddc32afe1",
+        "torch_version": "2.11.0",
+        "adapter_source_sha256": "e777f1876c4933ec738fddff8b20825e6fd10ff27870d0d862120dba4e9f9d82",
+        "pooling_source_sha256": "4c01f1770f1e1452f07ab7931b88240b263419aa029d34c5d781720030767fcb"
+      },
+      "phoneticxeus": {
+        "backbone": "phoneticxeus",
+        "model_id": "changelinglab/PhoneticXeus",
+        "configuration": {
+          "model_type": "phoneticxeus",
+          "architectures": [
+            "PhoneticXeusModel"
+          ],
+          "auto_map": {
+            "AutoConfig": "configuration_phoneticxeus.PhoneticXeusConfig",
+            "AutoModel": "modeling_phoneticxeus.PhoneticXeusModel"
+          },
+          "config_yaml": "pxeus/model/xeusphoneme/resources/xeus_config.yaml",
+          "vocab_file": "pxeus/model/xeusphoneme/resources/ipa_vocab.json",
+          "interctc_layer_idx": [
+            4,
+            8,
+            12
+          ],
+          "interctc_use_conditioning": true,
+          "sampling_rate": 16000,
+          "torch_dtype": "float32"
+        },
+        "acquisition_receipt": {
+          "id": "px-config.json",
+          "path": "phoneticxeus/config.json",
+          "url": "https://huggingface.co/changelinglab/PhoneticXeus/resolve/ed64f14aeb0e903a80a825cf67a079aa8f93d3ac/config.json",
+          "revision": "ed64f14aeb0e903a80a825cf67a079aa8f93d3ac",
+          "license": "Inspect model card and code license",
+          "sha256": "e3a1159d19f0908ecf21053c854e5f1994e90e6339a01025ea081d965d7d5a1b",
+          "bytes": 490,
+          "retrieved_at": "2026-10-10T11:50:30.084782+00:00",
+          "integrity": "local_sha256_only"
+        },
+        "weights_sha256": "ad58bf20a60e9d0380327bd8b2d0e8e90a9b8de2adccbfb479f9b21ea85eda18",
+        "config_sha256": "e3a1159d19f0908ecf21053c854e5f1994e90e6339a01025ea081d965d7d5a1b",
+        "vocabulary_sha256": "96c70e0f72c02aa882a6cf9083b2e1a007c37ff5890a94afc3bf0039748654c3",
+        "implementation": {
+          "configuration_phoneticxeus.py": "be6167a7f8572cfe37407ac3b92379c46664dcf24f7e7d74ee6013d3c2c3dd51",
+          "modeling_phoneticxeus.py": "7583603ff37667ce3d0d84760280e8d9d5cbeb20de749f41db2c9fd3feea256a",
+          "pxeus/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/core/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/core/utils.py": "e837c100eaa0b3b6df572b0e0743550767a32139010e74de1a1d288a274cc665",
+          "pxeus/espnet_import/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/espnet_import/attention.py": "281729d0e2e7450e1b3c702d09afde9b5d948837ce8eed867f583c804d689c23",
+          "pxeus/espnet_import/cgmlp.py": "027fd6754daab5a2b4080a3affc1edeb8b63a0997720bd6e98efc37bb3358ef3",
+          "pxeus/espnet_import/embedding.py": "2ec7912011a0fb75250ca2cf3d5d4e9708542cdaa559cff50fc063dc6410d1eb",
+          "pxeus/espnet_import/fastformer.py": "e1a3a07a4b35dd187e2054a60936bbc9f6e88b8ac01bcf19a096ab962a65528f",
+          "pxeus/espnet_import/label_smoothing_loss.py": "b1ae7794efe3f2650dc5c50cffa5f568a65398b162988fa59c39d6b7aa390977",
+          "pxeus/espnet_import/layer_norm.py": "09ae1baa48bd76813f53b0deeadbc8ede816258acdc64ec7e4edbf81cff39ab2",
+          "pxeus/espnet_import/nets_utils.py": "a36c74c940d910d75f633e0c163dc258c05b4329b6a2c732c3d791026366e502",
+          "pxeus/espnet_import/positionwise_feed_forward.py": "b9980b46e2c2bec968c20bfa99a494996e156d53db95dbbb7005c0a2fc76eef0",
+          "pxeus/espnet_import/repeat.py": "9fefa31e135c0f8c4da1ac9437be162075210bf5f23fcd1b702d256e584783ad",
+          "pxeus/espnet_import/subsampling.py": "f0b25ecf19b516b4d0626273a7b78042676176b3d37df75ba54ed909d03cd5d7",
+          "pxeus/model/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/model/powsm/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/model/powsm/ctc.py": "88d945d8f71db7cc5da335707747fe707d79f9e2d65b74f6ffd219938de621aa",
+          "pxeus/model/powsm/e_branchformer.py": "5870009388038a29368358095350da6f4ca7e8a8a8a7f78e38de1294dbc6aa93",
+          "pxeus/model/powsm/specaug.py": "c3266cfdc40c25c908c6e3d0357506a097f668a15266fde7103b19fe37b29e25",
+          "pxeus/model/powsm/utils.py": "d075f02ad6bd492d494f2afbbac0d06807d6d0c1a351a4c696a200d9abb8a631",
+          "pxeus/model/xeusphoneme/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/model/xeusphoneme/builders.py": "2287ea7e83d944358a136b83c558017a663d610a4904017345fa47873743241c",
+          "pxeus/model/xeusphoneme/cnn_frontend.py": "c8a303f39b471e1ec33fa9e549c073220a014da5f3a373a47ec2e57a9ff50683",
+          "pxeus/model/xeusphoneme/linear_layer.py": "4d4e40cda034d1674fbb395e2703c4b3ddd5aac93e2b32f4956c6e580168253b",
+          "pxeus/model/xeusphoneme/resources/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/model/xeusphoneme/xeuspr_inference.py": "742d51fcf39ea12d39817aab01f0bd30026b77f57eb88d21f43510226bfb91d9",
+          "pxeus/model/xeusphoneme/xeuspr_model.py": "f9aa59fa7c9ae0761a49253b972f5140abdb9b5033c62d751a2b2f9240e0e011",
+          "pxeus/recipe/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/recipe/phone_recognition/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "pxeus/recipe/phone_recognition/greedy_ctc_strategy.py": "e7aa4c2849b9c02e6f3fda399970a37a6ff0a2e4906171b6a0d52015d9f67c6c",
+          "pxeus/utils/__init__.py": "4698425f6b0c88a00e4058e055b0fba2d393021d55f38a98a2c0827d12253cc9",
+          "pxeus/utils/pylogger.py": "680eaba59200727b1489bf53a52e61fa1ff18d812a3e6ea960ad93cbf6a57158"
+        },
+        "adapter_sha256": "91b67b8c1c9d8886f277cea7f167de7c0ba6ebe2de63195400c85287a637c9b2",
+        "audio_sha256": "462de5818a4c9881626745f97f4c205adf55426b9e4dd0ebc8d986b91c22ae10",
+        "pooling_sha256": "c0a5a00205867d963cac9600f7c5e00dbeda791c96783c3ea563b646bdd8a7d9",
+        "preprocessing": "mono-resample-poly-v1",
+        "pooling": "native_frame_mean_std_epsilon_1e-5",
+        "torch_version": "2.11.0",
+        "frozen": true,
+        "device": "mps",
+        "dtype": "float32",
+        "pooling_device": "cpu"
+      }
+    }
+  },
+  "checkpoint_sha256": "5c1c0e7f5eed65c74f89829ef3cd74317de67762391ebe7490b2f7b7902ed70b",
+  "training": {
+    "experiment": "tuning-rule-v1",
+    "family": "aesopocean",
+    "condition": "damae",
+    "selected_construct": "prosody",
+    "alpha": 1.0,
+    "protocol_sha256": "4bb0138433b4d0f877a6027d00d72a8f1b2deeed75bdc5270bc296cbaf308e5d"
+  }
+}

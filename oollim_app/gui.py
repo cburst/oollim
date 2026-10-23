@@ -14,7 +14,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
     QMessageBox, QGridLayout, QGroupBox)
 from .common import ROOT, STAGES
 
-FAMILIES = ['speechocean','korean','aesop','koreanocean','aesopocean','koreanaesop','aesopkoreanocean']
+from .scoring import FAMILIES, SELECTIONS
 
 
 class Runner(QThread):
@@ -68,7 +68,14 @@ class Window(QMainWindow):
         self.refmode=QComboBox(self);self.refmode.addItems(['Paste reference text','Use a transcript file']);self.refmode.setCurrentIndex(1);self.refmode.hide()
         self.transcript=QLineEdit();self.transcript.setPlaceholderText('Reference.txt')
         self.transcript_row=self.path_row(self.transcript,self.choose_transcript);grid.addWidget(self.transcript_row,1,1)
-        self.family=QComboBox();self.family.addItems(FAMILIES);grid.addWidget(self.family,1,3)
+        self.scoring=QComboBox()
+        for family in FAMILIES:
+            for key,label in SELECTIONS.items():
+                self.scoring.addItem(f'{family} — {label}',(family,key))
+        self.scoring.setSizeAdjustPolicy(QComboBox.SizeAdjustPolicy.AdjustToContents)
+        self.scoring.setAccessibleName('Scoring family and selection rule')
+        self.scoring.setToolTip('Spearman: construct-specific correlation. DAMAE: accuracy MAE. Historical-grid DAMAE: accuracy MAE with the historical penalty grid. All tuning uses public development data.')
+        grid.addWidget(self.scoring,1,3)
         self.output=QLineEdit(str(Path.home()/'oollim/results/scores.csv'))
         grid.addWidget(self.path_row(self.output,self.choose_output),1,2)
         self.text=QPlainTextEdit(self);self.text.setPlaceholderText('Paste the text spoken in the recording…');self.text.setMinimumHeight(130);self.text.setMaximumHeight(180)
@@ -84,7 +91,7 @@ class Window(QMainWindow):
         self.stop.setEnabled(False);self.open_pdf.setEnabled(False)
         self.start.clicked.connect(self.begin);self.stop.clicked.connect(self.cancel);self.open_pdf.clicked.connect(self.show_pdf)
         buttons.addStretch();layout.addLayout(buttons)
-        for field in (self.source,self.transcript,self.output,self.refmode,self.family):field.setFixedHeight(36)
+        for field in (self.source,self.transcript,self.output,self.refmode,self.scoring):field.setFixedHeight(36)
         # Retain controller state without showing the old dashboard panels.
         self.elapsed=QLabel(self);self.status=QLabel(self);self.stage=QLabel(self)
         self.progress=QProgressBar(self);self.table=QTableWidget(0,5,self)
@@ -92,6 +99,10 @@ class Window(QMainWindow):
         for widget in (self.elapsed,self.status,self.stage,self.progress,self.table,self.details):widget.hide()
         self.timer=QTimer(self);self.timer.timeout.connect(self.tick)
         self.setStyleSheet('QMainWindow {background: #f5f9fc;} QGroupBox {font-weight: 600;} QPushButton {padding: 8px 15px;} QPushButton[action="true"] {background: #b9e2fb; color: #163c58; border: 1px solid #84bddc; border-radius: 7px;} QPushButton[action="true"]:disabled {background: #e3edf3; color: #8b9ba6; border-color: #c9d7df;} QLineEdit, QPlainTextEdit, QComboBox {padding: 5px;}')
+
+        self.scoring.ensurePolished()
+        menu_width=max(self.scoring.fontMetrics().horizontalAdvance(self.scoring.itemText(i)) for i in range(self.scoring.count()))+64
+        self.scoring.view().setMinimumWidth(menu_width)
 
     def path_row(self, field, action):
         row=QWidget(); box=QHBoxLayout(row);box.setContentsMargins(0,0,0,0);box.addWidget(field)
@@ -123,7 +134,8 @@ class Window(QMainWindow):
             output=Path(self.output.text()).expanduser().resolve()
             if output.suffix.lower()!='.csv':raise ValueError('The output filename must end in .csv.')
             if output==source.resolve():raise ValueError('Results cannot overwrite an input file.')
-            args=['--audio',str(source.resolve()),'--family',self.family.currentText(),'--output',str(output),'--no-live','--retry-failed','--granular']
+            family,selection=self.scoring.currentData()
+            args=['--audio',str(source.resolve()),'--family',family,'--selection',selection,'--output',str(output),'--no-live','--retry-failed','--granular']
             if self.refmode.currentIndex()==0:
                 text=self.text.toPlainText().strip()
                 if not text:raise ValueError('Paste the reference text or select another reference mode.')

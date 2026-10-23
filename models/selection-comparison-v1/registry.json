@@ -1,0 +1,443 @@
+{
+  "spearman__speechocean": {
+    "model_version": "tuning-rule-v1-spearman__speechocean",
+    "configuration_sha256": "a7b8e89616b0ffc9917603d68227909dbe4b7a26e4c38ccb7855356b7e5b957f",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/speechocean/accuracy.npz",
+        "sha256": "4d8e4985c059e9d5bc4cb656b28bed3ce3b5deb0a713d3982fedc16668a28c7f",
+        "metadata_sha256": "e36f39992ed30c44a90c519740ca863d0ba5c59c494f02363d6978692ce0edf4"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/speechocean/fluency.npz",
+        "sha256": "1986b9c694d47e13326b43f85d35fd20f4c62c94c79700426ae514f3314d65ee",
+        "metadata_sha256": "f3ab25b0b264b4d4d6c7835ecddf878fbea33f4f20e5204abd9afcb8f9b6bdb0"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/speechocean/prosody.npz",
+        "sha256": "1986b9c694d47e13326b43f85d35fd20f4c62c94c79700426ae514f3314d65ee",
+        "metadata_sha256": "d48f342c7b098ae91c066ce3c946b944582a20cd80f9e9254074534fcc0a3ee0"
+      }
+    }
+  },
+  "spearman__korean": {
+    "model_version": "tuning-rule-v1-spearman__korean",
+    "configuration_sha256": "0f665d713f157435a281edc37e288ddef335e6b64e0abaef7d391d123e734650",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/korean/accuracy.npz",
+        "sha256": "0969149a5ddfecea757c80c312a5434305b59d46383f9708c14de22dfee77374",
+        "metadata_sha256": "4612e7937227e072fbb07fe783ec287be0a439cef7d51fc4b964c08f12ca45e1"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/korean/fluency.npz",
+        "sha256": "7279b37ad49d928518c9ab5410471a9544afff5c92251c55d2115c01c855cba5",
+        "metadata_sha256": "a78b8c722a1f56e57ff69959a3afdda0735a9509daf6f14a934cb0490fba6408"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/korean/prosody.npz",
+        "sha256": "7279b37ad49d928518c9ab5410471a9544afff5c92251c55d2115c01c855cba5",
+        "metadata_sha256": "a4fa588d119514bfa4733a1ce4a71fa3f129400907ca83b4e51952a19c80af16"
+      }
+    }
+  },
+  "spearman__aesop": {
+    "model_version": "tuning-rule-v1-spearman__aesop",
+    "configuration_sha256": "c16f14ce333ee0b8d22aed8a38b6a4b405a70655f46753de652fe36352c4a3ed",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/aesop/accuracy.npz",
+        "sha256": "03b539fabf487362b591526b620109c76a9d6c3a08d4acce092aa323cdb36784",
+        "metadata_sha256": "a101e4a2aa7f151fe29f688909e6facedd06a76ec2cca94a21af65680910214c"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/aesop/fluency.npz",
+        "sha256": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+        "metadata_sha256": "9a265bedb6dcd5bcd54485008f39a87cfd709a30e3402d513c250bdc42f1b939"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/aesop/prosody.npz",
+        "sha256": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+        "metadata_sha256": "362b9da86c6aa43341b8d69c3fef4946c43a7bfd3703d16c34542c620e4116f4"
+      }
+    }
+  },
+  "spearman__koreanocean": {
+    "model_version": "tuning-rule-v1-spearman__koreanocean",
+    "configuration_sha256": "1913eaedd40824ca6b915f4bf74950726e1599565abf4fb25b0ed41cf2b6451b",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/koreanocean/accuracy.npz",
+        "sha256": "3b616fd5b319f97dc105205931c2b660af61e0e3ebc6e0fa7ff7ced229b41b8b",
+        "metadata_sha256": "32d978871d9dcb0ebc3191a97508d0987ed6c2a72623d1332649773a35f0ed0c"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/koreanocean/fluency.npz",
+        "sha256": "e700aa9c0d1d091ee0f2aef2787490aeafc5729b5e5be316917cb9268882b8c3",
+        "metadata_sha256": "f34b59e0959db015b1f5af9dbb1786e6a8438954de480c797a4c226cafbc297f"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/koreanocean/prosody.npz",
+        "sha256": "e700aa9c0d1d091ee0f2aef2787490aeafc5729b5e5be316917cb9268882b8c3",
+        "metadata_sha256": "29e67557d490976519f3fb68cf91d7decda25964ff6e6d3bcea5c605b710e1a2"
+      }
+    }
+  },
+  "spearman__aesopocean": {
+    "model_version": "tuning-rule-v1-spearman__aesopocean",
+    "configuration_sha256": "2d525cf50ac6f7bf4ee190cbf250e3b6177d004c8a9213129dc3408d287d3eda",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/aesopocean/accuracy.npz",
+        "sha256": "f03b04c363919f0b73d904e493dfe2ebbeaf74419dad45cf8b7cd0fc69e4f12b",
+        "metadata_sha256": "99cad3b7ff117e77df1d874da21c34a8233d48e60cda2ff56a423feb6f945f4b"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/aesopocean/fluency.npz",
+        "sha256": "e48a8fd056d0213e1fa920d6cbede68bb937bc40ac32522843bcf00623ce2676",
+        "metadata_sha256": "862e66b3c78d162bbcdd196488b63805f43b1c3112bc3f1210eb4606c4fac265"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/aesopocean/prosody.npz",
+        "sha256": "d2e7acb65e36e074c7365ecddeba131f8573e13b474039e28cb9967c005963fd",
+        "metadata_sha256": "5ef796ddb1af1d871466b24b21426552ab4f4aae8dbdc09e231a815e763a1d0e"
+      }
+    }
+  },
+  "spearman__koreanaesop": {
+    "model_version": "tuning-rule-v1-spearman__koreanaesop",
+    "configuration_sha256": "44b28a8525ac78fc3d7b7e94e49815ba3563356672e64deb2a06ab88c66099a9",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/koreanaesop/accuracy.npz",
+        "sha256": "4b6de82a7c1914a8349ceff4876b8057603cd27d15aed5e507d43b15334cc9c9",
+        "metadata_sha256": "59fe667a8666927177cc4beeb1a9004c04a714a6bc66b624e0739984a70152da"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/koreanaesop/fluency.npz",
+        "sha256": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+        "metadata_sha256": "56b4c3185b11ad8b0b5f1d6043ab3390bf41fdf665165406ca5a133708651923"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/koreanaesop/prosody.npz",
+        "sha256": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+        "metadata_sha256": "bc22fdaa2c1de2a4badcaaa8f69487bc3fbc8fddeafb9e7051b62356aed5845c"
+      }
+    }
+  },
+  "spearman__aesopkoreanocean": {
+    "model_version": "tuning-rule-v1-spearman__aesopkoreanocean",
+    "configuration_sha256": "827f655594201676f7a69fe40d41b5ef43ba391cca59214eb59f3d8cdadaf40e",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/spearman/aesopkoreanocean/accuracy.npz",
+        "sha256": "2e04ae6d665609676cc59120b27ea4be48a3b3fce214d0673ab466e5dd89fb5a",
+        "metadata_sha256": "8de37f01a617e4c285e52433d8b72087381479bcb0d2ef2403b79f61535d36ca"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/spearman/aesopkoreanocean/fluency.npz",
+        "sha256": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+        "metadata_sha256": "04714632c59a07a1e693d654c6ffec5d0e4a2537a8f327375f4eb3117ca24b1b"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/spearman/aesopkoreanocean/prosody.npz",
+        "sha256": "7827317d9aa835530c9161925c70e3819079597eb3b153b9bd8d30cd0251efcb",
+        "metadata_sha256": "ad475ac0372e15d3e7f0e7bcb1bc040e44059fcbcc917a034340bc82d423be0c"
+      }
+    }
+  },
+  "damae__speechocean": {
+    "model_version": "tuning-rule-v1-damae__speechocean",
+    "configuration_sha256": "d37a9b21a21863356002730370a3a91dbc273a9de08a1304b8c00ef6f11c3f9b",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/speechocean/accuracy.npz",
+        "sha256": "352953b009203d8dace4de791be9f3ea8dbda419de955d204c819d1a28e1573e",
+        "metadata_sha256": "d42832abc0b3bc5709c23464d8730497073a913e70fb3dfb2eb824f7368d8ba7"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/speechocean/fluency.npz",
+        "sha256": "def158fedba5e19e51fd9b55e9b5249b54d3fe3b4fe26cea2a48f3186e182676",
+        "metadata_sha256": "f99f03c33bdce167ba626041c39d23dd0d72e92469c033b1348871345bc1a049"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/speechocean/prosody.npz",
+        "sha256": "def158fedba5e19e51fd9b55e9b5249b54d3fe3b4fe26cea2a48f3186e182676",
+        "metadata_sha256": "1d667d8316067e5b3a1c0d59ab1ccef8c73253f3b89bdb8a0c10e8025925dcf8"
+      }
+    }
+  },
+  "damae__korean": {
+    "model_version": "tuning-rule-v1-damae__korean",
+    "configuration_sha256": "3986e1e63580cc665cc42d66d40e195932d29281b81be580001be57829cf1754",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/korean/accuracy.npz",
+        "sha256": "f97fe5bc1791ec618d5a785bd08d39141dfc6212dd9d71280f9c9c7a3fcf1d94",
+        "metadata_sha256": "d6a59a6cfa7466fe945784d12807fa8ba87da134d390563b99edfc68a5a83516"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/korean/fluency.npz",
+        "sha256": "c33b4f60a2ee65287bdca3fb390003b968b8a0a2cae2f4ea293f65ae6d8684ae",
+        "metadata_sha256": "163c8083d10da6cb3232e3890cf3177d2bfed3e51050f34ac48e9fa6cdbc4179"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/korean/prosody.npz",
+        "sha256": "c33b4f60a2ee65287bdca3fb390003b968b8a0a2cae2f4ea293f65ae6d8684ae",
+        "metadata_sha256": "4e22bfb4850fbcb1e7111815d7e7ef802b2494c4fa0b773a63330abf75bcf142"
+      }
+    }
+  },
+  "damae__aesop": {
+    "model_version": "tuning-rule-v1-damae__aesop",
+    "configuration_sha256": "cc77179b78073c9290934179207d4c5849e3f8b110bea80015f7de5e1ed68aa2",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/aesop/accuracy.npz",
+        "sha256": "8bf466898aa87ab97e6f398ad781dece547b9a499aa63370e07449e65a9225fa",
+        "metadata_sha256": "b7b9214e04bbe7f17478f811c550b1a5395e9862109b1bc992beb1dbc0ab6c6e"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/aesop/fluency.npz",
+        "sha256": "d65ac83e9bf72f4beef5a4ff415ff51d55cafdcffb060e202af621bf9ca3d55c",
+        "metadata_sha256": "607e1fe12daee3e68d047fa533d6751e211fc777000f99c0b9b26edeb692c37b"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/aesop/prosody.npz",
+        "sha256": "d65ac83e9bf72f4beef5a4ff415ff51d55cafdcffb060e202af621bf9ca3d55c",
+        "metadata_sha256": "e89631077ded78d68aff5998b55c8a73349568684aa99b52ba452fea50a40d07"
+      }
+    }
+  },
+  "damae__koreanocean": {
+    "model_version": "tuning-rule-v1-damae__koreanocean",
+    "configuration_sha256": "987de2b83d7f182aa8932773d4f80197a35fb921684b616e047063967c9d5dd5",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/koreanocean/accuracy.npz",
+        "sha256": "de87237443840dfd35e9179977d91781aadbdfcc833168b4ebe3b5ed5f51d88e",
+        "metadata_sha256": "f6dd8a3e96d6295607cf10152c47dbbd29382ce83f72a2fd9afa3f0656372c30"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/koreanocean/fluency.npz",
+        "sha256": "e8cd606de093d05cc1ac25ffab8f41eb15f77d2eac24be0c758afb33c8cbd173",
+        "metadata_sha256": "8d46b33d01cd8214478515c70b5eb1fb15931d49ed756b37766bfa494caec90d"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/koreanocean/prosody.npz",
+        "sha256": "e8cd606de093d05cc1ac25ffab8f41eb15f77d2eac24be0c758afb33c8cbd173",
+        "metadata_sha256": "a2199e12057d8fdfe8242568d226e6e926f1fe6056434c4ec266ab2d809dd756"
+      }
+    }
+  },
+  "damae__aesopocean": {
+    "model_version": "tuning-rule-v1-damae__aesopocean",
+    "configuration_sha256": "dd039c45c7fad132eece7cd3cea93387b8c1aba2b080792736b1de66b37ffecb",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/aesopocean/accuracy.npz",
+        "sha256": "0bb60915426e006d441d38d3cfb3e1e94e242e5cccc6c22cbe481d0dd03ab83f",
+        "metadata_sha256": "f41a8c5a3a4e5c35c736b2c05cfed0c2ee321632763c6c6316bc6ad7e30e8f8d"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/aesopocean/fluency.npz",
+        "sha256": "5c1c0e7f5eed65c74f89829ef3cd74317de67762391ebe7490b2f7b7902ed70b",
+        "metadata_sha256": "fbbc4ce13b5f2d7e556377509cccfd331d3a4f3287a1d0e98238f7cd12e0d714"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/aesopocean/prosody.npz",
+        "sha256": "5c1c0e7f5eed65c74f89829ef3cd74317de67762391ebe7490b2f7b7902ed70b",
+        "metadata_sha256": "6ea01249a70bba3ecf1fb5d4af04e28beb696940154ffd1f3ade851626ddea6d"
+      }
+    }
+  },
+  "damae__koreanaesop": {
+    "model_version": "tuning-rule-v1-damae__koreanaesop",
+    "configuration_sha256": "634bf90490afcc037fe7307a3831fd782c936df3573a300b210beadb64107519",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/koreanaesop/accuracy.npz",
+        "sha256": "73a633e22bbab0a5b22393bf00019131b02d7f4e4bd61d44324efe66d517f5ab",
+        "metadata_sha256": "03e272ddc7c982af01eacccd807d9b06f5c64143e4c076711fe97a7b1dea1296"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/koreanaesop/fluency.npz",
+        "sha256": "24069f332d246dc6ecde32406bd69190292353bfdc67a30cfe36074b4a8f4ebe",
+        "metadata_sha256": "7678f1f7b770f086d80ca3438c05fa769075f9e61341115667f911d6bee38156"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/koreanaesop/prosody.npz",
+        "sha256": "24069f332d246dc6ecde32406bd69190292353bfdc67a30cfe36074b4a8f4ebe",
+        "metadata_sha256": "329032878c3b4a8ec5f7920ef3a67798c4a3bb9b8437bc3f9c911e1a31390c4d"
+      }
+    }
+  },
+  "damae__aesopkoreanocean": {
+    "model_version": "tuning-rule-v1-damae__aesopkoreanocean",
+    "configuration_sha256": "09595a0f1d9b9b2bf434a8e01045171703aa9b63c043dcc35520326838693fde",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/damae/aesopkoreanocean/accuracy.npz",
+        "sha256": "821f03e2e566478bcc3ca56cb532abdb443483edda5345b0e66337f41aa5b451",
+        "metadata_sha256": "b47fa5622048995eab47896985f87bb5f5f8f37f088d208817c932251f7c1b53"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/damae/aesopkoreanocean/fluency.npz",
+        "sha256": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc",
+        "metadata_sha256": "326d55350bd06ced3050ee91174f47672ea44b14481460bf996e68a84f772231"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/damae/aesopkoreanocean/prosody.npz",
+        "sha256": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc",
+        "metadata_sha256": "aa286189d3165279206bd618664ed87d0ab57604f1e9c5d24ad90897ada219e9"
+      }
+    }
+  },
+  "historical_grid_damae__speechocean": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__speechocean",
+    "configuration_sha256": "9b4c80b460d4c56d5c405f7feab150412dbf3fa18b38208c111c961bc1987a65",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/speechocean/accuracy.npz",
+        "sha256": "ec3611bada85b53436a8f292f6a22573232bc65e28e14dedf4a128b2418ec180",
+        "metadata_sha256": "d787bd36ce32ed08c08cadb31d3bc459950c59c0b8a58845a233c7268f528f56"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/speechocean/fluency.npz",
+        "sha256": "a4c861db27dda964606d2836b2c28f0c1ff6321306a0dee4c7707b2424252431",
+        "metadata_sha256": "e45f2e8d8ff2637087a5942e9c5c361fc00d534a3d2e8b819a347c5ae43267e1"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/speechocean/prosody.npz",
+        "sha256": "a4c861db27dda964606d2836b2c28f0c1ff6321306a0dee4c7707b2424252431",
+        "metadata_sha256": "5b16c73ce2db6a25bf455d271b2912f7a0b4f22cbcb2816eff4308b5fe60f286"
+      }
+    }
+  },
+  "historical_grid_damae__korean": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__korean",
+    "configuration_sha256": "5495892032371a489fd22d4035c901563e0d592a4f432c0e0b1c6f3decfe412b",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/korean/accuracy.npz",
+        "sha256": "8739418b9ea968a93c4d3353bb833a930591d53d8fd6e65add68a2c28128365f",
+        "metadata_sha256": "addf67cf9412361055c2335de8cea81501d8190a75c5a9190cbe5bee154adb83"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/korean/fluency.npz",
+        "sha256": "c2a5c9e8e2c7950079f2499603dd2211470c0440afd1d264908ba7e1347988d6",
+        "metadata_sha256": "56a81162638b8dc9f9c0b766e71ac0ed35433e31b5aacdebbc4a467eecf1b5ee"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/korean/prosody.npz",
+        "sha256": "c2a5c9e8e2c7950079f2499603dd2211470c0440afd1d264908ba7e1347988d6",
+        "metadata_sha256": "c7850d2dbc55ce6feefe73de2c51abca8c5033b67b8e6db69d6b7a461e1fc0e4"
+      }
+    }
+  },
+  "historical_grid_damae__aesop": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__aesop",
+    "configuration_sha256": "36e69f21977a55c26589bd87cd90e2c9351dcc5d97a4020612c4229a279ad748",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesop/accuracy.npz",
+        "sha256": "25cbdf94501aeca3db70e358cbe4959eab61fe936361e2143f3d9d8845142500",
+        "metadata_sha256": "bcb2ec66b3cbec35495b402065d62b910d1aa6b61fa565137ba382488cf502e8"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesop/fluency.npz",
+        "sha256": "50a6481188ab3054c48dc422d127a9cb8c65b7eb90dfb5304da43c35c19fe147",
+        "metadata_sha256": "2db1fba3ff175926887ca7f2cc4c916d2f496142fd930edcb5e52ef77b15474d"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesop/prosody.npz",
+        "sha256": "50a6481188ab3054c48dc422d127a9cb8c65b7eb90dfb5304da43c35c19fe147",
+        "metadata_sha256": "3b8d513f7b32fbcd9a66a51efbf56bed1609be2ad24af97786d80e091b519759"
+      }
+    }
+  },
+  "historical_grid_damae__koreanocean": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__koreanocean",
+    "configuration_sha256": "30209304f658a055b534e7d4bfda70355ccaf35ff13ee1adce4c943a88d9c908",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanocean/accuracy.npz",
+        "sha256": "d5c13b15870a1fe0488d7cd59af2338569b1c75aa05d86926826e00390bb5ed6",
+        "metadata_sha256": "e3c8e434152eb4120a8b90cfcc81e4895c813d65fe09c74828f58029c0e05a14"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanocean/fluency.npz",
+        "sha256": "fb1ea2b78a76f00182b8c424f3c8f753c43e84ce39248a99fd5364900246a037",
+        "metadata_sha256": "9f7485004c7d725bc772ff3cfaaa50c980b9516d198801d02d4809d294877f78"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanocean/prosody.npz",
+        "sha256": "fb1ea2b78a76f00182b8c424f3c8f753c43e84ce39248a99fd5364900246a037",
+        "metadata_sha256": "2e134b8831ca0be490aeb2b8d6027a8c8944e6d6e9063aa42f90706ef0cc3c3e"
+      }
+    }
+  },
+  "historical_grid_damae__aesopocean": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__aesopocean",
+    "configuration_sha256": "c640366078a48a3619d29da15e496a87183a0e435371ee10cadb26b6e46c1191",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopocean/accuracy.npz",
+        "sha256": "b0afe2dc6171596faef319cce8d2ee33286a495a8bbd0b54f6f7807578676c10",
+        "metadata_sha256": "3b38bb3d6cdb26d05b5bbe5ee9966e2e49dabfa286746342703ddbd6b3e74f9f"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopocean/fluency.npz",
+        "sha256": "c80e72dfd0f37d682e42ea03458d45bd7283a7615478fbded8d8f21bf8ca19ae",
+        "metadata_sha256": "09d9e843cf466b12fde8892a7874bee9be8e0f6e9248007986db58ed9dad0eba"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopocean/prosody.npz",
+        "sha256": "c80e72dfd0f37d682e42ea03458d45bd7283a7615478fbded8d8f21bf8ca19ae",
+        "metadata_sha256": "d30bb6cc42d60e63a28c51f880ad702572449fb5999b53ec805e072d1d4e4959"
+      }
+    }
+  },
+  "historical_grid_damae__koreanaesop": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__koreanaesop",
+    "configuration_sha256": "af5d65fdbd347a1553aa2639f3dbaeee61bfd77cea0c3969c3be361425cac883",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanaesop/accuracy.npz",
+        "sha256": "0db174142dc011153e54302a3942e6995a1fdda3eb0b3543fdf1481887b11765",
+        "metadata_sha256": "d95c274f72b1d986be870f110a5f410749950b0ee0fb98948dd9eefde81a662c"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanaesop/fluency.npz",
+        "sha256": "6c2162091f2a50ef18fa009e455f0b4aff32a9504742da31bdcf433bdbaa2999",
+        "metadata_sha256": "f02787222d5e07f6b2bbaa55a2c189e582a3e0827c9a80e44db6d0c93c797600"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/koreanaesop/prosody.npz",
+        "sha256": "6c2162091f2a50ef18fa009e455f0b4aff32a9504742da31bdcf433bdbaa2999",
+        "metadata_sha256": "364202b8d3dd57770e12ce4ad55509fb4363f38c955ee462a51ba870bdd99f61"
+      }
+    }
+  },
+  "historical_grid_damae__aesopkoreanocean": {
+    "model_version": "tuning-rule-v1-historical_grid_damae__aesopkoreanocean",
+    "configuration_sha256": "dcd955fbcebbbc5cc1d2c4872752ca60a9fee6a18036747ad960e57a8de9c03c",
+    "heads": {
+      "accuracy": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopkoreanocean/accuracy.npz",
+        "sha256": "523d0080478608ef643ef2f43c589f4225aef22c7ecf771d3a99c8fbde4cb414",
+        "metadata_sha256": "f7da20514fa3eafaa7515e5d20e57e2dcf6c189ee2d050068d67e84777fee724"
+      },
+      "fluency": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopkoreanocean/fluency.npz",
+        "sha256": "683a05aff64cc65f39534b07ff68508dbc710274ec51f35f57c91539a81be7a8",
+        "metadata_sha256": "cf440a9cb24d3e5dc78224fa1c1ec55da1fe831c0f395fa7262da2dd05db8801"
+      },
+      "prosody": {
+        "path": "models/selection-comparison-v1/historical_grid_damae/aesopkoreanocean/prosody.npz",
+        "sha256": "683a05aff64cc65f39534b07ff68508dbc710274ec51f35f57c91539a81be7a8",
+        "metadata_sha256": "8ea698cc9c2cbde0eca0560fc0fd1c8058e228c115960d7136f4b19f5958b9d5"
+      }
+    }
+  }
+}

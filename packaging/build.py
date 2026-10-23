@@ -13,13 +13,14 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--target', choices=['mac', 'windows'], required=True)
     p.add_argument('--python-runtime', type=Path, required=True, help='Unpacked redistributable CPython 3.11 install-only directory; retain its licenses')
+    p.add_argument('--output',type=Path,help='Fresh build directory; existing staging is never overwritten')
     p.add_argument('--stage-only', action='store_true')
     a = p.parse_args()
     runtime = a.python_runtime.resolve()
     exe = runtime / ('python.exe' if a.target == 'windows' else 'bin/python3.11')
     if not exe.is_file():
         p.error(f'Missing bundled interpreter: {exe}')
-    build = ROOT / 'work/native' / a.target
+    build = a.output.resolve() if a.output else ROOT / 'work/native' / a.target
     stage = build / 'stage'
     if stage.exists():
         p.error(f'Staging folder already exists: {stage}. Use a fresh staging folder after reviewing prior outputs.')
@@ -31,7 +32,9 @@ def main():
         dest = stage / 'app' / name
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ROOT / name, dest)
-    shutil.copytree(runtime, stage / 'python', symlinks=True)
+    # Python regenerates bytecode on startup; do not ship mutable caches.
+    shutil.copytree(runtime, stage / 'python', symlinks=True,
+                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '*.pyo'))
     shutil.copy2(ROOT / 'packaging/bootstrap.py', stage / 'bootstrap.py')
     launcher = 'launch.cmd' if a.target == 'windows' else 'launch.command'
     shutil.copy2(ROOT / 'packaging' / launcher, stage / launcher)

@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesop",
+  "selection": "historical_grid_damae",
+  "model_version": "tuning-rule-v1-historical_grid_damae__aesop",
+  "configuration_sha256": "36e69f21977a55c26589bd87cd90e2c9351dcc5d97a4020612c4229a279ad748",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "25cbdf94501aeca3db70e358cbe4959eab61fe936361e2143f3d9d8845142500",
+    "accuracy.json": "bcb2ec66b3cbec35495b402065d62b910d1aa6b61fa565137ba382488cf502e8",
+    "fluency.npz": "50a6481188ab3054c48dc422d127a9cb8c65b7eb90dfb5304da43c35c19fe147",
+    "fluency.json": "2db1fba3ff175926887ca7f2cc4c916d2f496142fd930edcb5e52ef77b15474d",
+    "prosody.npz": "50a6481188ab3054c48dc422d127a9cb8c65b7eb90dfb5304da43c35c19fe147",
+    "prosody.json": "3b8d513f7b32fbcd9a66a51efbf56bed1609be2ad24af97786d80e091b519759"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

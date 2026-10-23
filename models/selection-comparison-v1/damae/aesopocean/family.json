@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopocean",
+  "selection": "damae",
+  "model_version": "tuning-rule-v1-damae__aesopocean",
+  "configuration_sha256": "dd039c45c7fad132eece7cd3cea93387b8c1aba2b080792736b1de66b37ffecb",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "0bb60915426e006d441d38d3cfb3e1e94e242e5cccc6c22cbe481d0dd03ab83f",
+    "accuracy.json": "f41a8c5a3a4e5c35c736b2c05cfed0c2ee321632763c6c6316bc6ad7e30e8f8d",
+    "fluency.npz": "5c1c0e7f5eed65c74f89829ef3cd74317de67762391ebe7490b2f7b7902ed70b",
+    "fluency.json": "fbbc4ce13b5f2d7e556377509cccfd331d3a4f3287a1d0e98238f7cd12e0d714",
+    "prosody.npz": "5c1c0e7f5eed65c74f89829ef3cd74317de67762391ebe7490b2f7b7902ed70b",
+    "prosody.json": "6ea01249a70bba3ecf1fb5d4af04e28beb696940154ffd1f3ade851626ddea6d"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

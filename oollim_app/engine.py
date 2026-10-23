@@ -3,6 +3,16 @@ import gc,json,subprocess,sys
 from pathlib import Path
 from .common import ROOT,RESOURCES,ESP,sha,imports_path,OollimError
 
+def _portable_provenance(value):
+ # Artifact locations are machine-local; all semantic metadata and hashes stay strict.
+ import copy
+ value=copy.deepcopy(value)
+ if isinstance(value,dict):
+  for name in ('xeus','xlsr'):
+   backbone=value.get('backbones',{}).get(name,{}).get('backbone',{})
+   if isinstance(backbone,dict):backbone.pop('directory',None)
+ return value
+
 def load_bundle(path):
  path=Path(path).resolve()
  if not path.is_file():raise OollimError('E_MODEL_MISSING',f'Model bundle is missing: {path}','Select speechocean, or supply an authorized family.json bundle with --model.')
@@ -16,7 +26,7 @@ def load_bundle(path):
  reference=json.loads((ROOT/'configs/extractor.json').read_text())
  for name in set(cfg['heads'].values()):
   head=json.loads((path.parent/Path(name).with_suffix('.json')).read_text())
-  if head.get('experiment_provenance')!=reference['experiment_provenance'] or any(reference['block_widths'].get(b)!=head['block_widths'].get(b) for b in head['blocks']):raise OollimError('E_MODEL_INCOMPATIBLE','Scoring heads require different encoder features.','Use a bundle compatible with this pinned extraction pipeline.')
+  if _portable_provenance(head.get('experiment_provenance'))!=_portable_provenance(reference['experiment_provenance']) or any(reference['block_widths'].get(b)!=head['block_widths'].get(b) for b in head['blocks']):raise OollimError('E_MODEL_INCOMPATIBLE','Scoring heads require different encoder features.','Use a bundle compatible with this pinned extraction pipeline.')
  return cfg
 
 def runtime_check():
@@ -90,4 +100,4 @@ def assess(audio,reference,bundle_path,temp,event,threads=4):
   head=heads[d];x=np.concatenate([blocks[n] for n in head.blocks],axis=1);scores[d]=float(head.predict_features(x)[0,j])
  event(5,'done','Raw 0–10-scale predictions; no calibration or clipping')
  cleanup.remove()
- return {'scores':scores,'duration_seconds':duration,'family':cfg['family'],'model_version':cfg['model_version'],'score_scale':'0–10 scale; raw ridge predictions may exceed the endpoints'}
+ return {'scores':scores,'duration_seconds':duration,'family':cfg['family'],'selection':cfg.get('selection','legacy'),'model_version':cfg['model_version'],'score_scale':'0–10 scale; raw ridge predictions may exceed the endpoints'}

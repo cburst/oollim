@@ -67,3 +67,22 @@ def test_numerical_parity_with_archived_family_runner():
  old=namespace['weighted_fit'](x,y,w,[.001,10],gain);new=weighted_fit(x,y,w,[.001,10],gain)
  for i in range(3):np.testing.assert_array_equal(old[i],new[i])
  for a in (.001,10):np.testing.assert_array_equal(old[3][a],new[3][a])
+
+
+def test_selection_condition_ties_and_normalized_historical_grid():
+ from reproduce.train import select_candidate,HISTORICAL_ALPHAS
+ candidates=[{'alpha':1.,'spearman':.9,'mae':.7},{'alpha':10.,'spearman':.8,'mae':.6},{'alpha':100.,'spearman':.7,'mae':.6}]
+ assert select_candidate(candidates,'spearman')['alpha']==1
+ assert select_candidate(candidates,'damae')['alpha']==100
+ assert HISTORICAL_ALPHAS==[.00005,.0005,.005,.05,.5,5.]
+
+
+def test_damae_shares_accuracy_selected_penalty_for_fluency_prosody(tmp_path):
+ corpora={n:load_corpus(make_corpus(tmp_path/n,n,i)) for i,n in enumerate(('speechocean','korean','aesop'))}
+ for condition in ('damae','historical_grid_damae'):
+  out=tmp_path/condition;run(corpora,out,condition=condition)
+  for family in FAMILIES:
+   f=json.loads((out/family/'fluency/xeus+xlsr/selection.json').read_text())
+   p=json.loads((out/family/'prosody/xeus+xlsr/selection.json').read_text())
+   assert f==p
+   assert f['selected']==min(f['candidates'],key=lambda c:(c['mae'],-c['alpha']))

@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "koreanocean",
+  "selection": "historical_grid_damae",
+  "model_version": "tuning-rule-v1-historical_grid_damae__koreanocean",
+  "configuration_sha256": "30209304f658a055b534e7d4bfda70355ccaf35ff13ee1adce4c943a88d9c908",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "d5c13b15870a1fe0488d7cd59af2338569b1c75aa05d86926826e00390bb5ed6",
+    "accuracy.json": "e3c8e434152eb4120a8b90cfcc81e4895c813d65fe09c74828f58029c0e05a14",
+    "fluency.npz": "fb1ea2b78a76f00182b8c424f3c8f753c43e84ce39248a99fd5364900246a037",
+    "fluency.json": "9f7485004c7d725bc772ff3cfaaa50c980b9516d198801d02d4809d294877f78",
+    "prosody.npz": "fb1ea2b78a76f00182b8c424f3c8f753c43e84ce39248a99fd5364900246a037",
+    "prosody.json": "2e134b8831ca0be490aeb2b8d6027a8c8944e6d6e9063aa42f90706ef0cc3c3e"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

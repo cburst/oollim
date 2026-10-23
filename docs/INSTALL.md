@@ -67,3 +67,7 @@ This runs the doctor, scores one whole recording, and reruns it to check resume.
 The NSIS and Platypus packaging sources are in `packaging/`. Native launchers use `~/oollim` on both platforms: `launcher/` for the source payload, `versions/` for isolated application/runtime installations, `cache/` and `tmp/` for installer caches, and `results/` for default CSV outputs. The Mac .app is a lightweight stub in `~/Applications`; Windows creates desktop and Start-menu shortcuts. User-selected input recordings stay in place. Compiled and signed installers still require native acceptance testing.
 
 PDF export uses WeasyPrint 70.0. On Apple Silicon, install Homebrew if absent; the installer then runs `brew install pango` when needed and verifies PDF creation. Windows setup downloads the official WeasyPrint onedir package, verifies its SHA-256, and keeps it under `~/oollim/pdf-runtime`. Poppler is not required for report generation.
+
+## Version 0.3 scoring choices
+
+The GUI exposes all 21 matched configurations in one combined Scoring dropdown. The CLI uses `--family` and `--selection spearman|damae|historical_grid_damae`. The default is now matched Spearman, including a fresh SpeechOcean refit. Use `--model models/speechocean/family.json` for the original deployed SpeechOcean model. Choose distinct output paths when comparing combinations; CSVs record selection and model version, and resume identity includes the bundle checksum. Encoders and audio preprocessing are unchanged.

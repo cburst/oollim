@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "speechocean",
+  "selection": "damae",
+  "model_version": "tuning-rule-v1-damae__speechocean",
+  "configuration_sha256": "d37a9b21a21863356002730370a3a91dbc273a9de08a1304b8c00ef6f11c3f9b",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "352953b009203d8dace4de791be9f3ea8dbda419de955d204c819d1a28e1573e",
+    "accuracy.json": "d42832abc0b3bc5709c23464d8730497073a913e70fb3dfb2eb824f7368d8ba7",
+    "fluency.npz": "def158fedba5e19e51fd9b55e9b5249b54d3fe3b4fe26cea2a48f3186e182676",
+    "fluency.json": "f99f03c33bdce167ba626041c39d23dd0d72e92469c033b1348871345bc1a049",
+    "prosody.npz": "def158fedba5e19e51fd9b55e9b5249b54d3fe3b4fe26cea2a48f3186e182676",
+    "prosody.json": "1d667d8316067e5b3a1c0d59ab1ccef8c73253f3b89bdb8a0c10e8025925dcf8"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

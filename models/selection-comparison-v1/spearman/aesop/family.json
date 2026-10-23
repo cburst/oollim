@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesop",
+  "selection": "spearman",
+  "model_version": "tuning-rule-v1-spearman__aesop",
+  "configuration_sha256": "c16f14ce333ee0b8d22aed8a38b6a4b405a70655f46753de652fe36352c4a3ed",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "03b539fabf487362b591526b620109c76a9d6c3a08d4acce092aa323cdb36784",
+    "accuracy.json": "a101e4a2aa7f151fe29f688909e6facedd06a76ec2cca94a21af65680910214c",
+    "fluency.npz": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+    "fluency.json": "9a265bedb6dcd5bcd54485008f39a87cfd709a30e3402d513c250bdc42f1b939",
+    "prosody.npz": "fbc4e6b94296c679bf68463084e266d2eeac29b6121dedae5edf310f56e9a070",
+    "prosody.json": "362b9da86c6aa43341b8d69c3fef4946c43a7bfd3703d16c34542c620e4116f4"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

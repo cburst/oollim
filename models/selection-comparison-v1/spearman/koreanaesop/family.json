@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "koreanaesop",
+  "selection": "spearman",
+  "model_version": "tuning-rule-v1-spearman__koreanaesop",
+  "configuration_sha256": "44b28a8525ac78fc3d7b7e94e49815ba3563356672e64deb2a06ab88c66099a9",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "4b6de82a7c1914a8349ceff4876b8057603cd27d15aed5e507d43b15334cc9c9",
+    "accuracy.json": "59fe667a8666927177cc4beeb1a9004c04a714a6bc66b624e0739984a70152da",
+    "fluency.npz": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+    "fluency.json": "56b4c3185b11ad8b0b5f1d6043ab3390bf41fdf665165406ca5a133708651923",
+    "prosody.npz": "615445fd7ee470dc6f77cd95d671484386726c7c1c92b56b1a4c899d4069ab44",
+    "prosody.json": "bc22fdaa2c1de2a4badcaaa8f69487bc3fbc8fddeafb9e7051b62356aed5845c"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

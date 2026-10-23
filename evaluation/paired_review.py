@@ -6,12 +6,14 @@ import argparse
 parser=argparse.ArgumentParser()
 parser.add_argument('archive',type=Path)
 parser.add_argument('--output',type=Path,default=Path('paired-results.json'))
+parser.add_argument('--member',default='stella305_augmented.csv',help='CSV member inside archive')
+parser.add_argument('--prefix',default='',help='Prediction column prefix, e.g. spearman__')
 parser.add_argument('--bootstrap',type=int,default=200000)
 parser.add_argument('--seed',type=int,default=42)
 args=parser.parse_args()
 source=args.archive
 with zipfile.ZipFile(source) as z:
- raw=z.read('stella305_augmented.csv');rows=list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
+ raw=z.read(args.member);rows=list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
 families=['speechocean','korean','aesop','koreanocean','aesopocean','koreanaesop','aesopkoreanocean'];systems=['azure']+families
 assert len(rows)==305 and len({r['evaluation_drive_id'] for r in rows})==305
 B=args.bootstrap; out=[]; scales=[];pointcheck=[]
@@ -23,7 +25,7 @@ def metrics(a,b):
  return np.stack([rho,1-((qa-qb)**2).mean(-1)/den],axis=-1)
 for c in ['Accuracy','Fluency','Prosody']:
  h=np.array([[float(r[f'h{j}-{c}Score']) for r in rows] for j in (1,2,3)])
- pred=np.array([[float(r[f'm-{c}Score' if s=='azure' else f'{s}-{c}Score100']) for r in rows] for s in systems])
+ pred=np.array([[float(r[f'm-{c}Score' if s=='azure' else f'{args.prefix}{s}-{c}Score100']) for r in rows] for s in systems])
  ref=np.array([np.mean(np.delete(h,j,axis=0),axis=0) for j in range(3)])
  def evaluate(idx):
   human=metrics(h[:,idx],ref[:,idx]).mean(0)
@@ -31,7 +33,7 @@ for c in ['Accuracy','Fluency','Prosody']:
   return machine,human
  point,hpoint=evaluate(np.arange(305));draws=[];rng=np.random.default_rng(args.seed)
  for start in range(0,B,100):
-  ix=rng.integers(0,305,(100,305));m,hu=evaluate(ix)
+  ix=rng.integers(0,305,(min(100,B-start),305));m,hu=evaluate(ix)
   draws.append(np.stack([m-hu[None,...],m-m[0:1]],axis=-1))
  draws=np.concatenate(draws,axis=1)
  for si,s in enumerate(systems):
@@ -45,5 +47,5 @@ for c in ['Accuracy','Fluency','Prosody']:
     lo,hi=np.quantile(d,[.025,.975]);al,ah=np.quantile(d,[.025/90,1-.025/90])
     out.append(dict(construct=c,system=s,reference=refname,metric=metric,difference=float(delta),ci95=[float(lo),float(hi)],familywise95_bonferroni90=[float(al),float(ah)]))
  print(c,'done',flush=True)
-result=dict(bootstrap=B,seed=args.seed,n=305,grouping='one unique recording URL per assumed speaker',source_sha256=hashlib.sha256(raw).hexdigest(),reference='mean of three pair-specific metrics; humans evaluated against other two',comparisons=out,scale_summaries=scales,point_estimates=pointcheck)
+result=dict(prediction_prefix=args.prefix,bootstrap=B,seed=args.seed,n=305,grouping='one unique recording URL per assumed speaker',source_sha256=hashlib.sha256(raw).hexdigest(),reference='mean of three pair-specific metrics; humans evaluated against other two',comparisons=out,scale_summaries=scales,point_estimates=pointcheck)
 args.output.write_text(json.dumps(result,indent=2))

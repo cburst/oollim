@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "speechocean",
+  "selection": "spearman",
+  "model_version": "tuning-rule-v1-spearman__speechocean",
+  "configuration_sha256": "a7b8e89616b0ffc9917603d68227909dbe4b7a26e4c38ccb7855356b7e5b957f",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "4d8e4985c059e9d5bc4cb656b28bed3ce3b5deb0a713d3982fedc16668a28c7f",
+    "accuracy.json": "e36f39992ed30c44a90c519740ca863d0ba5c59c494f02363d6978692ce0edf4",
+    "fluency.npz": "1986b9c694d47e13326b43f85d35fd20f4c62c94c79700426ae514f3314d65ee",
+    "fluency.json": "f3ab25b0b264b4d4d6c7835ecddf878fbea33f4f20e5204abd9afcb8f9b6bdb0",
+    "prosody.npz": "1986b9c694d47e13326b43f85d35fd20f4c62c94c79700426ae514f3314d65ee",
+    "prosody.json": "d48f342c7b098ae91c066ce3c946b944582a20cd80f9e9254074534fcc0a3ee0"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}

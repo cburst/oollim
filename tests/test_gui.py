@@ -58,3 +58,24 @@ def test_cli_cancellation_releases_output_lock(tmp_path,monkeypatch):
     assert cli.main(['--audio',str(audio),'--output',str(output),'--no-live'],cancel_event=event)==130
     assert not output.with_suffix('.csv.lock').exists()
     assert output.with_suffix('.csv.state.json').exists()
+
+def test_gui_routes_selection_to_cli(window,tmp_path,monkeypatch):
+    from oollim_app import gui
+    audio=tmp_path/'clip.wav';audio.write_bytes(b'fake')
+    ref=tmp_path/'ref.txt';ref.write_text('Please call Stella.')
+    window.source.setText(str(audio));window.transcript.setText(str(ref));window.output.setText(str(tmp_path/'out.csv'))
+    class Signal:
+        def connect(self,*args):pass
+    class FakeRunner:
+        update=Signal();result=Signal()
+        def __init__(self,args,parent):self.args=args
+        def start(self):pass
+        def isRunning(self):return False
+    monkeypatch.setattr(gui,'Runner',FakeRunner)
+    for family in gui.FAMILIES:
+        for selection in gui.SELECTIONS:
+            window.scoring.setCurrentIndex(window.scoring.findData((family,selection)))
+            window.begin();args=window.runner.args
+            assert args[args.index('--family')+1]==family
+            assert args[args.index('--selection')+1]==selection
+            window.timer.stop()

@@ -13,6 +13,12 @@ FAMILIES = {'speechocean':['speechocean'], 'korean':['korean'], 'aesop':['aesop'
 CONSTRUCTS = ('accuracy','fluency','prosody')
 FIXED = {'accuracy':['xeus','phoneticxeus','ipa'], 'fluency':['xeus','xlsr'], 'prosody':['xeus','xlsr']}
 ALPHAS = [.001,.01,.1,1.,10.,100.]
+HISTORICAL_ALPHAS = [a/2000 for a in (.1,1,10,100,1000,10000)]
+CONDITIONS = ('spearman','damae','historical_grid_damae')
+
+def select_candidate(candidates,condition):
+ if condition not in CONDITIONS:raise ValueError('Unknown selection condition')
+ return max(candidates,key=lambda s:(s['spearman'],-s['mae'],s['alpha'])) if condition=='spearman' else min(candidates,key=lambda s:(s['mae'],-s['alpha']))
 BLOCKS = ('xeus','xlsr','phoneticxeus','ipa')
 
 def digest(path):
@@ -67,9 +73,12 @@ def load_corpus(path):
  if any(v.ndim!=2 or len(v)!=len(rows) or not np.isfinite(v).all() for v in features.values()):raise ValueError('Invalid features')
  return {'rows':rows,'train':train,'features':features,'targets':y,'manifest_sha256':digest(path)}
 
-def run(corpora,out,mode='fixed',selection='included',extractor=None):
+def run(corpora,out,mode='fixed',selection='included',extractor=None,condition='spearman'):
+ if condition not in CONDITIONS:raise ValueError('Unknown selection condition')
+ if condition!='spearman' and (mode!='fixed' or selection!='included'):raise ValueError('DAMAE comparison requires fixed features and included-corpus development selection')
+ alphas=HISTORICAL_ALPHAS if condition=='historical_grid_damae' else ALPHAS
  out=Path(out)
- protocol={'schema_version':'portable-ridge-v1','mode':mode,'selection':selection,'alphas':ALPHAS,'inputs':{n:c['manifest_sha256'] for n,c in corpora.items()},'code_sha256':digest(__file__),'extractor_sha256':digest(extractor) if extractor else None}
+ protocol={'schema_version':'portable-ridge-v1','mode':mode,'selection':selection,'condition':condition,'alphas':alphas,'inputs':{n:c['manifest_sha256'] for n,c in corpora.items()},'code_sha256':digest(__file__),'extractor_sha256':digest(extractor) if extractor else None}
  pp=out/'protocol.json'
  if pp.exists() and json.loads(pp.read_text())!=protocol:raise ValueError('Output protocol differs; choose a new output directory')
  save(pp,protocol);table=[]
@@ -87,17 +96,18 @@ def run(corpora,out,mode='fixed',selection='included',extractor=None):
     x=np.concatenate([raw[n][corpora[n]['train']] for n in names]);y=np.concatenate([corpora[n]['targets'][corpora[n]['train']] for n in names])
     w=np.concatenate([np.full(corpora[n]['train'].sum(),1/(len(names)*corpora[n]['train'].sum())) for n in names])
     gain=np.concatenate([np.full(widths[k],np.sqrt(2048/widths[k])) for k in blocks])
-    mean,scale,intercept,coefs=weighted_fit(x,y,w,ALPHAS,gain)
+    mean,scale,intercept,coefs=weighted_fit(x,y,w,alphas,gain)
     candidates=[];selection_names=names if selection=='included' else list(corpora)
+    selection_index=j if condition=='spearman' else 0
     for alpha,coef in coefs.items():
-     scores={n:metrics(corpora[n]['targets'][~corpora[n]['train'],j],(((raw[n][~corpora[n]['train']]-mean)/scale*gain)@coef+intercept)[:,j]) for n in selection_names}
+     scores={n:metrics(corpora[n]['targets'][~corpora[n]['train'],selection_index],(((raw[n][~corpora[n]['train']]-mean)/scale*gain)@coef+intercept)[:,selection_index]) for n in selection_names}
      if any(v['spearman'] is None for v in scores.values()):raise ValueError('Undefined selection Spearman')
      candidates.append({'alpha':alpha,'spearman':float(np.mean([s['spearman'] for s in scores.values()])),'mae':float(np.mean([s['mae'] for s in scores.values()]))})
-    best=max(candidates,key=lambda s:(s['spearman'],-s['mae'],s['alpha']));coef=coefs[best['alpha']]
+    best=select_candidate(candidates,condition);coef=coefs[best['alpha']]
     folder=out/family/construct/('+'.join(blocks));folder.mkdir(parents=True,exist_ok=True);cp=folder/'ridge.npz'
     np.savez(cp,coef=coef,intercept=intercept,scaler_mean=mean,scaler_scale=scale,block_gain=gain)
     meta=json.loads(Path(extractor).read_text()) if extractor else {}
-    meta.update(format_version=1,checkpoint_type='frozen_feature_fusion_ridge',output_dimensions=list(CONSTRUCTS),blocks=blocks,block_widths=widths,checkpoint_sha256=digest(cp),target_scale='0..10 endpoint-mapped corpus labels',training={'family':family,'selected_construct':construct,'alpha':best['alpha'],'protocol_sha256':digest(pp)})
+    meta.update(format_version=1,checkpoint_type='frozen_feature_fusion_ridge',output_dimensions=list(CONSTRUCTS),blocks=blocks,block_widths=widths,checkpoint_sha256=digest(cp),target_scale='0..10 endpoint-mapped corpus labels',training={'family':family,'selected_construct':construct,'condition':condition,'alpha':best['alpha'],'protocol_sha256':digest(pp)})
     save(cp.with_suffix('.json'),meta);save(folder/'selection.json',{'selected':best,'candidates':candidates})
     for n,c in corpora.items():
      mask=~c['train'];pred=(((raw[n][mask]-mean)/scale*gain)@coef+intercept)[:,j]
@@ -110,5 +120,6 @@ def main():
  p=argparse.ArgumentParser(description=__doc__)
  for n in ('speechocean','korean','aesop'):p.add_argument('--'+n,type=Path,required=True)
  p.add_argument('--output',type=Path,required=True);p.add_argument('--mode',choices=['fixed','all'],default='fixed');p.add_argument('--selection',choices=['included','all'],default='included');p.add_argument('--extractor',type=Path)
- a=p.parse_args();run({n:load_corpus(getattr(a,n)) for n in ('speechocean','korean','aesop')},a.output,a.mode,a.selection,a.extractor)
+ p.add_argument('--condition',choices=CONDITIONS,default='spearman')
+ a=p.parse_args();run({n:load_corpus(getattr(a,n)) for n in ('speechocean','korean','aesop')},a.output,a.mode,a.selection,a.extractor,a.condition)
 if __name__=='__main__':main()

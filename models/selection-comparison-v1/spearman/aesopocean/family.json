@@ -1,0 +1,22 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopocean",
+  "selection": "spearman",
+  "model_version": "tuning-rule-v1-spearman__aesopocean",
+  "configuration_sha256": "2d525cf50ac6f7bf4ee190cbf250e3b6177d004c8a9213129dc3408d287d3eda",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "f03b04c363919f0b73d904e493dfe2ebbeaf74419dad45cf8b7cd0fc69e4f12b",
+    "accuracy.json": "99cad3b7ff117e77df1d874da21c34a8233d48e60cda2ff56a423feb6f945f4b",
+    "fluency.npz": "e48a8fd056d0213e1fa920d6cbede68bb937bc40ac32522843bcf00623ce2676",
+    "fluency.json": "862e66b3c78d162bbcdd196488b63805f43b1c3112bc3f1210eb4606c4fac265",
+    "prosody.npz": "d2e7acb65e36e074c7365ecddeba131f8573e13b474039e28cb9967c005963fd",
+    "prosody.json": "5ef796ddb1af1d871466b24b21426552ab4f4aae8dbdc09e231a815e763a1d0e"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120
+}
