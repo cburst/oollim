@@ -35,7 +35,7 @@ Seven training families compare single-corpus and mixed-corpus supervision. The 
 \begin{equation}
 \min_{\beta,b}\quad\sum_i w_i(y_i-z_i^\top\beta-b)^2+\alpha\lVert\beta\rVert_2^2,
 \end{equation}
-where $z_i$ is the standardized, block-scaled feature vector, $y_i$ the target, $\beta$ the coefficients, $b$ the unpenalized intercept, and $\alpha$ the regularization strength. Four approaches share corpus partitions, training-only scaling, and separate construct coefficients. The \emph{1-grid} is $\{0.001,0.01,0.1,1,10,100\}$; the \emph{5-grid} is $\{0.00005,0.0005,0.005,0.05,0.5,5\}$. The names identify the grid and selection criterion: S is \emph{1-grid construct-wise correlation}, D is \emph{1-grid pronunciation-accuracy error}, and H is \emph{5-grid pronunciation-accuracy error}. Correlation means construct-specific development Spearman; error means development pronunciation-accuracy mean absolute error (MAE). Development metrics are averaged equally over included corpora, keeping tuning separate from external evaluation \cite{cawley}. Under accuracy-MAE selection, fluency and prosody share the penalty selected using accuracy labels for their common XLS-R + XEUS features, but retain separate scoring coefficients. Three-ratio banded ridge (B) instead permits different penalties for XEUS and XLS-R \cite{banded}: $\alpha_{\rm XLS-R}/\alpha_{\rm XEUS}\in\{1/4,1,4\}$, selected by construct-wise correlation (B-S) or pronunciation-accuracy error (B-D). The scalar search and equal-penalty fallback are specified in the supplement; B accuracy uses the corresponding refined scalar-ridge head, without banding. Seven families therefore yield 35 configurations. SpeechOcean is freshly refitted under each condition; the earlier deployed version remains separately archived. The representation sensitivity analysis examined 315 family--construct--representation configurations on public development data and retained the overall selections under its prespecified 0.01 Spearman improvement threshold and corpus-degradation checks. Those representation selections differ from the descriptive external leaders below. No private evaluation ratings enter coefficient estimation, preprocessing fitting, hyperparameter selection, or calibration.
+where $z_i$ is the standardized, block-scaled feature vector, $y_i$ the target, $\beta$ the coefficients, $b$ the unpenalized intercept, and $\alpha$ the regularization strength. Four approaches share corpus partitions, training-only scaling, and separate construct coefficients. The \emph{1-grid} is $\{0.001,0.01,0.1,1,10,100\}$; the \emph{5-grid} is $\{0.00005,0.0005,0.005,0.05,0.5,5\}$. The names identify the grid and selection criterion: 1G-S is \emph{1-grid construct-wise correlation}, 1G-AMAE is \emph{1-grid pronunciation-accuracy error}, and 5G-AMAE is \emph{5-grid pronunciation-accuracy error}. Correlation means construct-specific development Spearman; error means development pronunciation-accuracy mean absolute error (MAE). Development metrics are averaged equally over included corpora, keeping tuning separate from external evaluation \cite{cawley}. Under accuracy-MAE selection, fluency and prosody share the penalty selected using accuracy labels for their common XLS-R + XEUS features, but retain separate scoring coefficients. Three-ratio banded ridge (3RB) instead permits different penalties for XEUS and XLS-R \cite{banded}: $\alpha_{\rm XLS-R}/\alpha_{\rm XEUS}\in\{1/4,1,4\}$, selected by construct-wise correlation (3RB-C) or pronunciation-accuracy error (3RB-A). The scalar search and equal-penalty fallback are specified in the supplement; 3RB accuracy uses the corresponding refined scalar-ridge head, without banding. Seven families therefore yield 35 configurations. SpeechOcean is freshly refitted under each condition; the earlier deployed version remains separately archived. The representation sensitivity analysis examined 315 family--construct--representation configurations on public development data and retained the overall selections under its prespecified 0.01 Spearman improvement threshold and corpus-degradation checks. Those representation selections differ from the descriptive external leaders below. No private evaluation ratings enter coefficient estimation, preprocessing fitting, hyperparameter selection, or calibration.
 
 
 
@@ -47,12 +47,12 @@ Local operation was verified on consumer hardware using CPU inference. On the Wi
 The collection comprised university EFL learners from China ($n=98$), Korea ($n=101$), and Japan ($n=107$), who recorded the same ``Please Call Stella'' passage on personal smartphones. One recording was excluded because of its length, leaving 305 samples. The three university professors had approximately 20--30 years of teaching experience, including pronunciation instruction, Cambridge English speaking assessment, and high-stakes speech rating. Based in those countries, the raters calibrated their judgments on separate recordings spanning proficiency levels, discussing discrepancies to establish shared criteria for accuracy, fluency, and prosody. Each professor then rated every recording independently in randomized order, blinded to participant identity and automated scores, using a 0--100 scale in five-point increments. The private evaluation recordings and ratings were held out from model training, hyperparameter tuning, and score calibration. The original human ratings and Azure API scores are archival; the seven ridge families were evaluated for the present study against those existing ratings. Azure scores were obtained in January 2026 using the \texttt{en-US} locale, with the Stella reference text supplied and each complete recording assessed as a whole. The returned accuracy, fluency, and prosody scores were retained. The service revision and remaining request options were not retained in the supplied evaluation archive; the comparison therefore concerns those recorded API outputs rather than a newly standardized Azure benchmark.
 
 \subsection{Metrics and human baselines}
-Evaluation distinguishes rank consistency from numerical agreement \cite{stemler,williamson}. Spearman's $\rho$ measures rank association \cite{spearman}. Quadratic weighted kappa (QWK) measures chance-corrected agreement with squared category-distance penalties \cite{cohen}; this study uses fixed integer categories 0--100 and rounding to the nearest integer, with exact half-points rounded upward. Model outputs are multiplied by ten; no calibration is fitted. Predictions are clipped to 0--100 for QWK, including bootstrap replicates, whereas Spearman retains raw predictions. A reference mean requires all three human scores; partial means are not substituted. Human--Human pairwise agreement averages the three pairwise statistics, whereas Human--Human consensus agreement averages each rater's agreement with the mean of the other two, never including that rater in their own reference. For each system, the three-rater row compares the system's scores with the mean of all humans, while the two-rater row averages the three separate agreement statistics against the three possible two-human means. Statistics are averaged, not observations or reference means pooled. The two-rater system row and Human--Human consensus row therefore provide the appropriate reference-size comparison when recomputed on the same recordings. Percentile 95\% intervals resample speaker clusters jointly, recomputing all component statistics within each replicate \cite{efron,field}. The supplementary marginal intervals retain the supplied evaluation export (2,000 replicates, seed 42). Additional paired comparisons use 1,200,000 bootstrap replicates per seed (42 and 2026), subtracting statistics on the same resampled recordings. Each unique recording URL is treated as one speaker. Bonferroni-adjusted intervals cover 510 contrasts: 35 configurations versus human consensus and Azure, Azure versus human consensus, and each of the 14 banded configurations versus the previous S/D/H leader for each construct and metric. The previous leaders are fixed from the preceding evaluation, rather than reselected within bootstrap samples. Seed 42 supplies the reported intervals; the second seed checks interval-exclusion stability. These post-evaluation comparisons condition on the observed raters and fitted models; adjustment covers the stated contrasts, not the preceding model search. The supplement gives full comparisons on the same 305 recordings, and the aggregate release retains three-rater and human-pairwise results.
+Evaluation distinguishes rank consistency from numerical agreement \cite{stemler,williamson}. Spearman's $\rho$ measures rank association \cite{spearman}. Quadratic weighted kappa (QWK) measures chance-corrected agreement with squared category-distance penalties \cite{cohen}; this study uses fixed integer categories 0--100 and rounding to the nearest integer, with exact half-points rounded upward. Model outputs are multiplied by ten; no calibration is fitted. Predictions are clipped to 0--100 for QWK, including bootstrap replicates, whereas Spearman retains raw predictions. A reference mean requires all three human scores; partial means are not substituted. Human--Human pairwise agreement averages the three pairwise statistics, whereas Human--Human consensus agreement averages each rater's agreement with the mean of the other two, never including that rater in their own reference. For each system, the three-rater row compares the system's scores with the mean of all humans, while the two-rater row averages the three separate agreement statistics against the three possible two-human means. Statistics are averaged, not observations or reference means pooled. The two-rater system row and Human--Human consensus row therefore provide the appropriate reference-size comparison when recomputed on the same recordings. Percentile 95\% intervals resample speaker clusters jointly, recomputing all component statistics within each replicate \cite{efron,field}. The supplementary marginal intervals retain the supplied evaluation export (2,000 replicates, seed 42). Additional paired comparisons use 1,200,000 bootstrap replicates per seed (42 and 2026), subtracting statistics on the same resampled recordings. Each unique recording URL is treated as one speaker. Bonferroni-adjusted intervals cover 510 contrasts: 35 configurations versus human consensus and Azure, Azure versus human consensus, and each of the 14 banded configurations versus the previous 1G-S/1G-AMAE/5G-AMAE leader for each construct and metric. The previous leaders are fixed from the preceding evaluation, rather than reselected within bootstrap samples. Seed 42 supplies the reported intervals; the second seed checks interval-exclusion stability. These post-evaluation comparisons condition on the observed raters and fitted models; adjustment covers the stated contrasts, not the preceding model search. The supplement gives full comparisons on the same 305 recordings, and the aggregate release retains three-rater and human-pairwise results.
 
 
 
 \section{Results}
-Table~\ref{tab:external} reports observed leaders and ties within .001. Three-ratio banded aesopocean (B-S) leads both fluency metrics, while banded koreanaesop (B-D) leads prosody correlation; the earlier accuracy and prosody-QWK leaders remain. All displayed correlation leaders significantly exceed both individual-human and archival Azure baselines on matched two-rater references after correction across 510 contrasts. S-koreanocean achieves significantly higher accuracy QWK than the human baseline (0.821 versus 0.704; adjusted difference interval [0.048, 0.191]); B-S-koreanocean closely matches that result. B-S-aesopocean has slightly higher fluency QWK than the human baseline (0.751 versus 0.739), but the difference is not significant (adjusted interval [$-$0.055, 0.082]). H-koreanocean's prosody QWK remains significantly below the human baseline. Banded gains over the previous fluency correlation, fluency QWK, and prosody correlation leaders are about 0.006--0.007, and none is statistically established after correction. Across all 35 configurations, 99 of 105 correlation advantages and 95 of 105 QWK advantages over Azure retain positive adjusted intervals in both seeds. Seven of 510 decisions are seed-dependent and reported as borderline; none changes the foregoing conclusions. External leaders remain descriptive selections.
+Table~\ref{tab:external} reports observed leaders and ties within .001. 3RB-C aesopocean leads both fluency metrics, while 3RB-A koreanaesop leads prosody correlation; the accuracy and prosody-QWK leaders remain unchanged. All displayed correlation leaders significantly exceed both individual-human and archival Azure baselines on matched two-rater references after correction across 510 contrasts. 1G-S-koreanocean achieves significantly higher accuracy QWK than the human baseline (0.821 versus 0.704; adjusted difference interval [0.048, 0.191]); 3RB-C-koreanocean closely matches that result. 3RB-C-aesopocean has slightly higher fluency QWK than the human baseline (0.751 versus 0.739), but the difference is not significant (adjusted interval [$-$0.055, 0.082]). 5G-AMAE-koreanocean's prosody QWK remains significantly below the human baseline. Gains over the previous fluency correlation, fluency QWK, and prosody correlation leaders are about 0.006--0.007, and none is statistically established after correction. Across all 35 configurations, 99 of 105 correlation advantages and 95 of 105 QWK advantages over Azure retain positive adjusted intervals in both seeds. Seven of 510 decisions are seed-dependent and reported as borderline; none changes the foregoing conclusions. External leaders remain descriptive selections.
 
 \begin{table}[H]
 \centering
@@ -67,27 +67,27 @@ Construct & Family & Rule & $\rho$ & 95\% CI & QWK & 95\% CI\\
 \midrule
 Accuracy & \textbf{Human consensus} & -- & \textbf{0.809} & [0.769, 0.842] & \textbf{0.704} & [0.663, 0.743]\\
  & Azure & -- & 0.761 & [0.709, 0.804] & 0.161 & [0.129, 0.196]\\
- & aesopocean & S & \textbf{0.872} & [0.842, 0.894] & 0.598 & [0.563, 0.631]\\
- & aesopocean & H & \textbf{0.872} & [0.841, 0.894] & 0.607 & [0.572, 0.640]\\
- & aesopocean & B-S & \textbf{0.871} & [0.841, 0.894] & 0.596 & [0.561, 0.629]\\
- & aesopocean & B-D & \textbf{0.871} & [0.840, 0.894] & 0.612 & [0.576, 0.645]\\
- & koreanocean & S & 0.853 & [0.816, 0.882] & \textbf{0.821} & [0.789, 0.847]\\
- & koreanocean & B-S & 0.852 & [0.813, 0.881] & \textbf{0.821} & [0.789, 0.847]\\
+ & aesopocean & 1G-S & \textbf{0.872} & [0.842, 0.894] & 0.598 & [0.563, 0.631]\\
+ & aesopocean & 5G-AMAE & \textbf{0.872} & [0.841, 0.894] & 0.607 & [0.572, 0.640]\\
+ & aesopocean & 3RB-C & \textbf{0.871} & [0.841, 0.894] & 0.596 & [0.561, 0.629]\\
+ & aesopocean & 3RB-A & \textbf{0.871} & [0.840, 0.894] & 0.612 & [0.576, 0.645]\\
+ & koreanocean & 1G-S & 0.853 & [0.816, 0.882] & \textbf{0.821} & [0.789, 0.847]\\
+ & koreanocean & 3RB-C & 0.852 & [0.813, 0.881] & \textbf{0.821} & [0.789, 0.847]\\
 \midrule
 Fluency & \textbf{Human consensus} & -- & \textbf{0.807} & [0.768, 0.840] & \textbf{0.739} & [0.695, 0.777]\\
  & Azure & -- & 0.633 & [0.556, 0.698] & 0.078 & [0.056, 0.107]\\
- & aesopocean & B-S & \textbf{0.883} & [0.854, 0.906] & \textbf{0.751} & [0.718, 0.779]\\
+ & aesopocean & 3RB-C & \textbf{0.883} & [0.854, 0.906] & \textbf{0.751} & [0.718, 0.779]\\
 \midrule
 Prosody & \textbf{Human consensus} & -- & \textbf{0.807} & [0.768, 0.842] & \textbf{0.742} & [0.701, 0.778]\\
  & Azure & -- & 0.737 & [0.672, 0.792] & 0.370 & [0.318, 0.421]\\
- & koreanaesop & B-D & \textbf{0.889} & [0.860, 0.911] & 0.446 & [0.409, 0.479]\\
- & koreanocean & H & 0.840 & [0.802, 0.872] & \textbf{0.675} & [0.632, 0.712]\\
+ & koreanaesop & 3RB-A & \textbf{0.889} & [0.860, 0.911] & 0.446 & [0.409, 0.479]\\
+ & koreanocean & 5G-AMAE & 0.840 & [0.802, 0.872] & \textbf{0.675} & [0.632, 0.712]\\
 \bottomrule
 \end{tabular}
 \par\smallskip
 \begin{minipage}{\textwidth}
 \footnotesize
-\textit{Note.} Statistics average the three two-human references; humans are compared with the other two. S/D: 1-grid construct-wise correlation/pronunciation-accuracy error; H: 5-grid pronunciation-accuracy error; B-S/B-D: three-ratio banded with the respective criteria. Correlation is Spearman; error is MAE. B accuracy uses the refined scalar head. Every configuration within .001 of either unrounded maximum among 35 combinations is shown; bold marks qualifying metrics and human baselines. Leaders are descriptive external selections. CIs are marginal 95\% bootstrap intervals (2,000 draws, seed 42); paired tests separately adjust 510 contrasts. No displayed leader required clipping.
+\textit{Note.} Statistics average the three two-human references; humans are compared with the other two. 1G-S/1G-AMAE: 1-grid construct-wise correlation/pronunciation-accuracy error; 5G-AMAE: 5-grid pronunciation-accuracy error; 3RB-C/3RB-A: three-ratio banded with the respective criteria. Correlation is Spearman; error is MAE. 3RB accuracy uses the refined scalar head. Every configuration within .001 of either unrounded maximum among 35 combinations is shown; bold marks qualifying metrics and human baselines. Leaders are descriptive external selections. CIs are marginal 95\% bootstrap intervals (2,000 draws, seed 42); paired tests separately adjust 510 contrasts. No displayed leader required clipping.
 \end{minipage}
 \end{table}
 
@@ -151,11 +151,11 @@ OpenAI Codex assisted with software development, experiment execution, and manus
 
 \appendix
 \section{Family and selection-rule comparisons}\label{sec:fulltables}\label{sec:selectionrules}
-All panels use the same 305 recordings and two-rater references. Model statistics average agreement with the three possible two-human means; human consensus compares each human with the other two. Marginal intervals retain the 2,000-draw, seed-42 evaluation export. S and D use the 1-grid $\{0.001,0.01,0.1,1,10,100\}$, selected respectively by construct-specific Spearman and accuracy MAE. H uses accuracy MAE on the 5-grid $\{0.00005,0.0005,0.005,0.05,0.5,5\}$. The 5-grid converts the earlier summed-loss candidates $\{0.1,\allowbreak1,\allowbreak10,\allowbreak100,\allowbreak1000,\allowbreak10000\}$ by dividing by the original 2,000 SpeechOcean training utterances; the same fixed grid is used for every family. The conversion preserves penalty scale, rather than reproducing every earlier implementation detail. All fitting, scaling, and tuning use public data only.
+All panels use the same 305 recordings and two-rater references. Model statistics average agreement with the three possible two-human means; human consensus compares each human with the other two. Marginal intervals retain the 2,000-draw, seed-42 evaluation export. 1G-S and 1G-AMAE use the 1-grid $\{0.001,0.01,0.1,1,10,100\}$, selected respectively by construct-specific Spearman and accuracy MAE. 5G-AMAE uses accuracy MAE on the 5-grid $\{0.00005,0.0005,0.005,0.05,0.5,5\}$. The 5-grid converts the earlier summed-loss candidates $\{0.1,\allowbreak1,\allowbreak10,\allowbreak100,\allowbreak1000,\allowbreak10000\}$ by dividing by the original 2,000 SpeechOcean training utterances; the same fixed grid is used for every family. The conversion preserves penalty scale, rather than reproducing every earlier implementation detail. All fitting, scaling, and tuning use public data only.
 
-Three-ratio banded ridge searches XLS-R/XEUS penalty ratios $r\in\{1/4,1,4\}$ for fluency and prosody. Its expanded scalar grid combines $10^{-6},10^{-5.5},\ldots,10^3$ with every 1-grid and 5-grid value. For each rule and construct, the equal-penalty winner is additionally refined over nine logarithmically spaced points from $\alpha/\sqrt{10}$ to $\alpha\sqrt{10}$, together with the expanded candidates. The banded search includes that refined equal-penalty solution as a fallback. Relative feature gains $r^{1/4}$ for XEUS and $r^{-1/4}$ for XLS-R yield penalties $\alpha/\sqrt r$ and $\alpha\sqrt r$ in the original standardized coordinates. B-S selects construct Spearman, breaking ties by lower MAE, equal penalties, then larger scalar penalty; B-D selects accuracy MAE, breaking ties by equal penalties, then larger scalar penalty. Accuracy has no banded search and retains its corresponding refined scalar-ridge head. The broadened scalar grid and unequal-penalty search change together, so the comparison does not isolate banding alone. The external fluency leader B-S-aesopocean uses scalar $\alpha=10$ and ratio $r=4$ (XEUS/XLS-R penalties 5 and 20); the prosody-correlation leader B-D-koreanaesop uses $\alpha=5$, $r=4$ (penalties 2.5 and 10). These settings were selected on public development data.
+Three-ratio banded ridge searches XLS-R/XEUS penalty ratios $r\in\{1/4,1,4\}$ for fluency and prosody. Its expanded scalar grid combines $10^{-6},10^{-5.5},\ldots,10^3$ with every 1-grid and 5-grid value. For each rule and construct, the equal-penalty winner is additionally refined over nine logarithmically spaced points from $\alpha/\sqrt{10}$ to $\alpha\sqrt{10}$, together with the expanded candidates. The banded search includes that refined equal-penalty solution as a fallback. Relative feature gains $r^{1/4}$ for XEUS and $r^{-1/4}$ for XLS-R yield penalties $\alpha/\sqrt r$ and $\alpha\sqrt r$ in the original standardized coordinates. 3RB-C selects construct Spearman, breaking ties by lower MAE, equal penalties, then larger scalar penalty; 3RB-A selects accuracy MAE, breaking ties by equal penalties, then larger scalar penalty. Accuracy has no banded search and retains its corresponding refined scalar-ridge head. The broadened scalar grid and unequal-penalty search change together, so the comparison does not isolate banding alone. The external fluency leader 3RB-C-aesopocean uses scalar $\alpha=10$ and ratio $r=4$ (XEUS/XLS-R penalties 5 and 20); the prosody-correlation leader 3RB-A-koreanaesop uses $\alpha=5$, $r=4$ (penalties 2.5 and 10). These settings were selected on public development data.
 
-All 35 configurations completed all 305 recordings. The original S/D/H arrays are unchanged; the 14 B variants add the exact evaluated checkpoints. No private ratings entered fitting, tuning, or calibration. The main table reports descriptive external maxima and ties within .001, whereas the paired analysis below separately evaluates uncertainty. Full-precision two- and three-rater statistics are supplied as aggregate CSV files.
+All 35 configurations completed all 305 recordings. The original 1G-S/1G-AMAE/5G-AMAE arrays are unchanged; the 14 3RB variants add the exact evaluated checkpoints. No private ratings entered fitting, tuning, or calibration. The main table reports descriptive external maxima and ties within .001, whereas the paired analysis below separately evaluates uncertainty. Full-precision two- and three-rater statistics are supplied as aggregate CSV files.
 \clearpage
 \begin{landscape}
 \begingroup\fontsize{6.5}{7}\selectfont\setlength{\tabcolsep}{2.5pt}\setlength{\LTcapwidth}{\linewidth}\renewcommand{\arraystretch}{0.95}
@@ -170,7 +170,7 @@ All 35 configurations completed all 305 recordings. The original S/D/H arrays ar
 Human consensus & \multicolumn{5}{c}{Spearman 0.809 [0.769, 0.842]} & \multicolumn{5}{c}{QWK 0.704 [0.663, 0.743]}\\
 Azure & \multicolumn{5}{c}{Spearman 0.761 [0.709, 0.804]} & \multicolumn{5}{c}{QWK 0.161 [0.129, 0.196]}\\
 \midrule
-Family & \multicolumn{2}{c}{S} & \multicolumn{2}{c}{D} & \multicolumn{2}{c}{H} & \multicolumn{2}{c}{B-S} & \multicolumn{2}{c}{B-D}\\
+Family & \multicolumn{2}{c}{1G-S} & \multicolumn{2}{c}{1G-AMAE} & \multicolumn{2}{c}{5G-AMAE} & \multicolumn{2}{c}{3RB-C} & \multicolumn{2}{c}{3RB-A}\\
  & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK\\
 \midrule
 speechocean & \shortstack{0.856\\{}[0.821,0.882]} & \shortstack{0.502\\{}[0.451,0.549]} & \shortstack{0.856\\{}[0.821,0.882]} & \shortstack{0.502\\{}[0.451,0.549]} & \shortstack{0.844\\{}[0.807,0.872]} & \shortstack{0.546\\{}[0.494,0.592]} & \shortstack{0.844\\{}[0.807,0.872]} & \shortstack{0.546\\{}[0.494,0.592]} & \shortstack{0.844\\{}[0.807,0.872]} & \shortstack{0.546\\{}[0.494,0.592]}\\
@@ -186,7 +186,7 @@ aesopkoreanocean & \shortstack{0.870\\{}[0.839,0.894]} & \shortstack{0.585\\{}[0
 Human consensus & \multicolumn{5}{c}{Spearman 0.807 [0.768, 0.840]} & \multicolumn{5}{c}{QWK 0.739 [0.695, 0.777]}\\
 Azure & \multicolumn{5}{c}{Spearman 0.633 [0.556, 0.698]} & \multicolumn{5}{c}{QWK 0.078 [0.056, 0.107]}\\
 \midrule
-Family & \multicolumn{2}{c}{S} & \multicolumn{2}{c}{D} & \multicolumn{2}{c}{H} & \multicolumn{2}{c}{B-S} & \multicolumn{2}{c}{B-D}\\
+Family & \multicolumn{2}{c}{1G-S} & \multicolumn{2}{c}{1G-AMAE} & \multicolumn{2}{c}{5G-AMAE} & \multicolumn{2}{c}{3RB-C} & \multicolumn{2}{c}{3RB-A}\\
  & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK\\
 \midrule
 speechocean & \shortstack{0.811\\{}[0.763,0.848]} & \shortstack{0.716\\{}[0.672,0.752]} & \shortstack{0.847\\{}[0.806,0.878]} & \shortstack{0.629\\{}[0.585,0.666]} & \shortstack{0.842\\{}[0.801,0.874]} & \shortstack{0.670\\{}[0.627,0.706]} & \shortstack{0.832\\{}[0.790,0.866]} & \shortstack{0.704\\{}[0.662,0.739]} & \shortstack{0.836\\{}[0.795,0.870]} & \shortstack{0.693\\{}[0.651,0.728]}\\
@@ -202,7 +202,7 @@ aesopkoreanocean & \shortstack{0.874\\{}[0.842,0.898]} & \shortstack{0.527\\{}[0
 Human consensus & \multicolumn{5}{c}{Spearman 0.807 [0.768, 0.842]} & \multicolumn{5}{c}{QWK 0.742 [0.701, 0.778]}\\
 Azure & \multicolumn{5}{c}{Spearman 0.737 [0.672, 0.792]} & \multicolumn{5}{c}{QWK 0.370 [0.318, 0.421]}\\
 \midrule
-Family & \multicolumn{2}{c}{S} & \multicolumn{2}{c}{D} & \multicolumn{2}{c}{H} & \multicolumn{2}{c}{B-S} & \multicolumn{2}{c}{B-D}\\
+Family & \multicolumn{2}{c}{1G-S} & \multicolumn{2}{c}{1G-AMAE} & \multicolumn{2}{c}{5G-AMAE} & \multicolumn{2}{c}{3RB-C} & \multicolumn{2}{c}{3RB-A}\\
  & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK & $\rho$ & QWK\\
 \midrule
 speechocean & \shortstack{0.819\\{}[0.776,0.855]} & \shortstack{0.597\\{}[0.551,0.639]} & \shortstack{0.850\\{}[0.813,0.880]} & \shortstack{0.545\\{}[0.501,0.585]} & \shortstack{0.847\\{}[0.809,0.878]} & \shortstack{0.570\\{}[0.525,0.610]} & \shortstack{0.839\\{}[0.800,0.871]} & \shortstack{0.588\\{}[0.543,0.628]} & \shortstack{0.843\\{}[0.804,0.874]} & \shortstack{0.581\\{}[0.535,0.622]}\\
@@ -218,17 +218,17 @@ aesopkoreanocean & \shortstack{0.881\\{}[0.850,0.906]} & \shortstack{0.480\\{}[0
 
 \begin{landscape}
 \section{Paired differences and score distributions}
-The same 305 recordings were jointly resampled 1,200,000 times per seed (42 and 2026), treating each unique recording URL as one speaker. Each replicate recomputed agreement against the same three two-rater reference pairs. Bonferroni intervals use percentile endpoints $0.025/510$ and $1-0.025/510$, covering 35 models versus human consensus and Azure, plus Azure versus human consensus, for three constructs and two metrics, and 84 banded-versus-previous-leader contrasts. Seven of 510 adjusted decisions differ between seeds and are marked with a dagger; these borderline comparisons do not establish a direction. The table reports seed-42 intervals; full-precision results for both seeds are released. Approximately 59 draws fall in each adjusted tail, so endpoints remain Monte Carlo approximations. Correction covers these contrasts, not the preceding model search or all historical experiments; inference conditions on the observed panel and fitted models. No private scores were used for fitting or calibration.
+The same 305 recordings were jointly resampled 1,200,000 times per seed (42 and 2026), treating each unique recording URL as one speaker. Each replicate recomputed agreement against the same three two-rater reference pairs. Bonferroni intervals use percentile endpoints $0.025/510$ and $1-0.025/510$, covering 35 models versus human consensus and Azure, plus Azure versus human consensus, for three constructs and two metrics, and 84 banded-versus-previous-leader contrasts. Seven of 510 adjusted decisions differ between seeds and are marked with a dagger; these borderline comparisons do not establish a direction. The table reports seed-42 intervals; full-precision results for both seeds are released. Approximately 59 draws fall in each adjusted tail, so endpoints remain Monte Carlo approximations. Correction covers these contrasts, not the preceding model search or all earlier experiments; inference conditions on the observed panel and fitted models. No private scores were used for fitting or calibration.
 \begingroup\scriptsize\setlength{\tabcolsep}{3pt}\setlength{\LTcapwidth}{\linewidth}\renewcommand{\arraystretch}{1.0}\setlength{\LTpost}{0pt}
 \begin{longtable}{@{}lllrrrrrrrrr@{}}
-\caption{Paired differences for all S/D/H/B configurations and constructs.}\label{tab:paired-all}\\
+\caption{Paired differences for all 1G-S/1G-AMAE/5G-AMAE/3RB configurations and constructs.}\label{tab:paired-all}\\
 \toprule & & & \multicolumn{3}{c}{Accuracy} & \multicolumn{3}{c}{Fluency} & \multicolumn{3}{c}{Prosody}\\\cmidrule(lr){4-6}\cmidrule(lr){7-9}\cmidrule(lr){10-12}System & Reference & Metric & Diff. & 95\% CI & Adjusted CI & Diff. & 95\% CI & Adjusted CI & Diff. & 95\% CI & Adjusted CI\\\midrule\endfirsthead
 \toprule & & & \multicolumn{3}{c}{Accuracy} & \multicolumn{3}{c}{Fluency} & \multicolumn{3}{c}{Prosody}\\\cmidrule(lr){4-6}\cmidrule(lr){7-9}\cmidrule(lr){10-12}System & Reference & Metric & Diff. & 95\% CI & Adjusted CI & Diff. & 95\% CI & Adjusted CI & Diff. & 95\% CI & Adjusted CI\\\midrule\endhead
 \bottomrule\endfoot
 \multicolumn{12}{l}{\textbf{Azure benchmark (independent of selection rule)}}\\*
 azure & Human & $\rho$ & -0.049 & [-0.096, -0.005] & [-0.148, 0.038] & -0.174 & [-0.243, -0.110] & [-0.319, -0.052] & -0.070 & [-0.125, -0.022] & [-0.186, 0.019]\\
 azure & Human & QWK & -0.543 & [-0.580, -0.504] & [-0.613, -0.464] & -0.661 & [-0.697, -0.620] & [-0.730, -0.578] & -0.372 & [-0.419, -0.325] & [-0.463, -0.277]\\
-\midrule\multicolumn{12}{l}{\textbf{S: 1-grid construct-wise correlation}}\\*
+\midrule\multicolumn{12}{l}{\textbf{1G-S: 1-grid construct-wise correlation}}\\*
 speechocean & Human & $\rho$ & +0.046 & [0.016, 0.076] & [-0.016, 0.109] & +0.004 & [-0.036, 0.041] & [-0.080, 0.076] & +0.012 & [-0.023, 0.044] & [-0.061, 0.076]\\
 speechocean & Human & QWK & -0.202 & [-0.249, -0.155] & [-0.294, -0.106] & -0.023 & [-0.067, 0.022] & [-0.112, 0.066] & -0.144 & [-0.188, -0.101] & [-0.231, -0.057]\\
 speechocean & Azure & $\rho$ & +0.095 & [0.054, 0.139] & [0.015, 0.189] & +0.178 & [0.113, 0.247] & [0.052, 0.323] & +0.082 & [0.033, 0.135] & [-0.011, 0.197]\\
@@ -264,7 +264,7 @@ aesopkoreanocean & Human & QWK & -0.119 & [-0.153, -0.084] & [-0.186, -0.048] & 
 aesopkoreanocean & Azure & $\rho$ & +0.110 & [0.070, 0.154] & [0.033, 0.204] & +0.241 & [0.178, 0.311] & [0.121, 0.388] & +0.144 & [0.101, 0.194] & [0.067, 0.253]\\
 aesopkoreanocean & Azure & QWK & +0.425 & [0.388, 0.459] & [0.353, 0.492] & +0.449 & [0.412, 0.482] & [0.375, 0.514] & +0.111 & [0.068, 0.151] & [0.025, 0.191]\\
 \addlinespace[2pt]
-\midrule\multicolumn{12}{l}{\textbf{D: 1-grid pronunciation-accuracy error}}\\*
+\midrule\multicolumn{12}{l}{\textbf{1G-AMAE: 1-grid pronunciation-accuracy error}}\\*
 speechocean & Human & $\rho$ & +0.046 & [0.016, 0.076] & [-0.016, 0.109] & +0.040 & [0.006, 0.073] & [-0.032, 0.106] & +0.043 & [0.012, 0.072] & [-0.021, 0.103]\\
 speechocean & Human & QWK & -0.202 & [-0.249, -0.155] & [-0.294, -0.106] & -0.111 & [-0.156, -0.064] & [-0.200, -0.016] & -0.196 & [-0.240, -0.151] & [-0.281, -0.104]\\
 speechocean & Azure & $\rho$ & +0.095 & [0.054, 0.139] & [0.015, 0.189] & +0.214 & [0.150, 0.283] & [0.092, 0.359] & +0.113 & [0.066, 0.166] & [0.025, 0.229]\\
@@ -300,7 +300,7 @@ aesopkoreanocean & Human & QWK & -0.128 & [-0.162, -0.094] & [-0.195, -0.058] & 
 aesopkoreanocean & Azure & $\rho$ & +0.101 & [0.060, 0.146] & [0.023, 0.198] & +0.244 & [0.182, 0.313] & [0.127, 0.390] & +0.142 & [0.099, 0.191] & [0.066, 0.249]\\
 aesopkoreanocean & Azure & QWK & +0.415 & [0.378, 0.451] & [0.342, 0.485] & +0.499 & [0.463, 0.532] & [0.426, 0.563] & +0.136 & [0.095, 0.175] & [0.053, 0.213]\\
 \addlinespace[2pt]
-\midrule\multicolumn{12}{l}{\textbf{H: 5-grid pronunciation-accuracy error}}\\*
+\midrule\multicolumn{12}{l}{\textbf{5G-AMAE: 5-grid pronunciation-accuracy error}}\\*
 speechocean & Human & $\rho$ & +0.035 & [0.004, 0.065] & [-0.029, 0.097] & +0.035 & [-0.000, 0.069] & [-0.039, 0.102] & +0.040 & [0.009, 0.069] & [-0.024, 0.099]\\
 speechocean & Human & QWK & -0.158 & [-0.206, -0.110] & [-0.253, -0.061] & -0.069 & [-0.113, -0.024] & [-0.156, 0.023] & -0.172 & [-0.215, -0.128] & [-0.255, -0.083]\\
 speechocean & Azure & $\rho$ & +0.083 & [0.041, 0.128] & [-0.000, 0.178]$^{\dagger}$ & +0.209 & [0.145, 0.278] & [0.086, 0.354] & +0.110 & [0.063, 0.163] & [0.021, 0.225]\\
@@ -336,7 +336,7 @@ aesopkoreanocean & Human & QWK & -0.129 & [-0.163, -0.094] & [-0.196, -0.059] & 
 aesopkoreanocean & Azure & $\rho$ & +0.097 & [0.056, 0.141] & [0.018, 0.193] & +0.239 & [0.176, 0.307] & [0.121, 0.384] & +0.135 & [0.093, 0.184] & [0.058, 0.242]\\
 aesopkoreanocean & Azure & QWK & +0.415 & [0.377, 0.450] & [0.341, 0.485] & +0.513 & [0.477, 0.546] & [0.440, 0.578] & +0.148 & [0.107, 0.188] & [0.064, 0.227]\\
 \addlinespace[2pt]
-\midrule\multicolumn{12}{l}{\textbf{B-S: three-ratio banded, construct-wise correlation}}\\*
+\midrule\multicolumn{12}{l}{\textbf{3RB-C: three-ratio banded, construct-wise correlation}}\\*
 speechocean & Human & $\rho$ & +0.035 & [0.004, 0.065] & [-0.029, 0.097] & +0.025 & [-0.011, 0.060] & [-0.052, 0.093] & +0.032 & [0.000, 0.062] & [-0.035, 0.092]\\
 speechocean & Human & QWK & -0.158 & [-0.206, -0.110] & [-0.253, -0.061] & -0.035 & [-0.079, 0.009] & [-0.123, 0.053] & -0.154 & [-0.196, -0.111] & [-0.237, -0.067]\\
 speechocean & Azure & $\rho$ & +0.083 & [0.041, 0.128] & [-0.000, 0.178]$^{\dagger}$ & +0.199 & [0.135, 0.268] & [0.076, 0.345] & +0.102 & [0.054, 0.155] & [0.012, 0.217]\\
@@ -372,7 +372,7 @@ aesopkoreanocean & Human & QWK & -0.125 & [-0.160, -0.091] & [-0.193, -0.055] & 
 aesopkoreanocean & Azure & $\rho$ & +0.108 & [0.068, 0.152] & [0.031, 0.204] & +0.247 & [0.184, 0.316] & [0.129, 0.394] & +0.145 & [0.103, 0.195] & [0.069, 0.253]\\
 aesopkoreanocean & Azure & QWK & +0.418 & [0.381, 0.453] & [0.345, 0.486] & +0.551 & [0.514, 0.584] & [0.476, 0.616] & +0.124 & [0.083, 0.164] & [0.040, 0.202]\\
 \addlinespace[2pt]
-\midrule\multicolumn{12}{l}{\textbf{B-D: three-ratio banded, pronunciation-accuracy error}}\\*
+\midrule\multicolumn{12}{l}{\textbf{3RB-A: three-ratio banded, pronunciation-accuracy error}}\\*
 speechocean & Human & $\rho$ & +0.035 & [0.004, 0.065] & [-0.029, 0.097] & +0.030 & [-0.006, 0.064] & [-0.045, 0.097] & +0.035 & [0.004, 0.065] & [-0.030, 0.095]\\
 speechocean & Human & QWK & -0.158 & [-0.206, -0.110] & [-0.253, -0.061] & -0.046 & [-0.090, -0.001] & [-0.133, 0.044] & -0.161 & [-0.203, -0.117] & [-0.244, -0.073]\\
 speechocean & Azure & $\rho$ & +0.083 & [0.041, 0.128] & [-0.000, 0.178]$^{\dagger}$ & +0.204 & [0.139, 0.273] & [0.080, 0.349] & +0.106 & [0.058, 0.159] & [0.016, 0.221]\\
@@ -408,8 +408,8 @@ aesopkoreanocean & Human & QWK & -0.127 & [-0.161, -0.093] & [-0.194, -0.057] & 
 aesopkoreanocean & Azure & $\rho$ & +0.103 & [0.062, 0.147] & [0.024, 0.199] & +0.244 & [0.182, 0.313] & [0.127, 0.390] & +0.142 & [0.099, 0.191] & [0.066, 0.249]\\
 aesopkoreanocean & Azure & QWK & +0.416 & [0.379, 0.452] & [0.343, 0.486] & +0.499 & [0.463, 0.532] & [0.426, 0.563] & +0.136 & [0.095, 0.175] & [0.053, 0.213]\\
 \addlinespace[2pt]
-\midrule\multicolumn{12}{l}{\textbf{Banded minus previous S/D/H metric leader}}\\*
-\multicolumn{12}{l}{\textbf{B-S}}\\*
+\midrule\multicolumn{12}{l}{\textbf{Banded minus previous 1G-S/1G-AMAE/5G-AMAE metric leader}}\\*
+\multicolumn{12}{l}{\textbf{3RB-C}}\\*
 speechocean & Previous best & $\rho$ & -0.028 & [-0.047, -0.010] & [-0.070, 0.007] & -0.046 & [-0.069, -0.025] & [-0.096, -0.006] & -0.044 & [-0.068, -0.023] & [-0.097, -0.005]\\
 speechocean & Previous best & QWK & -0.275 & [-0.314, -0.236] & [-0.350, -0.196] & -0.040 & [-0.074, -0.006] & [-0.109, 0.029] & -0.087 & [-0.123, -0.049] & [-0.159, -0.011]\\
 korean & Previous best & $\rho$ & -0.016 & [-0.031, -0.003] & [-0.047, 0.011] & -0.013 & [-0.022, -0.005] & [-0.034, 0.003] & -0.005 & [-0.014, 0.003] & [-0.023, 0.011]\\
@@ -424,7 +424,7 @@ koreanaesop & Previous best & $\rho$ & -0.005 & [-0.011, 0.002] & [-0.019, 0.008
 koreanaesop & Previous best & QWK & -0.343 & [-0.368, -0.318] & [-0.394, -0.294] & -0.292 & [-0.314, -0.270] & [-0.336, -0.249] & -0.243 & [-0.264, -0.223] & [-0.285, -0.204]\\
 aesopkoreanocean & Previous best & $\rho$ & -0.003 & [-0.009, 0.002] & [-0.016, 0.008] & +0.002 & [-0.008, 0.013] & [-0.021, 0.024] & -0.001 & [-0.012, 0.009] & [-0.024, 0.020]\\
 aesopkoreanocean & Previous best & QWK & -0.242 & [-0.266, -0.219] & [-0.289, -0.196] & -0.115 & [-0.132, -0.099] & [-0.150, -0.083] & -0.181 & [-0.197, -0.166] & [-0.214, -0.150]\\
-\multicolumn{12}{l}{\textbf{B-D}}\\*
+\multicolumn{12}{l}{\textbf{3RB-A}}\\*
 speechocean & Previous best & $\rho$ & -0.028 & [-0.047, -0.010] & [-0.070, 0.007] & -0.041 & [-0.064, -0.021] & [-0.091, -0.002] & -0.041 & [-0.063, -0.020] & [-0.091, -0.002]\\
 speechocean & Previous best & QWK & -0.275 & [-0.314, -0.236] & [-0.350, -0.196] & -0.051 & [-0.085, -0.017] & [-0.119, 0.019] & -0.093 & [-0.130, -0.056] & [-0.165, -0.017]\\
 korean & Previous best & $\rho$ & -0.019 & [-0.034, -0.005] & [-0.052, 0.009] & -0.019 & [-0.029, -0.010] & [-0.042, -0.002] & -0.013 & [-0.021, -0.005] & [-0.031, 0.002]\\
@@ -440,7 +440,7 @@ koreanaesop & Previous best & QWK & -0.346 & [-0.371, -0.321] & [-0.396, -0.296]
 aesopkoreanocean & Previous best & $\rho$ & -0.009 & [-0.016, -0.001] & [-0.026, 0.005] & -0.000 & [-0.011, 0.010] & [-0.023, 0.021] & -0.005 & [-0.015, 0.005] & [-0.027, 0.015]\\
 aesopkoreanocean & Previous best & QWK & -0.243 & [-0.269, -0.219] & [-0.295, -0.195] & -0.167 & [-0.182, -0.152] & [-0.198, -0.138] & -0.169 & [-0.184, -0.155] & [-0.199, -0.142]\\
 \end{longtable}
-\noindent\textit{Note.} Positive differences favor the system; Human denotes human--other-rater consensus. Adjusted intervals cover 510 contrasts. Decisions use unrounded endpoints, not displayed zeros. QWK uses clipping and half-up rounding; Spearman retains raw scores. Previous accuracy leaders: S-aesopocean for correlation and S-koreanocean for QWK; fluency/prosody leaders: H-koreanaesop for correlation and H-koreanocean for QWK. A dagger marks seed-dependent interval exclusion.
+\noindent\textit{Note.} Positive differences favor the system; Human denotes human--other-rater consensus. Adjusted intervals cover 510 contrasts. Decisions use unrounded endpoints, not displayed zeros. QWK uses clipping and half-up rounding; Spearman retains raw scores. Previous accuracy leaders: 1G-S-aesopocean for correlation and 1G-S-koreanocean for QWK; fluency/prosody leaders: 5G-AMAE-koreanaesop for correlation and 5G-AMAE-koreanocean for QWK. A dagger marks seed-dependent interval exclusion.
 \endgroup
 \end{landscape}
 
@@ -448,9 +448,9 @@ aesopkoreanocean & Previous best & QWK & -0.243 & [-0.269, -0.219] & [-0.295, -0
 \begin{landscape}
 \begingroup\small\setlength{\tabcolsep}{4pt}\setlength{\LTcapwidth}{\linewidth}
 \subsection{Score distributions}
-The ridge distributions below use the Spearman-selected (S) condition; Azure is independent of selection rule. Means, sample standard deviations, bias, and MAE use unrounded predictions on the 0--100 scale against the three-rater mean; no recalibration is fitted.
+The ridge distributions below use the Spearman-selected (1G-S) condition; Azure is independent of selection rule. Means, sample standard deviations, bias, and MAE use unrounded predictions on the 0--100 scale against the three-rater mean; no recalibration is fitted.
 \begin{longtable}{@{}lrrrrrrrrrrrr@{}}
-\caption{Score distributions for the S condition and Azure.}\\
+\caption{Score distributions for the 1G-S condition and Azure.}\\
 \toprule
 System & \multicolumn{4}{c}{Accuracy} & \multicolumn{4}{c}{Fluency} & \multicolumn{4}{c}{Prosody}\\
  & Mean & SD & Bias & MAE & Mean & SD & Bias & MAE & Mean & SD & Bias & MAE\\\midrule
@@ -470,9 +470,9 @@ koreanaesop & 50.09 & 14.23 & -15.58 & 15.59 & 51.09 & 12.44 & -15.21 & 15.21 & 
 aesopkoreanocean & 54.37 & 12.52 & -11.30 & 11.38 & 54.18 & 10.50 & -12.12 & 12.13 & 53.05 & 10.42 & -13.50 & 13.50\\
 \end{longtable}
 \section{Public-development comparisons}
-The matched seven-family experiment uses fixed representation combinations and Spearman-based penalty selection (S) over included-corpus development sets. All entries are development Spearman correlations, not final-test results. SpeechOcean uses the matched fitting procedure, not the original historical deployment. Korean fluency and prosody share a source target. SO denotes SpeechOcean ($n=500$), Korean has $n=636$, and J-AESOP has $n=36$ development recordings; the small J-AESOP sample limits precision.
+The matched seven-family experiment uses fixed representation combinations and Spearman-based penalty selection (1G-S) over included-corpus development sets. All entries are development Spearman correlations, not final-test results. SpeechOcean uses the matched fitting procedure, not the original earlier deployment. Korean fluency and prosody share a source target. SO denotes SpeechOcean ($n=500$), Korean has $n=636$, and J-AESOP has $n=36$ development recordings; the small J-AESOP sample limits precision.
 \begin{longtable}{@{}lrrrrrrrrr@{}}
-\caption{Public-development Spearman correlations for the S condition.}\\
+\caption{Public-development Spearman correlations for the 1G-S condition.}\\
 \toprule
 System & \multicolumn{3}{c}{Accuracy} & \multicolumn{3}{c}{Fluency} & \multicolumn{3}{c}{Prosody}\\
  & SO & Korean & J-AESOP & SO & Korean & J-AESOP & SO & Korean & J-AESOP\\\midrule
