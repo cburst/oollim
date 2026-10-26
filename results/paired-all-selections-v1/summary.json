@@ -1,0 +1,107 @@
+{
+  "comparisons": 258,
+  "bootstrap_per_seed": 600000,
+  "seeds": [
+    42,
+    2026
+  ],
+  "seed_decision_disagreements": 0,
+  "groups": [
+    {
+      "rule": "spearman",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 10,
+      "lower": 0,
+      "includes_zero": 11
+    },
+    {
+      "rule": "spearman",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 18,
+      "includes_zero": 2
+    },
+    {
+      "rule": "spearman",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 1
+    },
+    {
+      "rule": "spearman",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "damae",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 8,
+      "lower": 0,
+      "includes_zero": 13
+    },
+    {
+      "rule": "damae",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 18,
+      "includes_zero": 2
+    },
+    {
+      "rule": "damae",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 1
+    },
+    {
+      "rule": "damae",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 7,
+      "lower": 0,
+      "includes_zero": 14
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 17,
+      "includes_zero": 3
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 21,
+      "lower": 0,
+      "includes_zero": 0
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    }
+  ]
+}

@@ -2,13 +2,14 @@
 import argparse,csv,html
 from pathlib import Path
 CONSTRUCTS=('Accuracy','Fluency','Prosody')
-RULES={'spearman':'S','damae':'D','historical_grid_damae':'H'}
-NOTE=('Human agreement averages each rater versus the other two; model agreement averages the same three two-rater references. S: construct-specific development Spearman; D: development accuracy MAE on the same standardized grid; H: development accuracy MAE on the historical grid converted to normalized loss. Every configuration within .001 of the highest observed Spearman or QWK for its construct among 21 combinations is shown, using unrounded estimates. Bold marks qualifying metrics and human baselines. Ties are descriptive, not tests of equivalence or superiority. Rows were chosen after external evaluation; all fitting and hyperparameter selection used public training/development data. Both metrics belong to each displayed configuration. No displayed prediction required clipping; QWK uses 0–100 integer categories with half-up rounding, and Spearman uses raw scores. Intervals are marginal 95% percentile-bootstrap intervals (2,000 draws, seed 42), not selection-adjusted. Full results are in the supplement. Its paired tests concern the matched-Spearman subset, not all displayed leaders.')
+RULES={'spearman':'S','damae':'D','historical_grid_damae':'H','banded_3ratio_spearman':'B-S','banded_3ratio_accuracy_mae':'B-D'}
+NOTE=('Statistics average the three two-human references; humans are compared with the other two. S: 1-grid construct-wise correlation; D: 1-grid pronunciation-accuracy error; H: 5-grid pronunciation-accuracy error; B-S/B-D: three-ratio banded ridge with Spearman/accuracy-MAE selection. Banded accuracy uses the refined scalar-ridge head. All configurations within .001 of the unrounded maximum of either metric among 35 combinations are shown. Bold marks qualifying metrics and human baselines. Leaders are descriptive external selections; marginal 95% bootstrap intervals use 2,000 draws, seed 42. Paired tests separately adjust 510 contrasts. No displayed leader requires clipping. Full results are in the supplement.')
+
 def select(rows,tolerance=.001):
  output=[]
  for c in CONSTRUCTS:
   panel=[r for r in rows if r['Construct']==c];a=[r for r in panel if r['Reference']=='two' and '__' in r['System']]
-  if len(a)!=21 or len({r['System'] for r in a})!=21:raise ValueError('Expected 21 configurations')
+  if len(a)!=35 or len({r['System'] for r in a})!=35:raise ValueError('Expected 35 configurations')
   if any(int(r['N'])!=305 for r in panel):raise ValueError('Expected complete matched cohort')
   best={m:max(float(r[m]) for r in a) for m in ('Spearman','QWK')}
   h=next(r for r in panel if not r['System'] and 'other-rater' in r['Method']);az=next(r for r in panel if r['System']=='azure' and r['Reference']=='two')
@@ -38,5 +39,5 @@ def render(source,output):
  return selected
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,default=Path('results/selection-comparison-v1/external-all-conditions.csv'));p.add_argument('--output',type=Path,required=True);a=p.parse_args();render(a.input,a.output)
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',type=Path,default=Path('results/four-ridges-v1/external-all-conditions.csv'));p.add_argument('--output',type=Path,required=True);a=p.parse_args();render(a.input,a.output)
 if __name__=='__main__':main()

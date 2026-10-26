@@ -1,14 +1,9 @@
-# Publication checklist
+# Release 0.4.0
 
-Project: **oollim**. Intended GitHub repository: **cburst/oollim**. Prepared locally; not uploaded. The public entry points are install.py and oollim.py. The reported experiments and manuscript updates are complete; publication/upload and the documented platform and rights checks remain separate.
+The release adds three-ratio banded ridge to the unchanged S/D/H collections: 35 selectable family/criterion combinations. Dropdown names describe construct-wise correlation (Spearman) or pronunciation-accuracy error (accuracy MAE). Existing CLI keys and the matched SpeechOcean default remain compatible.
 
-Author: Richard Rose, HUFS Department of English Education; richard.rose@hufs.ac.kr.
+The manuscript reports descriptive leaders across all 35 configurations and paired uncertainty across 510 contrasts. All coefficient fitting and hyperparameter selection use public training/development data. Private recordings, identifiers, individual ratings and system predictions are excluded from the release.
 
-Before publication:
+The repository is https://github.com/cburst/oollim. This package is prepared locally; it does not automatically publish a GitHub release or update an existing DOI. The author signs/notarizes the Mac installer before public distribution. The Windows executable is unsigned. See VALIDATION.md for the scope of platform checks; Windows Server testing does not establish Windows 11 compatibility.
 
-1. Record native Windows acceptance (the owner will run it later); inspect VALIDATION.md for actual test coverage.
-2. Resolve the recorded derived-weight permission questions. All seven families are included locally at the author’s direction; no corpus recordings are bundled.
-3. Choose GitHub visibility and upload the reviewed source. No credentials or private evaluation rows belong in the upload.
-4. Complete the two outstanding result blocks and manuscript placeholders before paper submission.
-
-The original deployed SpeechOcean model remains distinct from fresh refits. The custom source-available license is included verbatim; it does not override third-party terms.
+Derived-weight permissions were confirmed by the author. Included licenses and third-party notices remain applicable. No source corpus is bundled. The original deployed SpeechOcean model remains separately versioned from the matched refits.

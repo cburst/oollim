@@ -46,10 +46,10 @@ def test_all_selection_heads_and_complete_aggregate_release():
 
 def test_leaders_include_all_ties_and_match_manuscript(tmp_path):
  from reproduce.leader_tables import render
- render(ROOT/'results/selection-comparison-v1/external-all-conditions.csv',tmp_path)
+ render(ROOT/'results/four-ridges-v1/external-all-conditions.csv',tmp_path)
  import csv
  rows=list(csv.DictReader((tmp_path/'leaders.csv').open()))
- assert len(rows)==16
+ assert len(rows)==15
  assert (tmp_path/'leader-table-rows.tex').read_text().strip() in (ROOT/'paper/main.tex').read_text()
- assert sum(row['Rule']!='--' and row['SpearmanLeader']=='True' for row in rows)==7
- assert sum(row['Rule']!='--' and row['QWKLeader']=='True' for row in rows)==3
+ assert sum(row['Rule']!='--' and row['SpearmanLeader']=='True' for row in rows)==6
+ assert sum(row['Rule']!='--' and row['QWKLeader']=='True' for row in rows)==4

@@ -112,3 +112,10 @@ python -m evaluation.run_statistics assembled_scores.csv --speaker-column speake
 ```
 
 Required columns: `h1-AccuracyScore` through `h3-ProsodyScore`, `m-AccuracyScore`/`m-FluencyScore`/`m-ProsodyScore`, and `<family>-<Construct>Score100` for all seven families, all on 0–100. Original `s-<Construct>Score` columns may supply SpeechOcean values on 0–10 and are multiplied by ten. Supply verified speaker identities; a URL is suitable only when each recording belongs to a unique speaker. Empty rows are ignored. Missing/incomplete results are rejected for final compact rendering. No network, model training, calibration, or audio inference occurs. Keep inputs and generated row-level files out of the repository.
+
+
+## Four approaches and banded ridge
+
+Render the current table with `python -m reproduce.leader_tables --output output/leaders`. The default aggregate input contains all 35 configurations. The original S/D/H archive remains unchanged. For public-data grid reproduction, set `OOLLIM_FEATURE_CACHE` to a folder containing `speechocean/manifest.json`, `korean/manifest.json`, and `aesop/manifest.json`, then run `python experiments/grid-options-v1/run.py`. Set `OOLLIM_GRID_OUTPUT` to a fresh output folder. The runner reproduces expanded/refined intermediates as well as banded heads; it never reads the private evaluation data. Source-path portability changes version the runner checksum; evaluated weights remain unchanged.
+
+`evaluation/paired_four_ridges.py` recomputes 510 paired contrasts from the two private evaluation exports when authorized inputs are available. Private files are not shipped. Synthetic tests check ranking, ties, QWK and the comparison family. Aggregate tables alone cannot independently reproduce paired uncertainty.

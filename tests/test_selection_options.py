@@ -6,9 +6,10 @@ from oollim_app.scoring import FAMILIES, SELECTIONS, bundle_path
 from oollim_app.engine import load_bundle, _portable_provenance
 from oollim_app.cli import identity
 
-def test_all_21_bundles_match_evaluated_registry():
+def test_all_35_bundles_match_evaluated_registry():
  registry=json.loads((ROOT/'models/selection-comparison-v1/registry.json').read_text())
- assert len(registry)==len(FAMILIES)*len(SELECTIONS)==21
+ registry.update(json.loads((ROOT/'models/banded-3ratio-v1/registry.json').read_text()))
+ assert len(registry)==len(FAMILIES)*len(SELECTIONS)==35
  for selection in SELECTIONS:
   for family in FAMILIES:
    path=bundle_path(family,selection);cfg=load_bundle(path);expected=registry[selection+'__'+family]
@@ -26,7 +27,7 @@ def test_provenance_only_ignores_machine_directory():
 
 def test_selection_changes_resume_identity(tmp_path):
  audio=tmp_path/'sample.wav';audio.write_bytes(b'audio')
- assert len({identity(audio,'Please call Stella.',bundle_path('speechocean',s)) for s in SELECTIONS})==3
+ assert len({identity(audio,'Please call Stella.',bundle_path('speechocean',s)) for s in SELECTIONS})==5
 
 def test_all_heads_produce_finite_scores():
  imports_path()

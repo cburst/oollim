@@ -72,9 +72,10 @@ class Window(QMainWindow):
         for family in FAMILIES:
             for key,label in SELECTIONS.items():
                 self.scoring.addItem(f'{family} — {label}',(family,key))
-        self.scoring.setSizeAdjustPolicy(QComboBox.SizeAdjustPolicy.AdjustToContents)
+        self.scoring.setMinimumContentsLength(20)
+        self.scoring.setSizeAdjustPolicy(QComboBox.SizeAdjustPolicy.AdjustToMinimumContentsLengthWithIcon)
         self.scoring.setAccessibleName('Scoring family and selection rule')
-        self.scoring.setToolTip('Spearman: construct-specific correlation. DAMAE: accuracy MAE. Historical-grid DAMAE: accuracy MAE with the historical penalty grid. All tuning uses public development data.')
+        self.scoring.setToolTip('1-grid and 5-grid are penalty grids. Three-ratio banded ridge allows separate XEUS and XLS-R penalties for fluency/prosody. Construct-wise correlation means Spearman; pronunciation-accuracy error means accuracy-construct MAE. Both use public development data.')
         grid.addWidget(self.scoring,1,3)
         self.output=QLineEdit(str(Path.home()/'oollim/results/scores.csv'))
         grid.addWidget(self.path_row(self.output,self.choose_output),1,2)

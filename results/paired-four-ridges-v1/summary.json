@@ -1,0 +1,215 @@
+{
+  "comparisons": 510,
+  "bootstrap_per_seed": 1200000,
+  "seeds": [
+    42,
+    2026
+  ],
+  "seed_decision_disagreements": 7,
+  "borderline_keys": [
+    [
+      "Accuracy",
+      "historical_grid_damae__speechocean",
+      "azure_two_rater",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "historical_grid_damae__koreanaesop",
+      "human_other_two",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "banded_3ratio_spearman__speechocean",
+      "azure_two_rater",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "banded_3ratio_spearman__aesopkoreanocean",
+      "human_other_two",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "banded_3ratio_accuracy_mae__speechocean",
+      "azure_two_rater",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "banded_3ratio_accuracy_mae__koreanaesop",
+      "human_other_two",
+      "rho"
+    ],
+    [
+      "Accuracy",
+      "banded_3ratio_spearman__aesop",
+      "spearman__aesopocean",
+      "rho"
+    ]
+  ],
+  "groups": [
+    {
+      "rule": "spearman",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 9,
+      "lower": 0,
+      "includes_zero": 12
+    },
+    {
+      "rule": "spearman",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 18,
+      "includes_zero": 2
+    },
+    {
+      "rule": "spearman",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 1
+    },
+    {
+      "rule": "spearman",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "damae",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 7,
+      "lower": 0,
+      "includes_zero": 14
+    },
+    {
+      "rule": "damae",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 18,
+      "includes_zero": 2
+    },
+    {
+      "rule": "damae",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 1
+    },
+    {
+      "rule": "damae",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 6,
+      "lower": 0,
+      "includes_zero": 14
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 16,
+      "includes_zero": 4
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 0
+    },
+    {
+      "rule": "historical_grid_damae",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "banded_3ratio_spearman",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 8,
+      "lower": 0,
+      "includes_zero": 12
+    },
+    {
+      "rule": "banded_3ratio_spearman",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 17,
+      "includes_zero": 3
+    },
+    {
+      "rule": "banded_3ratio_spearman",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 20,
+      "lower": 0,
+      "includes_zero": 0
+    },
+    {
+      "rule": "banded_3ratio_spearman",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    },
+    {
+      "rule": "banded_3ratio_accuracy_mae",
+      "reference": "human_other_two",
+      "metric": "rho",
+      "higher": 8,
+      "lower": 0,
+      "includes_zero": 12
+    },
+    {
+      "rule": "banded_3ratio_accuracy_mae",
+      "reference": "human_other_two",
+      "metric": "qwk",
+      "higher": 1,
+      "lower": 16,
+      "includes_zero": 4
+    },
+    {
+      "rule": "banded_3ratio_accuracy_mae",
+      "reference": "azure_two_rater",
+      "metric": "rho",
+      "higher": 19,
+      "lower": 0,
+      "includes_zero": 1
+    },
+    {
+      "rule": "banded_3ratio_accuracy_mae",
+      "reference": "azure_two_rater",
+      "metric": "qwk",
+      "higher": 19,
+      "lower": 1,
+      "includes_zero": 1
+    }
+  ]
+}

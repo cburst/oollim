@@ -1,0 +1,7 @@
+# Paired four-ridge analysis v1
+
+Scope fixed before calculating intervals: all 35 S/D/H/B family-selection configurations, all three constructs and both metrics, against human-other-rater consensus and Azure (426 contrasts including Azure versus human); all 14 banded variants versus the previous S/D/H metric leader for each construct (84 contrasts). Bonferroni correction covers all 510 contrasts. Previous leaders are fixed from the preceding aggregate tables, not reselected inside bootstrap samples.
+
+Jointly resample the same 305 recording IDs, treated as one recording per speaker, with replacement. Recalculate tied ranks each time. Machine agreement averages the three two-rater references; human agreement averages each remaining rater against that reference. Raw scores for Spearman; clip 0–100 and round half up for QWK. Use 1,200,000 draws for seeds 42 and 2026, around 59 draws in each adjusted tail. Report seed 42 intervals and report any sign-decision disagreements across seeds as borderline. Percentile intervals are approximations; correction covers these contrasts, not all historical experimentation or external leader selection.
+
+Inputs are joined by recording ID; all human and Azure scores must match exactly. No model fitting, calibration, new inference, or private-data selection. Only aggregate results are released. Preserve prior 258-contrast analysis separately. Include all new comparisons, including null and negative outcomes.

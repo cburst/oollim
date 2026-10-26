@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopkoreanocean",
+  "selection": "banded_3ratio_accuracy_mae",
+  "model_version": "grid-options-v1-banded__accuracy_mae__aesopkoreanocean",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "c47d135bca9350832b836fda740e716483b6af83d6d7a1f01868f3cad63a0514",
+    "accuracy.json": "ba4eea76e12764fdf921d14f8b92bf21729b50cc104b344c747aa4da681d4b3c",
+    "fluency.npz": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc",
+    "fluency.json": "d8ec6fd37a3384e58aad47f9a92353391709137de916219e6f0461c8a43b14fc",
+    "prosody.npz": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc",
+    "prosody.json": "1b33f37853a3abd761b53e993cbb01524bd3f1084732daeaea3c6e6789f886aa"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "source_configuration": "banded__accuracy_mae__aesopkoreanocean",
+  "accuracy_note": "Accuracy uses the refined scalar-ridge head; three-ratio banding applies to fluency and prosody.",
+  "configuration_sha256": "4338503b339071c8451bad96a776454c62d1fb039f747f78a880fcdf1e765242"
+}

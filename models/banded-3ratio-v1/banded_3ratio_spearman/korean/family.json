@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "korean",
+  "selection": "banded_3ratio_spearman",
+  "model_version": "grid-options-v1-banded__spearman__korean",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "f1a77f0759d31608a7644126c894d115599278a429b72b9d8e945a1836409d17",
+    "accuracy.json": "db6cdfbb3efecc5375482dc20cb27d349e07641831a6a6b4eea28f787ae099fb",
+    "fluency.npz": "05768d81cbc104d0269a428bc170a3a555ec268f17ccbc9ac6410cb0416c96da",
+    "fluency.json": "745b1ea9ba761824e0dc080b02440d2ec1eced2560a45b98dbe2e397e2746093",
+    "prosody.npz": "05768d81cbc104d0269a428bc170a3a555ec268f17ccbc9ac6410cb0416c96da",
+    "prosody.json": "bc53e89a63f8de3ea454b338ee7443a23d1b8555e8d6ce139156eb1036a50dbc"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "source_configuration": "banded__spearman__korean",
+  "accuracy_note": "Accuracy uses the refined scalar-ridge head; three-ratio banding applies to fluency and prosody.",
+  "configuration_sha256": "45cba9b9ef8ac84ca06c6954cd1ade7146a2f6a37a3901eb095bec57908ae636"
+}

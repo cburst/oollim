@@ -1,5 +1,5 @@
-# Remaining release/submission checks
+# Submission checks
 
-Reported experiments and statistical analyses are complete. Azure provenance is January 2026, en-US, supplied Stella text, whole-recording assessment. Human and Azure scores are archival; ridge predictions belong to the present study. Exact Azure revision and remaining request options are unavailable. Bootstrap grouping treats each distinct recording URL as one speaker by evaluator instruction.
+The four-approach revision and paired statistics are complete. The manuscript covers 35 configurations, including both selection variants of three-ratio banded ridge. Seven of the 510 adjusted interval decisions are seed-dependent and marked borderline; the main leader conclusions are stable.
 
-Interactive Windows Server 2022 installation, audio scoring, and PDF opening have passed; Windows 11 and a complete clean raw-corpus reproduction remain unverified. Derived-weight release permissions are confirmed by the author; restrictions remain documented in docs/RIGHTS.md. The manuscript availability statement is prepared for public release: publish the repository before distributing that statement as a public claim. Prepare an anonymous edition for any double-blind submission and check current venue requirements. No missing results are implied by these release checks.
+The author should review the PDFs before replacing a public preprint and prepare an anonymous edition for any double-blind submission. Azure provenance remains January 2026, en-US, supplied Stella text, whole-recording assessment; exact service revision and remaining options are unavailable. Human and Azure scores are archival. No private evaluation rows are distributed. Platform test scope is recorded in docs/VALIDATION.md.

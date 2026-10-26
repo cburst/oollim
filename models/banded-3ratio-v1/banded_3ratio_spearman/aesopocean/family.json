@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "aesopocean",
+  "selection": "banded_3ratio_spearman",
+  "model_version": "grid-options-v1-banded__spearman__aesopocean",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "1ce17f884e7ea75e40ff6658f5db875e0ea9476826b5ce8b32c01bc89ea68c08",
+    "accuracy.json": "d047b9bd3d3d92960bcb90760ed495c0346beee807125b9ef1e1176a6f8c48f2",
+    "fluency.npz": "568332d6a7c0eea63782c248a82e60c4ac21847a6e0ac6d4a2aad99336306461",
+    "fluency.json": "9f646dd2799ba44185c4d1e841688b9238a8cdbf2a6774146d83c1acba41a465",
+    "prosody.npz": "4c6726d5968e7bc7c8da36f725278c4668e6ec7e4d3b0a0639c91903d4f40f60",
+    "prosody.json": "8f3c231ba1664351dc8c7b9cc84e5154d5eb5c2db0f6e446c6e0868e5f114616"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "source_configuration": "banded__spearman__aesopocean",
+  "accuracy_note": "Accuracy uses the refined scalar-ridge head; three-ratio banding applies to fluency and prosody.",
+  "configuration_sha256": "cbde0be563cf64c28737017399a064bfa0217d86d8a64663d73e772218422204"
+}

@@ -70,4 +70,6 @@ PDF export uses WeasyPrint 70.0. On Apple Silicon, install Homebrew if absent; t
 
 ## Version 0.3 scoring choices
 
-The GUI exposes all 21 matched configurations in one combined Scoring dropdown. The CLI uses `--family` and `--selection spearman|damae|historical_grid_damae`. The default is now matched Spearman, including a fresh SpeechOcean refit. Use `--model models/speechocean/family.json` for the original deployed SpeechOcean model. Choose distinct output paths when comparing combinations; CSVs record selection and model version, and resume identity includes the bundle checksum. Encoders and audio preprocessing are unchanged.
+The GUI exposes all 35 configurations in one combined Scoring dropdown. The CLI uses `--family` and `--selection spearman|damae|historical_grid_damae|banded_3ratio_spearman|banded_3ratio_accuracy_mae`. The default is now matched Spearman, including a fresh SpeechOcean refit. Use `--model models/speechocean/family.json` for the original deployed SpeechOcean model. Choose distinct output paths when comparing combinations; CSVs record selection and model version, and resume identity includes the bundle checksum. Encoders and audio preprocessing are unchanged.
+
+The app uses descriptive selection names: **1-grid · construct-wise correlation**, **1-grid · pronunciation-accuracy error**, **5-grid · pronunciation-accuracy error**, and **Three-ratio banded** with either criterion. Correlation is Spearman and pronunciation-accuracy error is accuracy-construct MAE. Existing CLI selection keys are unchanged.

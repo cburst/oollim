@@ -1,0 +1,198 @@
+{
+  "banded_3ratio_spearman__speechocean": {
+    "model_version": "grid-options-v1-banded__spearman__speechocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "ec3611bada85b53436a8f292f6a22573232bc65e28e14dedf4a128b2418ec180"
+      },
+      "fluency": {
+        "sha256": "059d9f4f9e942bf30a4a601eabd2538ea71221109f7981d59060a9055a96ce66"
+      },
+      "prosody": {
+        "sha256": "059d9f4f9e942bf30a4a601eabd2538ea71221109f7981d59060a9055a96ce66"
+      }
+    }
+  },
+  "banded_3ratio_spearman__korean": {
+    "model_version": "grid-options-v1-banded__spearman__korean",
+    "heads": {
+      "accuracy": {
+        "sha256": "f1a77f0759d31608a7644126c894d115599278a429b72b9d8e945a1836409d17"
+      },
+      "fluency": {
+        "sha256": "05768d81cbc104d0269a428bc170a3a555ec268f17ccbc9ac6410cb0416c96da"
+      },
+      "prosody": {
+        "sha256": "05768d81cbc104d0269a428bc170a3a555ec268f17ccbc9ac6410cb0416c96da"
+      }
+    }
+  },
+  "banded_3ratio_spearman__aesop": {
+    "model_version": "grid-options-v1-banded__spearman__aesop",
+    "heads": {
+      "accuracy": {
+        "sha256": "3b7f06eadab3d0d1db48601c10333a28fa33f9da1221dee95b5e7aaaaaf5ce80"
+      },
+      "fluency": {
+        "sha256": "d5bc0a7a48de4ed901f3f2b81a3e50b5aa0a87eb14a0c36bc7187e1bb85b5fe7"
+      },
+      "prosody": {
+        "sha256": "0fd9bdec8b26330b1079e1ad9a5c1d1edc19e10ee5a26727b5225ab97adcf59e"
+      }
+    }
+  },
+  "banded_3ratio_spearman__koreanocean": {
+    "model_version": "grid-options-v1-banded__spearman__koreanocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "7371151003ebed6920cbc3755dbac28c5136c0423a66a99170762496873d59fe"
+      },
+      "fluency": {
+        "sha256": "ee532c6d7574957b8721522c530e9dba2181a7203b2711e16fe17a9d2215555f"
+      },
+      "prosody": {
+        "sha256": "bac522c03b7b33bff0b4bc07cb855f90d45b2882f7cbce7c3cdeced403ed8f5b"
+      }
+    }
+  },
+  "banded_3ratio_spearman__aesopocean": {
+    "model_version": "grid-options-v1-banded__spearman__aesopocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "1ce17f884e7ea75e40ff6658f5db875e0ea9476826b5ce8b32c01bc89ea68c08"
+      },
+      "fluency": {
+        "sha256": "568332d6a7c0eea63782c248a82e60c4ac21847a6e0ac6d4a2aad99336306461"
+      },
+      "prosody": {
+        "sha256": "4c6726d5968e7bc7c8da36f725278c4668e6ec7e4d3b0a0639c91903d4f40f60"
+      }
+    }
+  },
+  "banded_3ratio_spearman__koreanaesop": {
+    "model_version": "grid-options-v1-banded__spearman__koreanaesop",
+    "heads": {
+      "accuracy": {
+        "sha256": "0a10bcf8875112ef2cace7854abcda462c72dff27fa73b84c12ec375d253ba5f"
+      },
+      "fluency": {
+        "sha256": "051605846342c51ebba6241566a0822fa827e9cdfa519e316d6c35812fd0b10a"
+      },
+      "prosody": {
+        "sha256": "24069f332d246dc6ecde32406bd69190292353bfdc67a30cfe36074b4a8f4ebe"
+      }
+    }
+  },
+  "banded_3ratio_spearman__aesopkoreanocean": {
+    "model_version": "grid-options-v1-banded__spearman__aesopkoreanocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "28dfdaf8d3ae059b7319e066562882196cba7e9057f59815d80b91f2535175d8"
+      },
+      "fluency": {
+        "sha256": "ad0df409efaf69db2e76941ec00e40967740e1bc4ffaa6ec6451219dba064050"
+      },
+      "prosody": {
+        "sha256": "09f3684f40341800c087b0dfecd72e2ead938c3d90f0ee8d856d8482f84eeaad"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__speechocean": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__speechocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "ec3611bada85b53436a8f292f6a22573232bc65e28e14dedf4a128b2418ec180"
+      },
+      "fluency": {
+        "sha256": "886781a631969a4f2742f97353925c042fffc6b5fc4017a1fac63f6d4b38a40b"
+      },
+      "prosody": {
+        "sha256": "886781a631969a4f2742f97353925c042fffc6b5fc4017a1fac63f6d4b38a40b"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__korean": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__korean",
+    "heads": {
+      "accuracy": {
+        "sha256": "edc786c170913dc326c7149899e09f23c8b5df127921c8640b3071e867726e95"
+      },
+      "fluency": {
+        "sha256": "2f2f62c8e604809395f47e55106ed077f2c980a7054daafff4c7adecc0e7f717"
+      },
+      "prosody": {
+        "sha256": "2f2f62c8e604809395f47e55106ed077f2c980a7054daafff4c7adecc0e7f717"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__aesop": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__aesop",
+    "heads": {
+      "accuracy": {
+        "sha256": "27e300d5766f9d5e91a2966b786ec3be45a411c023b42d8a752505048e68f38a"
+      },
+      "fluency": {
+        "sha256": "d5e8fb280fd77e60d1ac045ed1c325b5f224e610760265f6e5529750365c23c1"
+      },
+      "prosody": {
+        "sha256": "d5e8fb280fd77e60d1ac045ed1c325b5f224e610760265f6e5529750365c23c1"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__koreanocean": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__koreanocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "7076d7d92438caf27b5f879cda50a86895075f889bddde2af8444dcd8666b29c"
+      },
+      "fluency": {
+        "sha256": "9c118f237cbf4cead1ffb79363bd2fc395a5ccf3287e2eb3a228ad584fd52274"
+      },
+      "prosody": {
+        "sha256": "9c118f237cbf4cead1ffb79363bd2fc395a5ccf3287e2eb3a228ad584fd52274"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__aesopocean": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__aesopocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "f26fb9cdb89b42c74e82d8e6652d60eefb2c097a5b860d3e9acaec04d958ddc8"
+      },
+      "fluency": {
+        "sha256": "b145f03d7b2bebdc40c1ec5c4439c5c1e8886f568fe032c7b78217c4e2d95ac9"
+      },
+      "prosody": {
+        "sha256": "b145f03d7b2bebdc40c1ec5c4439c5c1e8886f568fe032c7b78217c4e2d95ac9"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__koreanaesop": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__koreanaesop",
+    "heads": {
+      "accuracy": {
+        "sha256": "8ab2aa1230c8caaa877b9a47dd99abe6c35ea5dcf1bc346a6cdaa4ed0e023101"
+      },
+      "fluency": {
+        "sha256": "0dcfaa2f51786982dacb2d63b6d37e65465c112d688f57b2a108cc2f379c4023"
+      },
+      "prosody": {
+        "sha256": "0dcfaa2f51786982dacb2d63b6d37e65465c112d688f57b2a108cc2f379c4023"
+      }
+    }
+  },
+  "banded_3ratio_accuracy_mae__aesopkoreanocean": {
+    "model_version": "grid-options-v1-banded__accuracy_mae__aesopkoreanocean",
+    "heads": {
+      "accuracy": {
+        "sha256": "c47d135bca9350832b836fda740e716483b6af83d6d7a1f01868f3cad63a0514"
+      },
+      "fluency": {
+        "sha256": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc"
+      },
+      "prosody": {
+        "sha256": "2be0cb67847e476c903bf3ac7c1949e273e17ac0e6c5f4b943836ab6a32865dc"
+      }
+    }
+  }
+}

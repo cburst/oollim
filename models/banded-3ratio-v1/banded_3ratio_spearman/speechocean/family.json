@@ -1,0 +1,24 @@
+{
+  "schema_version": "oollim-family-v1",
+  "family": "speechocean",
+  "selection": "banded_3ratio_spearman",
+  "model_version": "grid-options-v1-banded__spearman__speechocean",
+  "heads": {
+    "accuracy": "accuracy.npz",
+    "fluency": "fluency.npz",
+    "prosody": "prosody.npz"
+  },
+  "files": {
+    "accuracy.npz": "ec3611bada85b53436a8f292f6a22573232bc65e28e14dedf4a128b2418ec180",
+    "accuracy.json": "79e41cd28d6677ff9e712d252ecd98d29ed21fa665f64a9c64f454a4146fb86b",
+    "fluency.npz": "059d9f4f9e942bf30a4a601eabd2538ea71221109f7981d59060a9055a96ce66",
+    "fluency.json": "cf61f4953e67cf24f4c8180d1a4159ca4e07f363864d3213ce4f565ef404e645",
+    "prosody.npz": "059d9f4f9e942bf30a4a601eabd2538ea71221109f7981d59060a9055a96ce66",
+    "prosody.json": "c1cf99ff6ae5fcc1e19b4566beb955e74b91e39cdccb18bfa342283f56b9dd33"
+  },
+  "reference_required": true,
+  "max_duration_seconds": 120,
+  "source_configuration": "banded__spearman__speechocean",
+  "accuracy_note": "Accuracy uses the refined scalar-ridge head; three-ratio banding applies to fluency and prosody.",
+  "configuration_sha256": "365e505673f692ebb80f0a25f405dede1ef6508a4ce42454fa42ef59891b3053"
+}

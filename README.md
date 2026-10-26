@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
 
 [![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.48550%2FarXiv.2610.26406-blue)](https://doi.org/10.48550/arXiv.2610.26406)
-[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23587546-blue)](https://doi.org/10.5281/zenodo.23587546)
+[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23468266-blue)](https://doi.org/10.5281/zenodo.23468266)
 
 ## 🚀 Install
 
@@ -110,17 +110,23 @@ Frozen **XLS-R**, **XEUS**, and **PhoneticXeus** representations combine with re
 | Fluency | XEUS + XLS-R |
 | Prosody | XEUS + XLS-R |
 
-👪 **21 matched scoring options** combine three selection rules with seven training families: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`.
+👪 **35 scoring options** cover four approaches (S, D, H, and three-ratio banded ridge, with two banded selection variants) with seven training families: `speechocean` (default), `korean`, `aesop`, `koreanocean`, `aesopocean`, `koreanaesop`, and `aesopkoreanocean`.
 
 | Selection (`--selection`) | How the ridge penalty was chosen on public development data |
 |---|---|
-| `spearman` (default) | Each construct’s Spearman correlation; standardized grid |
-| `damae` | Accuracy mean absolute error (DAMAE); same standardized grid |
-| `historical_grid_damae` | Accuracy MAE; historical grid converted to normalized loss |
+| `spearman` (default) | S: 1-grid · construct-wise correlation |
+| `damae` | D: 1-grid · pronunciation-accuracy error |
+| `historical_grid_damae` | H: 5-grid · pronunciation-accuracy error |
+| `banded_3ratio_spearman` | B-S: three-ratio banded · construct-wise correlation |
+| `banded_3ratio_accuracy_mae` | B-D: three-ratio banded · pronunciation-accuracy error |
 
-**Version 0.3 changes the default to the matched Spearman bundle.** The previous deployed SpeechOcean ridge is preserved: use `--model models/speechocean/family.json` to reproduce that version. Other original bundles remain under `models/<family>/family.json`. New choices use the exact evaluated weights in `models/selection-comparison-v1/`; no retraining or private-data calibration is performed. CSVs identify the family, selection rule, and model version. Use a separate output filename for each combination; resume fingerprints distinguish model versions.
+**Version 0.4 retains the matched Spearman default and adds 14 banded choices.** The previous deployed SpeechOcean ridge is preserved: use `--model models/speechocean/family.json` to reproduce that version. Other original bundles remain under `models/<family>/family.json`. New choices use the exact evaluated weights in `models/selection-comparison-v1/` and `models/banded-3ratio-v1/`; no retraining or private-data calibration is performed. CSVs identify the family, selection rule, and model version. Use a separate output filename for each combination; resume fingerprints distinguish model versions.
 
-For DAMAE conditions, accuracy selects the penalty for each representation combination; fluency and prosody share the penalty chosen for their common features but retain separate output coefficients. These rules describe training-time selection, not live adaptation to your recording.
+“Construct-wise correlation” means development Spearman for each construct. “Pronunciation-accuracy error” means development accuracy-construct MAE; fluency and prosody retain their own output coefficients.
+
+The **1-grid** is `[0.001, 0.01, 0.1, 1, 10, 100]`; the **5-grid** is `[0.00005, 0.0005, 0.005, 0.05, 0.5, 5]`. **Three-ratio banded ridge** tests XLS-R/XEUS penalty ratios `1/4, 1, 4` for fluency and prosody. Its accuracy head is the corresponding refined scalar-ridge head, not a banded accuracy fit. See [the full protocol](experiments/grid-options-v1/PROTOCOL.md) for the scalar search and equal-penalty fallback.
+
+For accuracy-MAE conditions, accuracy selects the penalty for each representation combination; fluency and prosody share the penalty chosen for their common features but retain separate output coefficients. These rules describe training-time selection, not live adaptation to your recording.
 
 ## 🔬 Reproduce the work
 
@@ -160,7 +166,7 @@ python -m reproduce.train --help
 
 🗂️ `reproduce/` provides portable entry points, `speech/pronunciation/` contains encoder and scoring implementations, and `models/` holds the trained ridge bundles. `speech/scripts/` preserves historical research runners with their experiment-specific layouts.
 
-✅ The **21-combination selection comparison**, **315-configuration representation ablation**, and matched-Spearman paired comparisons are complete. The main table includes all construct-specific leaders within .001 of the unrounded maximum, with marginal 95% confidence intervals. The paired analysis covers the matched-Spearman subset using **200,000 bootstrap replicates** and a second-seed check (89/90 adjusted decisions agree). See [complete comparisons](results/selection-comparison-v1/README.md). The ablation retains the **.01 promotion threshold**; `configs/selected-constructs.json` records the unchanged overall selections: koreanocean accuracy and aesopkoreanocean fluency/prosody. Full ablation results are in `results/ablation-mac-v1/`.
+✅ The four-approach comparison contains **35 family/selection configurations**. The main table includes every construct-specific leader within .001 of the unrounded maximum, with marginal 95% confidence intervals. The expanded paired analysis covers **510 contrasts**, including all banded configurations versus human and Azure baselines and previous S/D/H leaders. See [four-approach results](results/four-ridges-v1/README.md) and [paired protocol](results/paired-four-ridges-v1/PROTOCOL.md). The separate **315-configuration representation ablation** retains its **.01 promotion threshold** and public-development selections; see `results/ablation-mac-v1/`.
 
 🔎 The portable solver is checked against direct normal equations and the historical solver, with synthetic integration tests. A complete clean-environment raw-corpus → encoder → seven-family rerun has **not** been performed for this release. Pinned source and model manifests support that verification; see [validation details](docs/VALIDATION.md).
 

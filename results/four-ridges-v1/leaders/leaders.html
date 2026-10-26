@@ -1,0 +1,16 @@
+<meta charset="utf-8"><style>body{font:17px Georgia;margin:30px}td,th{padding:8px;border-bottom:1px solid #ddd;white-space:nowrap}table{border-collapse:collapse}</style><h1>Observed leaders and ties</h1><table><tr><th>Construct</th><th>Family</th><th>Rule</th><th>Spearman</th><th>95% CI</th><th>QWK</th><th>95% CI</th></tr>
+<tr><td>Accuracy</td><td>Human consensus</td><td>--</td><td><b>0.809</b></td><td>[0.769, 0.842]</td><td><b>0.704</b></td><td>[0.663, 0.743]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.761</td><td>[0.709, 0.804]</td><td>0.161</td><td>[0.129, 0.196]</td></tr>
+<tr><td></td><td>aesopocean</td><td>S</td><td><b>0.872</b></td><td>[0.842, 0.894]</td><td>0.598</td><td>[0.563, 0.631]</td></tr>
+<tr><td></td><td>aesopocean</td><td>H</td><td><b>0.872</b></td><td>[0.841, 0.894]</td><td>0.607</td><td>[0.572, 0.640]</td></tr>
+<tr><td></td><td>aesopocean</td><td>B-S</td><td><b>0.871</b></td><td>[0.841, 0.894]</td><td>0.596</td><td>[0.561, 0.629]</td></tr>
+<tr><td></td><td>aesopocean</td><td>B-D</td><td><b>0.871</b></td><td>[0.840, 0.894]</td><td>0.612</td><td>[0.576, 0.645]</td></tr>
+<tr><td></td><td>koreanocean</td><td>S</td><td>0.853</td><td>[0.816, 0.882]</td><td><b>0.821</b></td><td>[0.789, 0.847]</td></tr>
+<tr><td></td><td>koreanocean</td><td>B-S</td><td>0.852</td><td>[0.813, 0.881]</td><td><b>0.821</b></td><td>[0.789, 0.847]</td></tr>
+<tr><td>Fluency</td><td>Human consensus</td><td>--</td><td><b>0.807</b></td><td>[0.768, 0.840]</td><td><b>0.739</b></td><td>[0.695, 0.777]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.633</td><td>[0.556, 0.698]</td><td>0.078</td><td>[0.056, 0.107]</td></tr>
+<tr><td></td><td>aesopocean</td><td>B-S</td><td><b>0.883</b></td><td>[0.854, 0.906]</td><td><b>0.751</b></td><td>[0.718, 0.779]</td></tr>
+<tr><td>Prosody</td><td>Human consensus</td><td>--</td><td><b>0.807</b></td><td>[0.768, 0.842]</td><td><b>0.742</b></td><td>[0.701, 0.778]</td></tr>
+<tr><td></td><td>Azure</td><td>--</td><td>0.737</td><td>[0.672, 0.792]</td><td>0.370</td><td>[0.318, 0.421]</td></tr>
+<tr><td></td><td>koreanaesop</td><td>B-D</td><td><b>0.889</b></td><td>[0.860, 0.911]</td><td>0.446</td><td>[0.409, 0.479]</td></tr>
+<tr><td></td><td>koreanocean</td><td>H</td><td>0.840</td><td>[0.802, 0.872]</td><td><b>0.675</b></td><td>[0.632, 0.712]</td></tr></table><p>Statistics average the three two-human references; humans are compared with the other two. S: 1-grid construct-wise correlation; D: 1-grid pronunciation-accuracy error; H: 5-grid pronunciation-accuracy error; B-S/B-D: three-ratio banded ridge with Spearman/accuracy-MAE selection. Banded accuracy uses the refined scalar-ridge head. All configurations within .001 of the unrounded maximum of either metric among 35 combinations are shown. Bold marks qualifying metrics and human baselines. Leaders are descriptive external selections; marginal 95% bootstrap intervals use 2,000 draws, seed 42. Paired tests separately adjust 510 contrasts. No displayed leader requires clipping. Full results are in the supplement.</p>

@@ -1,0 +1,13 @@
+{
+  "comparisons_per_seed": 258,
+  "draws_per_seed": 600000,
+  "seeds": [
+    42,
+    2026
+  ],
+  "all_system_and_human_point_estimates_match_existing_export": true,
+  "all_intervals_finite_and_nested": true,
+  "seed_decision_disagreements": 0,
+  "private_rows_exported": false,
+  "script_sha256": "3d90799afc9b9950e2dce4c0fa522cdb7c04ae3b9b795744bb525f332d1186a0"
+}
