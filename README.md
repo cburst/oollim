@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-source--available-orange)](LICENSE.md)
 
 [![Paper DOI](https://img.shields.io/badge/Paper_DOI-10.48550%2FarXiv.2610.26406-blue)](https://doi.org/10.48550/arXiv.2610.26406)
-[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23468266-blue)](https://doi.org/10.5281/zenodo.23468266)
+[![Software DOI](https://img.shields.io/badge/Software_DOI-10.5281%2Fzenodo.23653899-blue)](https://doi.org/10.5281/zenodo.23653899)
 
 ## 🚀 Install
 
