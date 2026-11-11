@@ -1,0 +1,97 @@
+{
+ "arrays": {
+  "logits/logits": {
+   "dtype": "float32",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    128,
+    428
+   ]
+  },
+  "logits/token_ids": {
+   "dtype": "int32",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    9
+   ]
+  },
+  "records/ipa": {
+   "dtype": "float64",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    17
+   ]
+  },
+  "records/layers_phoneticxeus": {
+   "dtype": "float32",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    20,
+    2048
+   ]
+  },
+  "records/layers_xeus": {
+   "dtype": "float32",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    19,
+    2048
+   ]
+  },
+  "records/layers_xlsr": {
+   "dtype": "float32",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    25,
+    2048
+   ]
+  },
+  "records/phoneticxeus": {
+   "dtype": "float64",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    2048
+   ]
+  },
+  "records/xeus": {
+   "dtype": "float64",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    2048
+   ]
+  },
+  "records/xlsr": {
+   "dtype": "float64",
+   "identical": 20,
+   "max_abs_diff": 0.0,
+   "rows": 20,
+   "shape": [
+    2048
+   ]
+  }
+ },
+ "left": "work/X4/validate-A",
+ "manifest": "work/X4/validate/manifest.json",
+ "right": "work/X4/validate-B",
+ "rows_bitwise_identical": 20,
+ "rows_compared": 20,
+ "rows_in_manifest": 20,
+ "rows_missing": [],
+ "verdict": "bitwise identical"
+}

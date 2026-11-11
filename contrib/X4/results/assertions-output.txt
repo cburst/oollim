@@ -1,0 +1,53 @@
+ok    train: schema: 'speech-feature-cache-v1'
+ok    train: linhas no manifesto: 2500
+ok    train: cobertas: 2478
+ok    train: incompletas: 22
+ok    train: text_complete falso com reference_complete verdadeiro: 0
+ok    train: ordem do features.npz: True
+ok    train: forma do bloco xeus: (2500, 2048)
+ok    train: finitude do bloco xeus: True
+ok    train: forma do bloco xlsr: (2500, 2048)
+ok    train: finitude do bloco xlsr: True
+ok    train: forma do bloco phoneticxeus: (2500, 2048)
+ok    train: finitude do bloco phoneticxeus: True
+ok    train: forma do bloco ipa: (2500, 17)
+ok    train: finitude do bloco ipa: True
+ok    train: forma de layers_xeus: (2500, 19, 2048)
+ok    train: forma de crosslayer_xeus: (2500, 2, 2048)
+ok    train: forma de layers_xlsr: (2500, 25, 2048)
+ok    train: forma de crosslayer_xlsr: (2500, 2, 2048)
+ok    train: forma de layers_phoneticxeus: (2500, 20, 2048)
+ok    train: forma de crosslayer_phoneticxeus: (2500, 2, 2048)
+ok    train: logits ausentes: 0
+ok    train: arquivos em logits: 2500
+ok    train: forma dos alvos: (2500, 3)
+ok    train: alvos em 0 a 10: True
+ok    test: schema: 'speech-feature-cache-v1'
+ok    test: linhas no manifesto: 2500
+ok    test: cobertas: 2483
+ok    test: incompletas: 17
+ok    test: text_complete falso com reference_complete verdadeiro: 0
+ok    test: ordem do features.npz: True
+ok    test: forma do bloco xeus: (2500, 2048)
+ok    test: finitude do bloco xeus: True
+ok    test: forma do bloco xlsr: (2500, 2048)
+ok    test: finitude do bloco xlsr: True
+ok    test: forma do bloco phoneticxeus: (2500, 2048)
+ok    test: finitude do bloco phoneticxeus: True
+ok    test: forma do bloco ipa: (2500, 17)
+ok    test: finitude do bloco ipa: True
+ok    test: forma de layers_xeus: (2500, 19, 2048)
+ok    test: forma de crosslayer_xeus: (2500, 2, 2048)
+ok    test: forma de layers_xlsr: (2500, 25, 2048)
+ok    test: forma de crosslayer_xlsr: (2500, 2, 2048)
+ok    test: forma de layers_phoneticxeus: (2500, 20, 2048)
+ok    test: forma de crosslayer_phoneticxeus: (2500, 2, 2048)
+ok    test: logits ausentes: 0
+ok    test: arquivos em logits: 2500
+ok    test: forma dos alvos: (2500, 3)
+ok    test: alvos em 0 a 10: True
+ok    nenhuma gravacao nas duas particoes: 0
+ok    nenhum falante nas duas particoes: 0
+
+50 de 50 asseracoes passaram
+PORTAO_ABERTO
