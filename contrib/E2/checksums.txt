@@ -1,0 +1,25 @@
+# SHA-256 of the pinned encoder weights, verified 2026-11-10.
+#
+# Each value was checked three ways and all three agree:
+#   1. sha256sum of the file downloaded from the pinned revision,
+#   2. the sha256 field in speech/resources-manifest.json,
+#   3. the LFS oid returned by the Hugging Face paths-info API for that
+#      repository and revision, whose oid is the file's SHA-256.
+#
+# Byte sizes from the API also match the manifest for all three files.
+#
+# Format: sha256  repository/path-in-hf-repo  revision
+
+d5e490574712ad0a6736923b9ed11d4cd51c78609c36205f704fc4e87b11d2e0  facebook/wav2vec2-xls-r-300m/pytorch_model.bin  1a640f32ac3e39899438a2931f9924c02f080a54
+4fd02581b4dd06736d1a6aa29e20c442afe3d9b299c88359f63320292a5c5cff  espnet/xeus/model/xeus_checkpoint_new.pth  b651261280bf792df4632ccb2d1ba4eeaabeaee2
+ad58bf20a60e9d0380327bd8b2d0e8e90a9b8de2adccbfb479f9b21ea85eda18  changelinglab/PhoneticXeus/model.safetensors  ed64f14aeb0e903a80a825cf67a079aa8f93d3ac
+
+# Sizes in bytes, identical in the manifest and in the API response:
+#   facebook/wav2vec2-xls-r-300m/pytorch_model.bin      1269737156
+#   espnet/xeus/model/xeus_checkpoint_new.pth           2306233340
+#   changelinglab/PhoneticXeus/model.safetensors        2300089432
+#
+# speech/resources-manifest.json holds 66 entries. The 49 that
+# oollim_app/assets.py acquires were downloaded in one run and verified
+# against their manifest sha256: the three weight files above and the
+# remaining 46. All 49 matched and none required a retry.
