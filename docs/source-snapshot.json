@@ -106,7 +106,7 @@
     {
       "path": "speech/pronunciation/inference_memory.py",
       "source_sha256": "01e75ee10c6083b79bfa99f46dacc8ef0de74c2267ee98aad8b1d9090a357128",
-      "release_sha256": "01e75ee10c6083b79bfa99f46dacc8ef0de74c2267ee98aad8b1d9090a357128",
+      "release_sha256": "9e97bdf60a72fb6ba775a43a55dbec6d6bcfb8b91daec34993cddd3e99bc9626",
       "source_path": "xlsr/pronunciation/inference_memory.py"
     },
     {
